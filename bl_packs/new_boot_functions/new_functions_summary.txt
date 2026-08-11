@@ -1,0 +1,159 @@
+====================================================================================================
+EZB6 NEW BOOT FUNCTION IDENTIFICATION
+====================================================================================================
+
+
+####################################################################################################
+new_call_C5A10 @ 0xC5A10
+####################################################################################################
+FUNCTION NOT FOUND
+
+####################################################################################################
+new_call_D5D90 @ 0xD5D90
+####################################################################################################
+FUNCTION NOT FOUND
+
+####################################################################################################
+new_call_26020 @ 0x26020
+####################################################################################################
+Instructions : 136
+End          : 0x2623C
+Norm SHA256  : 5e4ddb13e811c764ca418d0a06af1d0e52374cde466819bacf374c0f040942e7
+Callers      : 1
+Calls out    : 49
+Strings      : 4
+
+CALLERS
+  0x9324 bl
+
+REFERENCED STRINGS
+  code=0x260A0 string=0xF8127 Lock  <<< IMPORTANT
+  code=0x260A8 string=0xF93F0 Unlock  <<< IMPORTANT
+  code=0x261C4 string=0x116626 LOCK  <<< IMPORTANT
+  code=0x261CC string=0x10FFEE UNLOCK  <<< IMPORTANT
+
+DIRECT / TAIL CALLS
+  0x2604C bl -> 0x25EC0
+  0x26060 b.ne -> 0x260F8
+  0x26064 b -> 0x26068
+  0x26068 b -> 0x2606C
+  0x2606C bl -> 0x1C20
+  0x26078 b -> 0x2607C
+  0x2607C b -> 0x26080
+  0x26088 bl -> 0x1C48
+  0x26094 b -> 0x26098
+  0x260C8 bl -> 0x162C
+  0x260CC b -> 0x260D0
+  0x260D0 b -> 0x260D4
+  0x260D4 b -> 0x260D8
+  0x260D8 b -> 0x260DC
+  0x260E4 b -> 0x260E8
+  0x260EC bl -> 0x27EE0
+  0x260F0 b -> 0x260F4
+  0x260F4 b -> 0x26218
+  0x26100 bl -> 0x26240
+  0x26110 b -> 0x26114
+  0x26114 b -> 0x26118
+  0x26118 bl -> 0x1C20
+  0x26124 b -> 0x26128
+  0x26128 b -> 0x2612C
+  0x26134 bl -> 0x1C48
+  0x26140 b -> 0x26144
+  0x26174 bl -> 0x162C
+  0x26178 b -> 0x2617C
+  0x2617C b -> 0x26180
+  0x26180 b -> 0x26184
+  0x26184 b -> 0x26188
+  0x26188 b -> 0x26218
+  0x2618C b -> 0x26190
+  0x26190 bl -> 0x1C20
+  0x2619C b -> 0x261A0
+  0x261A0 b -> 0x261A4
+  0x261AC bl -> 0x1C48
+  0x261B8 b -> 0x261BC
+  0x261F0 bl -> 0x162C
+  0x261F4 b -> 0x261F8
+  0x261F8 b -> 0x261FC
+  0x261FC b -> 0x26200
+  0x26200 b -> 0x26204
+  0x26208 bl -> 0x73B70
+  0x26210 bl -> 0x27EE0
+  0x26214 b -> 0x26218
+  0x26228 b.ne -> 0x26230
+  0x2622C b -> 0x26234
+  0x26230 bl -> 0x1488
+
+BEST CXDF FUNCTION MATCHES
+  score=100.00% CXDF=0x25EE0 old_len=136
+  score= 92.91% CXDF=0x25F28 old_len=118
+  score= 92.49% CXDF=0x25F2C old_len=117
+  score= 90.76% CXDF=0x25F3C old_len=113
+  score= 90.32% CXDF=0x25F40 old_len=112
+  score= 87.60% CXDF=0x25F58 old_len=106
+  score= 80.70% CXDF=0x25F90 old_len=92
+  score= 80.18% CXDF=0x25F94 old_len=91
+
+####################################################################################################
+new_call_6EE10 @ 0x6EE10
+####################################################################################################
+Instructions : 15
+End          : 0x6EE48
+Norm SHA256  : 446c966260f8f23b9e4c70675c343ca1d702ed533389ff7b032f5c31f19f9e74
+Callers      : 1
+Calls out    : 1
+Strings      : 0
+
+CALLERS
+  0x9328 bl
+
+REFERENCED STRINGS
+  (none detected)
+
+DIRECT / TAIL CALLS
+  0x6EE3C b.ne -> 0x6EE4C
+
+BEST CXDF FUNCTION MATCHES
+  score=100.00% CXDF=0x814C0 old_len=15
+  score=100.00% CXDF=0x6EBA0 old_len=15
+  score= 93.75% CXDF=0x6EB98 old_len=17
+  score= 90.91% CXDF=0x814B4 old_len=18
+  score= 90.32% CXDF=0x83C7C old_len=16
+  score= 90.32% CXDF=0x7F970 old_len=16
+  score= 90.32% CXDF=0x641F8 old_len=16
+  score= 90.32% CXDF=0x7324 old_len=16
+
+####################################################################################################
+new_state_function_C7CF0 @ 0xC7CF0
+####################################################################################################
+FUNCTION NOT FOUND
+
+####################################################################################################
+state_wrapper_9688 @ 0x9688
+####################################################################################################
+Instructions : 4
+End          : 0x9694
+Norm SHA256  : d0227e010348dda88b7fc9d2e38ebdcacd77fa72eca7dfe388b0484de0a8cac0
+Callers      : 3
+Calls out    : 1
+Strings      : 0
+
+CALLERS
+  0x9370 bl
+  0x93C0 bl
+  0x9594 bl
+
+REFERENCED STRINGS
+  (none detected)
+
+DIRECT / TAIL CALLS
+  0x9694 b -> 0xC7CF0
+
+BEST CXDF FUNCTION MATCHES
+  score= 85.71% CXDF=0x98090 old_len=3
+  score= 85.71% CXDF=0x9618C old_len=3
+  score= 85.71% CXDF=0x8F968 old_len=3
+  score= 85.71% CXDF=0x8A350 old_len=3
+  score= 85.71% CXDF=0x1E980 old_len=3
+  score= 85.71% CXDF=0x1B930 old_len=3
+  score= 85.71% CXDF=0x1B888 old_len=3
+  score= 75.00% CXDF=0x987E8 old_len=4

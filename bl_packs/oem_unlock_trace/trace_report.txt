@@ -1,0 +1,1194 @@
+====================================================================================================
+CXDF ODIN
+====================================================================================================
+File: /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin
+Instructions: 72896
+
+
+####################################################################################################
+TARGET: [OEM]Oem unlock value is %d
+####################################################################################################
+String raw : 0xA00DB
+String VA  : 0xA00DB
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [FRP][OEM] init succeed!
+####################################################################################################
+String raw : 0x99E05
+String VA  : 0x99E05
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [OEM]PLC:%x
+####################################################################################################
+String raw : 0x97A9A
+String VA  : 0x97A9A
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [OEM]Unlock buffer Allocate fail
+####################################################################################################
+String raw : 0xA7F21
+String VA  : 0xA7F21
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: OEM LOCK : %a (%a%x)
+####################################################################################################
+String raw : 0xA4004
+String VA  : 0xA4004
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: OEM LOCK : %a (%a)
+####################################################################################################
+String raw : 0x9B035
+String VA  : 0x9B035
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: IsUnlocked
+####################################################################################################
+String raw : 0xA34A0
+String VA  : 0xA34A0
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x27EF4
+   0x00027EAC: ldr      x8, [x8, #8]
+   0x00027EB0: str      x8, [sp, #8]
+   0x00027EB4: b        #0x27eb8
+   0x00027EB8: bl       #0x1bec
+   0x00027EBC: and      w8, w0, #0xff
+   0x00027EC0: cbz      w8, #0x27f14
+   0x00027EC4: b        #0x27ec8
+   0x00027EC8: b        #0x27ecc
+   0x00027ECC: mov      w8, #-0x80000000
+   0x00027ED0: mov      w0, w8
+   0x00027ED4: bl       #0x1c14
+   0x00027ED8: and      w8, w0, #0xff
+   0x00027EDC: cbz      w8, #0x27f0c
+   0x00027EE0: b        #0x27ee4
+   0x00027EE4: adrp     x8, #0x10b000
+   0x00027EE8: ldrb     w3, [x8, #0x4d]
+   0x00027EEC: adrp     x1, #0xa7000
+   0x00027EF0: add      x1, x1, #0x988
+>> 0x00027EF4: adrp     x2, #0xa3000
+   0x00027EF8: add      x2, x2, #0x4a0
+   0x00027EFC: mov      w8, #-0x80000000
+   0x00027F00: mov      w0, w8
+   0x00027F04: bl       #0x15f8
+   0x00027F08: b        #0x27f0c
+   0x00027F0C: b        #0x27f10
+   0x00027F10: b        #0x27f14
+   0x00027F14: b        #0x27f18
+   0x00027F18: adrp     x8, #0x10b000
+   0x00027F1C: ldrb     w8, [x8, #0x4d]
+   0x00027F20: str      w8, [sp, #4]
+   0x00027F24: ldr      x9, [sp, #8]
+   0x00027F28: adrp     x8, #0xcd000
+   0x00027F2C: ldr      x8, [x8, #8]
+   0x00027F30: subs     x8, x8, x9
+   0x00027F34: b.ne     #0x27f3c
+   0x00027F38: b        #0x27f40
+   0x00027F3C: bl       #0x153c
+Pointer-table candidates: 0
+
+====================================================================================================
+EZB6 ODIN
+====================================================================================================
+File: /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin
+Instructions: 73472
+
+
+####################################################################################################
+TARGET: IsUnlocked
+####################################################################################################
+String raw : 0xA482A
+String VA  : 0xA482A
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x287E4
+   0x0002879C: ldr      x8, [x8, #8]
+   0x000287A0: str      x8, [sp, #8]
+   0x000287A4: b        #0x287a8
+   0x000287A8: bl       #0x1bec
+   0x000287AC: and      w8, w0, #0xff
+   0x000287B0: cbz      w8, #0x28804
+   0x000287B4: b        #0x287b8
+   0x000287B8: b        #0x287bc
+   0x000287BC: mov      w8, #-0x80000000
+   0x000287C0: mov      w0, w8
+   0x000287C4: bl       #0x1c14
+   0x000287C8: and      w8, w0, #0xff
+   0x000287CC: cbz      w8, #0x287fc
+   0x000287D0: b        #0x287d4
+   0x000287D4: adrp     x8, #0x113000
+   0x000287D8: ldrb     w3, [x8, #0x29d]
+   0x000287DC: adrp     x1, #0xa9000
+   0x000287E0: add      x1, x1, #0xb7
+>> 0x000287E4: adrp     x2, #0xa4000
+   0x000287E8: add      x2, x2, #0x82a
+   0x000287EC: mov      w8, #-0x80000000
+   0x000287F0: mov      w0, w8
+   0x000287F4: bl       #0x15f8
+   0x000287F8: b        #0x287fc
+   0x000287FC: b        #0x28800
+   0x00028800: b        #0x28804
+   0x00028804: b        #0x28808
+   0x00028808: adrp     x8, #0x113000
+   0x0002880C: ldrb     w8, [x8, #0x29d]
+   0x00028810: str      w8, [sp, #4]
+   0x00028814: ldr      x9, [sp, #8]
+   0x00028818: adrp     x8, #0xce000
+   0x0002881C: ldr      x8, [x8, #8]
+   0x00028820: subs     x8, x8, x9
+   0x00028824: b.ne     #0x2882c
+   0x00028828: b        #0x28830
+   0x0002882C: bl       #0x153c
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: SetDdiBootMode
+####################################################################################################
+String raw : 0x99851
+String VA  : 0x99851
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: SetDdiRebootReason
+####################################################################################################
+String raw : 0xA1374
+String VA  : 0xA1374
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: GetKGFuseFromBL
+####################################################################################################
+String raw : 0xA6524
+String VA  : 0xA6524
+Direct code refs: 0
+Pointer-table candidates: 0
+
+====================================================================================================
+CXDF LINUXLOADER
+====================================================================================================
+File: /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin
+Instructions: 162128
+
+
+####################################################################################################
+TARGET: [OEM]Oem unlock value is %d
+####################################################################################################
+String raw : 0xFF629
+String VA  : 0xFF629
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [FRP][OEM] init succeed!
+####################################################################################################
+String raw : 0xF6066
+String VA  : 0xF6066
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [OEM]PLC:%x
+####################################################################################################
+String raw : 0xF2975
+String VA  : 0xF2975
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [OEM]Unlock buffer Allocate fail
+####################################################################################################
+String raw : 0x10C114
+String VA  : 0x10C114
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [OEM]LOCK:%d
+####################################################################################################
+String raw : 0x102CD9
+String VA  : 0x102CD9
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: Unable set the unlock value: %r
+####################################################################################################
+String raw : 0xFB09D
+String VA  : 0xFB09D
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x268EC
+   0x000268A4: bl       #0x18d30
+   0x000268A8: str      x0, [sp, #0x10]
+   0x000268AC: ldr      x8, [sp, #0x10]
+   0x000268B0: cbz      x8, #0x2691c
+   0x000268B4: b        #0x268b8
+   0x000268B8: b        #0x268bc
+   0x000268BC: bl       #0x1c20
+   0x000268C0: and      w8, w0, #0xff
+   0x000268C4: cbz      w8, #0x2690c
+   0x000268C8: b        #0x268cc
+   0x000268CC: b        #0x268d0
+   0x000268D0: mov      w8, #-0x80000000
+   0x000268D4: mov      w0, w8
+   0x000268D8: bl       #0x1c48
+   0x000268DC: and      w8, w0, #0xff
+   0x000268E0: cbz      w8, #0x26904
+   0x000268E4: b        #0x268e8
+   0x000268E8: ldr      x2, [sp, #0x10]
+>> 0x000268EC: adrp     x1, #0xfb000
+   0x000268F0: add      x1, x1, #0x9d
+   0x000268F4: mov      w8, #-0x80000000
+   0x000268F8: mov      w0, w8
+   0x000268FC: bl       #0x162c
+   0x00026900: b        #0x26904
+   0x00026904: b        #0x26908
+   0x00026908: b        #0x2690c
+   0x0002690C: b        #0x26910
+   0x00026910: ldr      x8, [sp, #0x10]
+   0x00026914: str      x8, [sp, #0x20]
+   0x00026918: b        #0x2692c
+   0x0002691C: b        #0x26920
+   0x00026920: ldr      x8, [sp, #0x10]
+   0x00026924: str      x8, [sp, #0x20]
+   0x00026928: b        #0x2692c
+   0x0002692C: ldr      x8, [sp, #0x20]
+   0x00026930: str      x8, [sp, #8]
+   0x00026934: ldr      x9, [sp, #0x28]
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: Unable set the unlock critical value: %r
+####################################################################################################
+String raw : 0x1059F1
+String VA  : 0x1059F1
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x269F4
+   0x000269AC: bl       #0x18d30
+   0x000269B0: str      x0, [sp, #0x10]
+   0x000269B4: ldr      x8, [sp, #0x10]
+   0x000269B8: cbz      x8, #0x26a24
+   0x000269BC: b        #0x269c0
+   0x000269C0: b        #0x269c4
+   0x000269C4: bl       #0x1c20
+   0x000269C8: and      w8, w0, #0xff
+   0x000269CC: cbz      w8, #0x26a14
+   0x000269D0: b        #0x269d4
+   0x000269D4: b        #0x269d8
+   0x000269D8: mov      w8, #-0x80000000
+   0x000269DC: mov      w0, w8
+   0x000269E0: bl       #0x1c48
+   0x000269E4: and      w8, w0, #0xff
+   0x000269E8: cbz      w8, #0x26a0c
+   0x000269EC: b        #0x269f0
+   0x000269F0: ldr      x2, [sp, #0x10]
+>> 0x000269F4: adrp     x1, #0x105000
+   0x000269F8: add      x1, x1, #0x9f1
+   0x000269FC: mov      w8, #-0x80000000
+   0x00026A00: mov      w0, w8
+   0x00026A04: bl       #0x162c
+   0x00026A08: b        #0x26a0c
+   0x00026A0C: b        #0x26a10
+   0x00026A10: b        #0x26a14
+   0x00026A14: b        #0x26a18
+   0x00026A18: ldr      x8, [sp, #0x10]
+   0x00026A1C: str      x8, [sp, #0x20]
+   0x00026A20: b        #0x26a34
+   0x00026A24: b        #0x26a28
+   0x00026A28: ldr      x8, [sp, #0x10]
+   0x00026A2C: str      x8, [sp, #0x20]
+   0x00026A30: b        #0x26a34
+   0x00026A34: ldr      x8, [sp, #0x20]
+   0x00026A38: str      x8, [sp, #8]
+   0x00026A3C: ldr      x9, [sp, #0x28]
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: For device unlock, Draw UnLock Img
+####################################################################################################
+String raw : 0x1066F3
+String VA  : 0x1066F3
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: Device is unlocked, Skipping boot verification
+####################################################################################################
+String raw : 0x10C76E
+String VA  : 0x10C76E
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x1E2D0
+   0x0001E288: b.eq     #0x1e318
+   0x0001E28C: adrp     x1, #0xff000
+   0x0001E290: add      x1, x1, #0xc52
+   0x0001E294: b        #0x1e308
+   0x0001E298: ldrb     w8, [sp]
+   0x0001E29C: cbz      w8, #0x1e2ac
+   0x0001E2A0: bl       #0x11ed0
+   0x0001E2A4: tst      w0, #0xff
+   0x0001E2A8: b.eq     #0x1e384
+   0x0001E2AC: mov      w0, #1
+   0x0001E2B0: bl       #0x31c70
+   0x0001E2B4: cbz      x0, #0x1e314
+   0x0001E2B8: bl       #0x1c20
+   0x0001E2BC: tst      w0, #0xff
+   0x0001E2C0: b.eq     #0x1e318
+   0x0001E2C4: bl       #0x1e6b4
+   0x0001E2C8: tst      w0, #0xff
+   0x0001E2CC: b.eq     #0x1e318
+>> 0x0001E2D0: adrp     x1, #0x10c000
+   0x0001E2D4: add      x1, x1, #0x76e
+   0x0001E2D8: b        #0x1e308
+   0x0001E2DC: mov      w0, wzr
+   0x0001E2E0: bl       #0x31c70
+   0x0001E2E4: cbz      x0, #0x1e314
+   0x0001E2E8: bl       #0x1c20
+   0x0001E2EC: tst      w0, #0xff
+   0x0001E2F0: b.eq     #0x1e318
+   0x0001E2F4: bl       #0x1e6b4
+   0x0001E2F8: tst      w0, #0xff
+   0x0001E2FC: b.eq     #0x1e318
+   0x0001E300: adrp     x1, #0x106000
+   0x0001E304: add      x1, x1, #0xc5d
+   0x0001E308: mov      w0, #0x40
+   0x0001E30C: bl       #0x162c
+   0x0001E310: b        #0x1e318
+   0x0001E314: bl       #0x32240
+   0x0001E318: bl       #0x26500
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: GetUnlockCount
+####################################################################################################
+String raw : 0xF0B28
+String VA  : 0xF0B28
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x25D24
+   0x00025CDC: ldr      x8, [x8, #8]
+   0x00025CE0: str      x8, [sp, #8]
+   0x00025CE4: b        #0x25ce8
+   0x00025CE8: bl       #0x1c20
+   0x00025CEC: and      w8, w0, #0xff
+   0x00025CF0: cbz      w8, #0x25d44
+   0x00025CF4: b        #0x25cf8
+   0x00025CF8: b        #0x25cfc
+   0x00025CFC: mov      w8, #0x40
+   0x00025D00: mov      w0, w8
+   0x00025D04: bl       #0x1c48
+   0x00025D08: and      w8, w0, #0xff
+   0x00025D0C: cbz      w8, #0x25d3c
+   0x00025D10: b        #0x25d14
+   0x00025D14: adrp     x8, #0x19a000
+   0x00025D18: ldr      w3, [x8, #0xbf8]
+   0x00025D1C: adrp     x1, #0x10b000
+   0x00025D20: add      x1, x1, #0x3d9
+>> 0x00025D24: adrp     x2, #0xf0000
+   0x00025D28: add      x2, x2, #0xb28
+   0x00025D2C: mov      w8, #0x40
+   0x00025D30: mov      w0, w8
+   0x00025D34: bl       #0x162c
+   0x00025D38: b        #0x25d3c
+   0x00025D3C: b        #0x25d40
+   0x00025D40: b        #0x25d44
+   0x00025D44: b        #0x25d48
+   0x00025D48: adrp     x8, #0x19a000
+   0x00025D4C: ldr      w8, [x8, #0xbf8]
+   0x00025D50: str      w8, [sp, #4]
+   0x00025D54: ldr      x9, [sp, #8]
+   0x00025D58: adrp     x8, #0x137000
+   0x00025D5C: ldr      x8, [x8, #8]
+   0x00025D60: subs     x8, x8, x9
+   0x00025D64: b.ne     #0x25d6c
+   0x00025D68: b        #0x25d70
+   0x00025D6C: bl       #0x1488
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: IsUnlockCritical
+####################################################################################################
+String raw : 0xF9C0F
+String VA  : 0xF9C0F
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x25E84
+   0x00025E3C: ldr      x8, [x8, #8]
+   0x00025E40: str      x8, [sp, #8]
+   0x00025E44: b        #0x25e48
+   0x00025E48: bl       #0x1c20
+   0x00025E4C: and      w8, w0, #0xff
+   0x00025E50: cbz      w8, #0x25ea4
+   0x00025E54: b        #0x25e58
+   0x00025E58: b        #0x25e5c
+   0x00025E5C: mov      w8, #-0x80000000
+   0x00025E60: mov      w0, w8
+   0x00025E64: bl       #0x1c48
+   0x00025E68: and      w8, w0, #0xff
+   0x00025E6C: cbz      w8, #0x25e9c
+   0x00025E70: b        #0x25e74
+   0x00025E74: adrp     x8, #0x199000
+   0x00025E78: ldrb     w3, [x8, #0xf66]
+   0x00025E7C: adrp     x1, #0x10b000
+   0x00025E80: add      x1, x1, #0x3d9
+>> 0x00025E84: adrp     x2, #0xf9000
+   0x00025E88: add      x2, x2, #0xc0f
+   0x00025E8C: mov      w8, #-0x80000000
+   0x00025E90: mov      w0, w8
+   0x00025E94: bl       #0x162c
+   0x00025E98: b        #0x25e9c
+   0x00025E9C: b        #0x25ea0
+   0x00025EA0: b        #0x25ea4
+   0x00025EA4: b        #0x25ea8
+   0x00025EA8: adrp     x8, #0x199000
+   0x00025EAC: ldrb     w8, [x8, #0xf66]
+   0x00025EB0: str      w8, [sp, #4]
+   0x00025EB4: ldr      x9, [sp, #8]
+   0x00025EB8: adrp     x8, #0x137000
+   0x00025EBC: ldr      x8, [x8, #8]
+   0x00025EC0: subs     x8, x8, x9
+   0x00025EC4: b.ne     #0x25ecc
+   0x00025EC8: b        #0x25ed0
+   0x00025ECC: bl       #0x1488
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: IsUnlocked
+####################################################################################################
+String raw : 0x1044DE
+String VA  : 0x1044DE
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x25DD4
+   0x00025D8C: ldr      x8, [x8, #8]
+   0x00025D90: str      x8, [sp, #8]
+   0x00025D94: b        #0x25d98
+   0x00025D98: bl       #0x1c20
+   0x00025D9C: and      w8, w0, #0xff
+   0x00025DA0: cbz      w8, #0x25df4
+   0x00025DA4: b        #0x25da8
+   0x00025DA8: b        #0x25dac
+   0x00025DAC: mov      w8, #-0x80000000
+   0x00025DB0: mov      w0, w8
+   0x00025DB4: bl       #0x1c48
+   0x00025DB8: and      w8, w0, #0xff
+   0x00025DBC: cbz      w8, #0x25dec
+   0x00025DC0: b        #0x25dc4
+   0x00025DC4: adrp     x8, #0x199000
+   0x00025DC8: ldrb     w3, [x8, #0xf65]
+   0x00025DCC: adrp     x1, #0x10b000
+   0x00025DD0: add      x1, x1, #0x3d9
+>> 0x00025DD4: adrp     x2, #0x104000
+   0x00025DD8: add      x2, x2, #0x4de
+   0x00025DDC: mov      w8, #-0x80000000
+   0x00025DE0: mov      w0, w8
+   0x00025DE4: bl       #0x162c
+   0x00025DE8: b        #0x25dec
+   0x00025DEC: b        #0x25df0
+   0x00025DF0: b        #0x25df4
+   0x00025DF4: b        #0x25df8
+   0x00025DF8: adrp     x8, #0x199000
+   0x00025DFC: ldrb     w8, [x8, #0xf65]
+   0x00025E00: str      w8, [sp, #4]
+   0x00025E04: ldr      x9, [sp, #8]
+   0x00025E08: adrp     x8, #0x137000
+   0x00025E0C: ldr      x8, [x8, #8]
+   0x00025E10: subs     x8, x8, x9
+   0x00025E14: b.ne     #0x25e1c
+   0x00025E18: b        #0x25e20
+   0x00025E1C: bl       #0x1488
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: setOEMFlags
+####################################################################################################
+String raw : 0xF8037
+String VA  : 0xF8037
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x80040
+   0x0007FFF8: add      x2, sp, #8
+   0x0007FFFC: add      x0, x0, #0xcdc
+   0x00080000: mov      x1, xzr
+   0x00080004: ldr      x8, [x8, #8]
+   0x00080008: str      x8, [sp, #0x88]
+   0x0008000C: ldr      x8, [x9, #0x578]
+   0x00080010: str      xzr, [sp, #8]
+   0x00080014: ldr      x8, [x8, #0x140]
+   0x00080018: blr      x8
+   0x0008001C: mov      x19, x0
+   0x00080020: bl       #0x1c20
+   0x00080024: tst      w0, #0xff
+   0x00080028: b.eq     #0x80054
+   0x0008002C: mov      w0, #-0x80000000
+   0x00080030: bl       #0x1c48
+   0x00080034: tst      w0, #0xff
+   0x00080038: b.eq     #0x80054
+   0x0008003C: adrp     x1, #0x10b000
+>> 0x00080040: adrp     x2, #0xf8000
+   0x00080044: add      x1, x1, #0xb7c
+   0x00080048: add      x2, x2, #0x37
+   0x0008004C: mov      w0, #-0x80000000
+   0x00080050: bl       #0x162c
+   0x00080054: cbz      x19, #0x80080
+   0x00080058: bl       #0x1c20
+   0x0008005C: tst      w0, #0xff
+   0x00080060: b.eq     #0x80270
+   0x00080064: mov      w0, #0x40
+   0x00080068: bl       #0x1c48
+   0x0008006C: tst      w0, #0xff
+   0x00080070: b.eq     #0x80270
+   0x00080074: adrp     x1, #0xf5000
+   0x00080078: add      x1, x1, #0xc5f
+   0x0008007C: b        #0x80264
+   0x00080080: add      x8, sp, #0x38
+   0x00080084: mov      w2, #0x48
+   0x00080088: add      x0, x8, #8
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: androidboot.vbmeta.device_state
+####################################################################################################
+String raw : 0xF3025
+String VA  : 0xF3025
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x2D898
+   0x0002D850: bl       #0x2defc
+   0x0002D854: adrp     x2, #0x112000
+   0x0002D858: adrp     x3, #0x10b000
+   0x0002D85C: adrp     x4, #0xef000
+   0x0002D860: adrp     x5, #0x103000
+   0x0002D864: bl       #0x2df28
+   0x0002D868: add      x3, x3, #0x4e0
+   0x0002D86C: mov      w0, #-0x78000000
+   0x0002D870: add      x4, x4, #0x635
+   0x0002D874: add      x5, x5, #0x521
+   0x0002D878: bl       #0x2df34
+   0x0002D87C: mov      w24, #2
+   0x0002D880: b        #0x2dab4
+   0x0002D884: ldrb     w8, [sp, #0x68]
+   0x0002D888: adrp     x9, #0xf3000
+   0x0002D88C: adrp     x10, #0x111000
+   0x0002D890: add      x9, x9, #0x45
+   0x0002D894: add      x10, x10, #0x6c3
+>> 0x0002D898: adrp     x1, #0xf3000
+   0x0002D89C: add      x1, x1, #0x25
+   0x0002D8A0: mov      x0, x19
+   0x0002D8A4: cmp      w8, #0
+   0x0002D8A8: csel     x2, x10, x9, eq
+   0x0002D8AC: bl       #0x2db1c
+   0x0002D8B0: cbz      w0, #0x2dab0
+   0x0002D8B4: subs     w8, w23, #4
+   0x0002D8B8: b.lo     #0x2d91c
+   0x0002D8BC: cmp      w8, #3
+   0x0002D8C0: b.hs     #0x2d97c
+   0x0002D8C4: add      x2, sp, #4
+   0x0002D8C8: mov      x0, x19
+   0x0002D8CC: mov      w1, #1
+   0x0002D8D0: bl       #0x2cd64
+   0x0002D8D4: ldr      x8, [x19, #0x10]
+   0x0002D8D8: mov      x23, xzr
+   0x0002D8DC: mov      w9, #0x10
+   0x0002D8E0: cbz      x8, #0x2d8ec
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: device_unlock.jpg
+####################################################################################################
+String raw : 0xF598C
+String VA  : 0xF598C
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x60A50
+   0x00060A08: ldr      x8, [sp, #0x18]
+   0x00060A0C: ldr      x9, [x9, #8]
+   0x00060A10: cmp      x9, x8
+   0x00060A14: b.ne     #0x60a24
+   0x00060A18: ldr      x30, [sp, #0x20]
+   0x00060A1C: add      sp, sp, #0x30
+   0x00060A20: ret      
+   0x00060A24: bl       #0x1488
+   0x00060A28: udf      #0
+   0x00060A2C: udf      #0
+   0x00060A30: sub      sp, sp, #0x30
+   0x00060A34: str      x30, [sp, #0x20]
+   0x00060A38: adrp     x8, #0x137000
+   0x00060A3C: mov      w0, #0x20
+   0x00060A40: mov      w1, wzr
+   0x00060A44: ldr      x8, [x8, #8]
+   0x00060A48: str      x8, [sp, #0x18]
+   0x00060A4C: bl       #0x610d0
+>> 0x00060A50: adrp     x2, #0xf5000
+   0x00060A54: add      x0, sp, #0x10
+   0x00060A58: add      x2, x2, #0x98c
+   0x00060A5C: add      x1, sp, #8
+   0x00060A60: stp      xzr, xzr, [sp, #8]
+   0x00060A64: bl       #0x60400
+   0x00060A68: ldr      x2, [sp, #0x10]
+   0x00060A6C: cbz      x2, #0x60a84
+   0x00060A70: ldr      x3, [sp, #8]
+   0x00060A74: cbz      x3, #0x60a84
+   0x00060A78: mov      w0, #-2
+   0x00060A7C: mov      w1, #-2
+   0x00060A80: bl       #0x615a0
+   0x00060A84: adrp     x9, #0x137000
+   0x00060A88: ldr      x8, [sp, #0x18]
+   0x00060A8C: ldr      x9, [x9, #8]
+   0x00060A90: cmp      x9, x8
+   0x00060A94: b.ne     #0x60aa4
+   0x00060A98: ldr      x30, [sp, #0x20]
+Pointer-table candidates: 0
+
+====================================================================================================
+EZB6 LINUXLOADER
+====================================================================================================
+File: /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin
+Instructions: 162656
+
+
+####################################################################################################
+TARGET: [OEM]LOCK:%d
+####################################################################################################
+String raw : 0x1087DE
+String VA  : 0x1087DE
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: Unable set the unlock value: %r
+####################################################################################################
+String raw : 0x10099B
+String VA  : 0x10099B
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x26A2C
+   0x000269E4: bl       #0x18e70
+   0x000269E8: str      x0, [sp, #0x10]
+   0x000269EC: ldr      x8, [sp, #0x10]
+   0x000269F0: cbz      x8, #0x26a5c
+   0x000269F4: b        #0x269f8
+   0x000269F8: b        #0x269fc
+   0x000269FC: bl       #0x1c20
+   0x00026A00: and      w8, w0, #0xff
+   0x00026A04: cbz      w8, #0x26a4c
+   0x00026A08: b        #0x26a0c
+   0x00026A0C: b        #0x26a10
+   0x00026A10: mov      w8, #-0x80000000
+   0x00026A14: mov      w0, w8
+   0x00026A18: bl       #0x1c48
+   0x00026A1C: and      w8, w0, #0xff
+   0x00026A20: cbz      w8, #0x26a44
+   0x00026A24: b        #0x26a28
+   0x00026A28: ldr      x2, [sp, #0x10]
+>> 0x00026A2C: adrp     x1, #0x100000
+   0x00026A30: add      x1, x1, #0x99b
+   0x00026A34: mov      w8, #-0x80000000
+   0x00026A38: mov      w0, w8
+   0x00026A3C: bl       #0x162c
+   0x00026A40: b        #0x26a44
+   0x00026A44: b        #0x26a48
+   0x00026A48: b        #0x26a4c
+   0x00026A4C: b        #0x26a50
+   0x00026A50: ldr      x8, [sp, #0x10]
+   0x00026A54: str      x8, [sp, #0x20]
+   0x00026A58: b        #0x26a6c
+   0x00026A5C: b        #0x26a60
+   0x00026A60: ldr      x8, [sp, #0x10]
+   0x00026A64: str      x8, [sp, #0x20]
+   0x00026A68: b        #0x26a6c
+   0x00026A6C: ldr      x8, [sp, #0x20]
+   0x00026A70: str      x8, [sp, #8]
+   0x00026A74: ldr      x9, [sp, #0x28]
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: Unable set the unlock critical value: %r
+####################################################################################################
+String raw : 0x10B70E
+String VA  : 0x10B70E
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x26B34
+   0x00026AEC: bl       #0x18e70
+   0x00026AF0: str      x0, [sp, #0x10]
+   0x00026AF4: ldr      x8, [sp, #0x10]
+   0x00026AF8: cbz      x8, #0x26b64
+   0x00026AFC: b        #0x26b00
+   0x00026B00: b        #0x26b04
+   0x00026B04: bl       #0x1c20
+   0x00026B08: and      w8, w0, #0xff
+   0x00026B0C: cbz      w8, #0x26b54
+   0x00026B10: b        #0x26b14
+   0x00026B14: b        #0x26b18
+   0x00026B18: mov      w8, #-0x80000000
+   0x00026B1C: mov      w0, w8
+   0x00026B20: bl       #0x1c48
+   0x00026B24: and      w8, w0, #0xff
+   0x00026B28: cbz      w8, #0x26b4c
+   0x00026B2C: b        #0x26b30
+   0x00026B30: ldr      x2, [sp, #0x10]
+>> 0x00026B34: adrp     x1, #0x10b000
+   0x00026B38: add      x1, x1, #0x70e
+   0x00026B3C: mov      w8, #-0x80000000
+   0x00026B40: mov      w0, w8
+   0x00026B44: bl       #0x162c
+   0x00026B48: b        #0x26b4c
+   0x00026B4C: b        #0x26b50
+   0x00026B50: b        #0x26b54
+   0x00026B54: b        #0x26b58
+   0x00026B58: ldr      x8, [sp, #0x10]
+   0x00026B5C: str      x8, [sp, #0x20]
+   0x00026B60: b        #0x26b74
+   0x00026B64: b        #0x26b68
+   0x00026B68: ldr      x8, [sp, #0x10]
+   0x00026B6C: str      x8, [sp, #0x20]
+   0x00026B70: b        #0x26b74
+   0x00026B74: ldr      x8, [sp, #0x20]
+   0x00026B78: str      x8, [sp, #8]
+   0x00026B7C: ldr      x9, [sp, #0x28]
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: For device unlock, Draw UnLock Img
+####################################################################################################
+String raw : 0x10C42E
+String VA  : 0x10C42E
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: Device is unlocked, Skipping boot verification
+####################################################################################################
+String raw : 0x112A3D
+String VA  : 0x112A3D
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x1E410
+   0x0001E3C8: b.eq     #0x1e458
+   0x0001E3CC: adrp     x1, #0x105000
+   0x0001E3D0: add      x1, x1, #0x630
+   0x0001E3D4: b        #0x1e448
+   0x0001E3D8: ldrb     w8, [sp]
+   0x0001E3DC: cbz      w8, #0x1e3ec
+   0x0001E3E0: bl       #0x12000
+   0x0001E3E4: tst      w0, #0xff
+   0x0001E3E8: b.eq     #0x1e4c4
+   0x0001E3EC: mov      w0, #1
+   0x0001E3F0: bl       #0x31db0
+   0x0001E3F4: cbz      x0, #0x1e454
+   0x0001E3F8: bl       #0x1c20
+   0x0001E3FC: tst      w0, #0xff
+   0x0001E400: b.eq     #0x1e458
+   0x0001E404: bl       #0x1e7f4
+   0x0001E408: tst      w0, #0xff
+   0x0001E40C: b.eq     #0x1e458
+>> 0x0001E410: adrp     x1, #0x112000
+   0x0001E414: add      x1, x1, #0xa3d
+   0x0001E418: b        #0x1e448
+   0x0001E41C: mov      w0, wzr
+   0x0001E420: bl       #0x31db0
+   0x0001E424: cbz      x0, #0x1e454
+   0x0001E428: bl       #0x1c20
+   0x0001E42C: tst      w0, #0xff
+   0x0001E430: b.eq     #0x1e458
+   0x0001E434: bl       #0x1e7f4
+   0x0001E438: tst      w0, #0xff
+   0x0001E43C: b.eq     #0x1e458
+   0x0001E440: adrp     x1, #0x10c000
+   0x0001E444: add      x1, x1, #0x9af
+   0x0001E448: mov      w0, #0x40
+   0x0001E44C: bl       #0x162c
+   0x0001E450: b        #0x1e458
+   0x0001E454: bl       #0x32380
+   0x0001E458: bl       #0x26640
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: GetUnlockCount
+####################################################################################################
+String raw : 0xF5B9E
+String VA  : 0xF5B9E
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x25E64
+   0x00025E1C: ldr      x8, [x8, #8]
+   0x00025E20: str      x8, [sp, #8]
+   0x00025E24: b        #0x25e28
+   0x00025E28: bl       #0x1c20
+   0x00025E2C: and      w8, w0, #0xff
+   0x00025E30: cbz      w8, #0x25e84
+   0x00025E34: b        #0x25e38
+   0x00025E38: b        #0x25e3c
+   0x00025E3C: mov      w8, #0x40
+   0x00025E40: mov      w0, w8
+   0x00025E44: bl       #0x1c48
+   0x00025E48: and      w8, w0, #0xff
+   0x00025E4C: cbz      w8, #0x25e7c
+   0x00025E50: b        #0x25e54
+   0x00025E54: adrp     x8, #0x18c000
+   0x00025E58: ldr      w3, [x8, #0x7a0]
+   0x00025E5C: adrp     x1, #0x111000
+   0x00025E60: add      x1, x1, #0x57c
+>> 0x00025E64: adrp     x2, #0xf5000
+   0x00025E68: add      x2, x2, #0xb9e
+   0x00025E6C: mov      w8, #0x40
+   0x00025E70: mov      w0, w8
+   0x00025E74: bl       #0x162c
+   0x00025E78: b        #0x25e7c
+   0x00025E7C: b        #0x25e80
+   0x00025E80: b        #0x25e84
+   0x00025E84: b        #0x25e88
+   0x00025E88: adrp     x8, #0x18c000
+   0x00025E8C: ldr      w8, [x8, #0x7a0]
+   0x00025E90: str      w8, [sp, #4]
+   0x00025E94: ldr      x9, [sp, #8]
+   0x00025E98: adrp     x8, #0x13e000
+   0x00025E9C: ldr      x8, [x8, #8]
+   0x00025EA0: subs     x8, x8, x9
+   0x00025EA4: b.ne     #0x25eac
+   0x00025EA8: b        #0x25eb0
+   0x00025EAC: bl       #0x1488
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: IsUnlockCritical
+####################################################################################################
+String raw : 0xFF56E
+String VA  : 0xFF56E
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x25FC4
+   0x00025F7C: ldr      x8, [x8, #8]
+   0x00025F80: str      x8, [sp, #8]
+   0x00025F84: b        #0x25f88
+   0x00025F88: bl       #0x1c20
+   0x00025F8C: and      w8, w0, #0xff
+   0x00025F90: cbz      w8, #0x25fe4
+   0x00025F94: b        #0x25f98
+   0x00025F98: b        #0x25f9c
+   0x00025F9C: mov      w8, #-0x80000000
+   0x00025FA0: mov      w0, w8
+   0x00025FA4: bl       #0x1c48
+   0x00025FA8: and      w8, w0, #0xff
+   0x00025FAC: cbz      w8, #0x25fdc
+   0x00025FB0: b        #0x25fb4
+   0x00025FB4: adrp     x8, #0x18b000
+   0x00025FB8: ldrb     w3, [x8, #0xb0e]
+   0x00025FBC: adrp     x1, #0x111000
+   0x00025FC0: add      x1, x1, #0x57c
+>> 0x00025FC4: adrp     x2, #0xff000
+   0x00025FC8: add      x2, x2, #0x56e
+   0x00025FCC: mov      w8, #-0x80000000
+   0x00025FD0: mov      w0, w8
+   0x00025FD4: bl       #0x162c
+   0x00025FD8: b        #0x25fdc
+   0x00025FDC: b        #0x25fe0
+   0x00025FE0: b        #0x25fe4
+   0x00025FE4: b        #0x25fe8
+   0x00025FE8: adrp     x8, #0x18b000
+   0x00025FEC: ldrb     w8, [x8, #0xb0e]
+   0x00025FF0: str      w8, [sp, #4]
+   0x00025FF4: ldr      x9, [sp, #8]
+   0x00025FF8: adrp     x8, #0x13e000
+   0x00025FFC: ldr      x8, [x8, #8]
+   0x00026000: subs     x8, x8, x9
+   0x00026004: b.ne     #0x2600c
+   0x00026008: b        #0x26010
+   0x0002600C: bl       #0x1488
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: IsUnlocked
+####################################################################################################
+String raw : 0x10A11A
+String VA  : 0x10A11A
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x25F14
+   0x00025ECC: ldr      x8, [x8, #8]
+   0x00025ED0: str      x8, [sp, #8]
+   0x00025ED4: b        #0x25ed8
+   0x00025ED8: bl       #0x1c20
+   0x00025EDC: and      w8, w0, #0xff
+   0x00025EE0: cbz      w8, #0x25f34
+   0x00025EE4: b        #0x25ee8
+   0x00025EE8: b        #0x25eec
+   0x00025EEC: mov      w8, #-0x80000000
+   0x00025EF0: mov      w0, w8
+   0x00025EF4: bl       #0x1c48
+   0x00025EF8: and      w8, w0, #0xff
+   0x00025EFC: cbz      w8, #0x25f2c
+   0x00025F00: b        #0x25f04
+   0x00025F04: adrp     x8, #0x18b000
+   0x00025F08: ldrb     w3, [x8, #0xb0d]
+   0x00025F0C: adrp     x1, #0x111000
+   0x00025F10: add      x1, x1, #0x57c
+>> 0x00025F14: adrp     x2, #0x10a000
+   0x00025F18: add      x2, x2, #0x11a
+   0x00025F1C: mov      w8, #-0x80000000
+   0x00025F20: mov      w0, w8
+   0x00025F24: bl       #0x162c
+   0x00025F28: b        #0x25f2c
+   0x00025F2C: b        #0x25f30
+   0x00025F30: b        #0x25f34
+   0x00025F34: b        #0x25f38
+   0x00025F38: adrp     x8, #0x18b000
+   0x00025F3C: ldrb     w8, [x8, #0xb0d]
+   0x00025F40: str      w8, [sp, #4]
+   0x00025F44: ldr      x9, [sp, #8]
+   0x00025F48: adrp     x8, #0x13e000
+   0x00025F4C: ldr      x8, [x8, #8]
+   0x00025F50: subs     x8, x8, x9
+   0x00025F54: b.ne     #0x25f5c
+   0x00025F58: b        #0x25f60
+   0x00025F5C: bl       #0x1488
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: setOEMFlags
+####################################################################################################
+String raw : 0xFD873
+String VA  : 0xFD873
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x80540
+   0x000804F8: add      x2, sp, #8
+   0x000804FC: add      x0, x0, #0x110
+   0x00080500: mov      x1, xzr
+   0x00080504: ldr      x8, [x8, #8]
+   0x00080508: str      x8, [sp, #0x88]
+   0x0008050C: ldr      x8, [x9, #0x120]
+   0x00080510: str      xzr, [sp, #8]
+   0x00080514: ldr      x8, [x8, #0x140]
+   0x00080518: blr      x8
+   0x0008051C: mov      x19, x0
+   0x00080520: bl       #0x1c20
+   0x00080524: tst      w0, #0xff
+   0x00080528: b.eq     #0x80554
+   0x0008052C: mov      w0, #-0x80000000
+   0x00080530: bl       #0x1c48
+   0x00080534: tst      w0, #0xff
+   0x00080538: b.eq     #0x80554
+   0x0008053C: adrp     x1, #0x111000
+>> 0x00080540: adrp     x2, #0xfd000
+   0x00080544: add      x1, x1, #0xdb0
+   0x00080548: add      x2, x2, #0x873
+   0x0008054C: mov      w0, #-0x80000000
+   0x00080550: bl       #0x162c
+   0x00080554: cbz      x19, #0x80580
+   0x00080558: bl       #0x1c20
+   0x0008055C: tst      w0, #0xff
+   0x00080560: b.eq     #0x80770
+   0x00080564: mov      w0, #0x40
+   0x00080568: bl       #0x1c48
+   0x0008056C: tst      w0, #0xff
+   0x00080570: b.eq     #0x80770
+   0x00080574: adrp     x1, #0xfb000
+   0x00080578: add      x1, x1, #0x143
+   0x0008057C: b        #0x80764
+   0x00080580: add      x8, sp, #0x38
+   0x00080584: mov      w2, #0x48
+   0x00080588: add      x0, x8, #8
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: androidboot.vbmeta.device_state
+####################################################################################################
+String raw : 0xF81EB
+String VA  : 0xF81EB
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x2D9D8
+   0x0002D990: bl       #0x2e03c
+   0x0002D994: adrp     x2, #0x118000
+   0x0002D998: adrp     x3, #0x111000
+   0x0002D99C: adrp     x4, #0xf4000
+   0x0002D9A0: adrp     x5, #0x109000
+   0x0002D9A4: bl       #0x2e068
+   0x0002D9A8: add      x3, x3, #0x683
+   0x0002D9AC: mov      w0, #-0x78000000
+   0x0002D9B0: add      x4, x4, #0x6c8
+   0x0002D9B4: add      x5, x5, #0x8f
+   0x0002D9B8: bl       #0x2e074
+   0x0002D9BC: mov      w24, #2
+   0x0002D9C0: b        #0x2dbf4
+   0x0002D9C4: ldrb     w8, [sp, #0x68]
+   0x0002D9C8: adrp     x9, #0xf8000
+   0x0002D9CC: adrp     x10, #0x117000
+   0x0002D9D0: add      x9, x9, #0x20b
+   0x0002D9D4: add      x10, x10, #0xb91
+>> 0x0002D9D8: adrp     x1, #0xf8000
+   0x0002D9DC: add      x1, x1, #0x1eb
+   0x0002D9E0: mov      x0, x19
+   0x0002D9E4: cmp      w8, #0
+   0x0002D9E8: csel     x2, x10, x9, eq
+   0x0002D9EC: bl       #0x2dc5c
+   0x0002D9F0: cbz      w0, #0x2dbf0
+   0x0002D9F4: subs     w8, w23, #4
+   0x0002D9F8: b.lo     #0x2da5c
+   0x0002D9FC: cmp      w8, #3
+   0x0002DA00: b.hs     #0x2dabc
+   0x0002DA04: add      x2, sp, #4
+   0x0002DA08: mov      x0, x19
+   0x0002DA0C: mov      w1, #1
+   0x0002DA10: bl       #0x2cea4
+   0x0002DA14: ldr      x8, [x19, #0x10]
+   0x0002DA18: mov      x23, xzr
+   0x0002DA1C: mov      w9, #0x10
+   0x0002DA20: cbz      x8, #0x2da2c
+Pointer-table candidates: 1
+
+[PTR 1] raw=0xC9867 VA=0xC9867 width=4
+Code refs to pointer: 0
+
+####################################################################################################
+TARGET: device_unlock.jpg
+####################################################################################################
+String raw : 0xFAE70
+String VA  : 0xFAE70
+Direct code refs: 1
+
+[DIRECT ADRP+ADD] @ 0x60BC0
+   0x00060B78: ldr      x8, [sp, #0x18]
+   0x00060B7C: ldr      x9, [x9, #8]
+   0x00060B80: cmp      x9, x8
+   0x00060B84: b.ne     #0x60b94
+   0x00060B88: ldr      x30, [sp, #0x20]
+   0x00060B8C: add      sp, sp, #0x30
+   0x00060B90: ret      
+   0x00060B94: bl       #0x1488
+   0x00060B98: udf      #0
+   0x00060B9C: udf      #0
+   0x00060BA0: sub      sp, sp, #0x30
+   0x00060BA4: str      x30, [sp, #0x20]
+   0x00060BA8: adrp     x8, #0x13e000
+   0x00060BAC: mov      w0, #0x20
+   0x00060BB0: mov      w1, wzr
+   0x00060BB4: ldr      x8, [x8, #8]
+   0x00060BB8: str      x8, [sp, #0x18]
+   0x00060BBC: bl       #0x61240
+>> 0x00060BC0: adrp     x2, #0xfa000
+   0x00060BC4: add      x0, sp, #0x10
+   0x00060BC8: add      x2, x2, #0xe70
+   0x00060BCC: add      x1, sp, #8
+   0x00060BD0: stp      xzr, xzr, [sp, #8]
+   0x00060BD4: bl       #0x60570
+   0x00060BD8: ldr      x2, [sp, #0x10]
+   0x00060BDC: cbz      x2, #0x60bf4
+   0x00060BE0: ldr      x3, [sp, #8]
+   0x00060BE4: cbz      x3, #0x60bf4
+   0x00060BE8: mov      w0, #-2
+   0x00060BEC: mov      w1, #-2
+   0x00060BF0: bl       #0x61790
+   0x00060BF4: adrp     x9, #0x13e000
+   0x00060BF8: ldr      x8, [sp, #0x18]
+   0x00060BFC: ldr      x9, [x9, #8]
+   0x00060C00: cmp      x9, x8
+   0x00060C04: b.ne     #0x60c14
+   0x00060C08: ldr      x30, [sp, #0x20]
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [BLDP] unlock_count = %d
+####################################################################################################
+String raw : 0x10C2C2
+String VA  : 0x10C2C2
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [BLDP] kg_state = 0x%x
+####################################################################################################
+String raw : 0x10AEA5
+String VA  : 0x10AEA5
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [BLDP] kg_fuse = 0x%x
+####################################################################################################
+String raw : 0x106258
+String VA  : 0x106258
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [BLDP] secure_boot = 0x%x
+####################################################################################################
+String raw : 0x10026D
+String VA  : 0x10026D
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: [BLDP] vbmeta_type = 0x%x
+####################################################################################################
+String raw : 0xFB585
+String VA  : 0xFB585
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: ClearDdiPreviousBldpData
+####################################################################################################
+String raw : 0xF5344
+String VA  : 0xF5344
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: CopyDdiData
+####################################################################################################
+String raw : 0x101621
+String VA  : 0x101621
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: SetDdiBootMode
+####################################################################################################
+String raw : 0xF8E8B
+String VA  : 0xF8E8B
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: SetDdiKernelType
+####################################################################################################
+String raw : 0x10E762
+String VA  : 0x10E762
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: SetDdiRebootReason
+####################################################################################################
+String raw : 0x105040
+String VA  : 0x105040
+Direct code refs: 0
+Pointer-table candidates: 0
+
+####################################################################################################
+TARGET: GetKGFuseFromBL
+####################################################################################################
+String raw : 0x10D58E
+String VA  : 0x10D58E
+Direct code refs: 0
+Pointer-table candidates: 0

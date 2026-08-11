@@ -1,0 +1,33 @@
+====================================================================================================
+BOOT CALLER COMPARISON
+====================================================================================================
+
+CXDF initializer call : 0x8CF8
+EZB6 initializer call : 0x8D0C
+
+CXDF caller function  : 0x8B28-0x9780
+EZB6 caller function  : 0x8B3C-0x97F0
+
+CXDF instructions     : 791
+EZB6 instructions     : 814
+Instruction delta     : +23
+
+Relaxed similarity    : 98.07%
+Semi-strict similarity: 83.61%
+
+CXDF direct BL calls  : 163
+EZB6 direct BL calls  : 171
+
+REMOVED REFERENCED STRINGS
+----------------------------------------------------------------------------------------------------
+00:12:50
+May  8 2024
+
+ADDED REFERENCED STRINGS
+----------------------------------------------------------------------------------------------------
+15:06:39
+Feb 13 2026
+
+INTERESTING NEW STRINGS
+----------------------------------------------------------------------------------------------------
+(none)

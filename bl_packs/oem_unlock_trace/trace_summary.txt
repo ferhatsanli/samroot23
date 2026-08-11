@@ -1,0 +1,261 @@
+TARGET: [OEM]Oem unlock value is %d
+String raw : 0xA00DB
+String VA  : 0xA00DB
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [FRP][OEM] init succeed!
+String raw : 0x99E05
+String VA  : 0x99E05
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [OEM]PLC:%x
+String raw : 0x97A9A
+String VA  : 0x97A9A
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [OEM]Unlock buffer Allocate fail
+String raw : 0xA7F21
+String VA  : 0xA7F21
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: OEM LOCK : %a (%a%x)
+String raw : 0xA4004
+String VA  : 0xA4004
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: OEM LOCK : %a (%a)
+String raw : 0x9B035
+String VA  : 0x9B035
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: IsUnlocked
+String raw : 0xA34A0
+String VA  : 0xA34A0
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x27EF4
+Pointer-table candidates: 0
+TARGET: IsUnlocked
+String raw : 0xA482A
+String VA  : 0xA482A
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x287E4
+Pointer-table candidates: 0
+TARGET: SetDdiBootMode
+String raw : 0x99851
+String VA  : 0x99851
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: SetDdiRebootReason
+String raw : 0xA1374
+String VA  : 0xA1374
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: GetKGFuseFromBL
+String raw : 0xA6524
+String VA  : 0xA6524
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [OEM]Oem unlock value is %d
+String raw : 0xFF629
+String VA  : 0xFF629
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [FRP][OEM] init succeed!
+String raw : 0xF6066
+String VA  : 0xF6066
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [OEM]PLC:%x
+String raw : 0xF2975
+String VA  : 0xF2975
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [OEM]Unlock buffer Allocate fail
+String raw : 0x10C114
+String VA  : 0x10C114
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [OEM]LOCK:%d
+String raw : 0x102CD9
+String VA  : 0x102CD9
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: Unable set the unlock value: %r
+String raw : 0xFB09D
+String VA  : 0xFB09D
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x268EC
+Pointer-table candidates: 0
+TARGET: Unable set the unlock critical value: %r
+String raw : 0x1059F1
+String VA  : 0x1059F1
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x269F4
+Pointer-table candidates: 0
+TARGET: For device unlock, Draw UnLock Img
+String raw : 0x1066F3
+String VA  : 0x1066F3
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: Device is unlocked, Skipping boot verification
+String raw : 0x10C76E
+String VA  : 0x10C76E
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x1E2D0
+Pointer-table candidates: 0
+TARGET: GetUnlockCount
+String raw : 0xF0B28
+String VA  : 0xF0B28
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x25D24
+Pointer-table candidates: 0
+TARGET: IsUnlockCritical
+String raw : 0xF9C0F
+String VA  : 0xF9C0F
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x25E84
+Pointer-table candidates: 0
+TARGET: IsUnlocked
+String raw : 0x1044DE
+String VA  : 0x1044DE
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x25DD4
+Pointer-table candidates: 0
+TARGET: setOEMFlags
+String raw : 0xF8037
+String VA  : 0xF8037
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x80040
+Pointer-table candidates: 0
+TARGET: androidboot.vbmeta.device_state
+String raw : 0xF3025
+String VA  : 0xF3025
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x2D898
+Pointer-table candidates: 0
+TARGET: device_unlock.jpg
+String raw : 0xF598C
+String VA  : 0xF598C
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x60A50
+Pointer-table candidates: 0
+TARGET: [OEM]LOCK:%d
+String raw : 0x1087DE
+String VA  : 0x1087DE
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: Unable set the unlock value: %r
+String raw : 0x10099B
+String VA  : 0x10099B
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x26A2C
+Pointer-table candidates: 0
+TARGET: Unable set the unlock critical value: %r
+String raw : 0x10B70E
+String VA  : 0x10B70E
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x26B34
+Pointer-table candidates: 0
+TARGET: For device unlock, Draw UnLock Img
+String raw : 0x10C42E
+String VA  : 0x10C42E
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: Device is unlocked, Skipping boot verification
+String raw : 0x112A3D
+String VA  : 0x112A3D
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x1E410
+Pointer-table candidates: 0
+TARGET: GetUnlockCount
+String raw : 0xF5B9E
+String VA  : 0xF5B9E
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x25E64
+Pointer-table candidates: 0
+TARGET: IsUnlockCritical
+String raw : 0xFF56E
+String VA  : 0xFF56E
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x25FC4
+Pointer-table candidates: 0
+TARGET: IsUnlocked
+String raw : 0x10A11A
+String VA  : 0x10A11A
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x25F14
+Pointer-table candidates: 0
+TARGET: setOEMFlags
+String raw : 0xFD873
+String VA  : 0xFD873
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x80540
+Pointer-table candidates: 0
+TARGET: androidboot.vbmeta.device_state
+String raw : 0xF81EB
+String VA  : 0xF81EB
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x2D9D8
+Pointer-table candidates: 1
+[PTR 1] raw=0xC9867 VA=0xC9867 width=4
+TARGET: device_unlock.jpg
+String raw : 0xFAE70
+String VA  : 0xFAE70
+Direct code refs: 1
+[DIRECT ADRP+ADD] @ 0x60BC0
+Pointer-table candidates: 0
+TARGET: [BLDP] unlock_count = %d
+String raw : 0x10C2C2
+String VA  : 0x10C2C2
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [BLDP] kg_state = 0x%x
+String raw : 0x10AEA5
+String VA  : 0x10AEA5
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [BLDP] kg_fuse = 0x%x
+String raw : 0x106258
+String VA  : 0x106258
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [BLDP] secure_boot = 0x%x
+String raw : 0x10026D
+String VA  : 0x10026D
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: [BLDP] vbmeta_type = 0x%x
+String raw : 0xFB585
+String VA  : 0xFB585
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: ClearDdiPreviousBldpData
+String raw : 0xF5344
+String VA  : 0xF5344
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: CopyDdiData
+String raw : 0x101621
+String VA  : 0x101621
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: SetDdiBootMode
+String raw : 0xF8E8B
+String VA  : 0xF8E8B
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: SetDdiKernelType
+String raw : 0x10E762
+String VA  : 0x10E762
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: SetDdiRebootReason
+String raw : 0x105040
+String VA  : 0x105040
+Direct code refs: 0
+Pointer-table candidates: 0
+TARGET: GetKGFuseFromBL
+String raw : 0x10D58E
+String VA  : 0x10D58E
+Direct code refs: 0
+Pointer-table candidates: 0

@@ -1,0 +1,183 @@
+========================================
+ Samsung ABL comparison report
+========================================
+
+=== BASIC FILE INFO ===
+CXDF/abl.elf: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, no section header
+EZB6/abl.elf: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, no section header
+
+=== SIZE ===
+CXDF/abl.elf : 4194304 bytes
+EZB6/abl.elf : 4194304 bytes
+
+=== SHA-256 ===
+d5587c4b5699e7f8026f400350663336b0c16722c84c41bf07bb302f0ac3fed2  CXDF/abl.elf
+b092b4e808bc56703af441b812379de38fea37ec25cfb7939828311365df7da3  EZB6/abl.elf
+
+=== BINARY EQUALITY ===
+Files are DIFFERENT
+
+=== FIRST BINARY DIFFERENCE ===
+  4185 222 374
+  4189 202 220
+  4190 242  52
+  4193 152 170
+  4194 242  52
+  4223  61 121
+  4236 244 265
+  4237 200 167
+  4238 327 127
+  4239 372 343
+
+=== TOOL DETECTION ===
+readelf tool : NOT FOUND
+objdump tool : objdump
+otool        : /usr/bin/otool
+
+
+=== ELF ANALYSIS ===
+No readelf/greadelf found.
+Skipping ELF header/section analysis.
+
+=== INTERESTING STRINGS: CXDF ===
+gkGk
+-kG;
+9Fkg
+KG$&
+KG_!'
+KGp!~
+M`kgy
+MkG'W-
+Oem9
+P%kG
+`RKg
+fKGV
+hSkg
+kgq!
+kgtG
+oEmr
+v4KgI
+
+=== INTERESTING STRINGS: EZB6 ===
+-Wm(kg
+EKGo
+GSKGFf
+Kg?iAN
+KgL`
+Kga.cv
+VkG<f
+X:5#kg8}9
+]Kgj)$
+dKg/
+kGU2
+kg.t1s
+kg:9
+kgGQ
+
+=== UNIQUE INTERESTING STRING DIFFERENCES ===
+-gkGk
+--kG;
+-9Fkg
+-KG$&
+-KG_!'
+-KGp!~
+-M`kgy
+-MkG'W-
+-Oem9
+-P%kG
+-`RKg
+-fKGV
+-hSkg
+-kgq!
+-kgtG
+-oEmr
+-v4KgI
++-Wm(kg
++EKGo
++GSKGFf
++Kg?iAN
++KgL`
++Kga.cv
++VkG<f
++X:5#kg8}9
++]Kgj)$
++dKg/
++kGU2
++kg.t1s
++kg:9
++kgGQ
+
+=== OBJDUMP SECTION HEADERS: CXDF ===
+
+CXDF/abl.elf:	file format elf32-littlearm
+
+Sections:
+Idx Name          Size     VMA      Type
+  0 PT_LOAD#1     00252000 9fa00000 TEXT
+
+=== OBJDUMP SECTION HEADERS: EZB6 ===
+
+EZB6/abl.elf:	file format elf32-littlearm
+
+Sections:
+Idx Name          Size     VMA      Type
+  0 PT_LOAD#1     00252000 9fa00000 TEXT
+
+=== OBJDUMP SECTION HEADER DIFF ===
+--- /tmp/cxdf_objdump_sections.txt	2026-08-10 18:57:35
++++ /tmp/ezb6_objdump_sections.txt	2026-08-10 18:57:35
+@@ -1,5 +1,5 @@
+ 
+-CXDF/abl.elf:	file format elf32-littlearm
++EZB6/abl.elf:	file format elf32-littlearm
+ 
+ Sections:
+ Idx Name          Size     VMA      Type
+
+=== FIRST 256 BYTES: CXDF ===
+00000000: 7f45 4c46 0101 0100 0000 0000 0000 0000  .ELF............
+00000010: 0200 2800 0100 0000 0000 a09f 3400 0000  ..(.........4...
+00000020: 0000 0000 0000 0000 3400 2000 0300 0000  ........4. .....
+00000030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000040: 0000 0000 9400 0000 0000 0000 0000 0007  ................
+00000050: 0000 0000 0100 0000 0010 0000 0000 a09f  ................
+00000060: 0000 a09f 0020 2500 0020 2500 0700 0000  ..... %.. %.....
+00000070: 0010 0000 0000 0000 0030 2500 0000 0000  .........0%.....
+00000080: 0000 0000 380f 0000 380f 0000 0000 0002  ....8...8.......
+00000090: 0010 0000 0000 0000 0000 0000 0000 0000  ................
+000000a0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000b0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000c0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000d0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000e0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000f0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+=== FIRST 256 BYTES: EZB6 ===
+00000000: 7f45 4c46 0101 0100 0000 0000 0000 0000  .ELF............
+00000010: 0200 2800 0100 0000 0000 a09f 3400 0000  ..(.........4...
+00000020: 0000 0000 0000 0000 3400 2000 0300 0000  ........4. .....
+00000030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000040: 0000 0000 9400 0000 0000 0000 0000 0007  ................
+00000050: 0000 0000 0100 0000 0010 0000 0000 a09f  ................
+00000060: 0000 a09f 0020 2500 0020 2500 0700 0000  ..... %.. %.....
+00000070: 0010 0000 0000 0000 0030 2500 0000 0000  .........0%.....
+00000080: 0000 0000 380f 0000 380f 0000 0000 0002  ....8...8.......
+00000090: 0010 0000 0000 0000 0000 0000 0000 0000  ................
+000000a0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000b0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000c0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000d0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000e0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000f0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+=== FIRST 256 BYTE DIFF ===
+
+=== DIFFERENCE DENSITY SAMPLE ===
+Compared bytes : 4194304
+Differing bytes: 825872
+Difference rate: 19.6903%
+Changed 4K blocks: 206/1024
+
+========================================
+ END OF REPORT
+========================================

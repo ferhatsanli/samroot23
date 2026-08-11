@@ -1,0 +1,45 @@
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.report.txt	2026-08-10 19:06:34
++++ /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.report.txt	2026-08-10 19:06:35
+@@ -1,25 +1,25 @@
+         Type         |        Subtype        |   Base   |   Size   |  CRC32   |   Name 
+- Image               | UEFI                  | 00000000 | 00252000 | B0BF34EE |  UEFI image
+- Volume              | FFSv2                 | 00000000 | 00252000 | B0BF34EE | - 8C8CE578-8A3D-4F1C-9935-896185C32DD3
+- File                | Volume image          | 00000048 | 000CA282 | BD949F14 | -- 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792
+- Section             | GUID defined          | 00000060 | 000CA26A | 87201323 | --- EE4E5898-3914-4259-9D6E-DC7BD79403CF
++ Image               | UEFI                  | 00000000 | 00252000 | EE437298 |  UEFI image
++ Volume              | FFSv2                 | 00000000 | 00252000 | EE437298 | - 8C8CE578-8A3D-4F1C-9935-896185C32DD3
++ File                | Volume image          | 00000048 | 000C2A90 | 1283B97B | -- 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792
++ Section             | GUID defined          | 00000060 | 000C2A78 | 1DF3C851 | --- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+  Section             | Raw                   |   N/A    | 00000004 | CA4DE08B | ---- Raw section
+- Section             | Volume image          |   N/A    | 003831C4 | D09436EA | ---- Volume image section
+- Volume              | FFSv2                 |   N/A    | 003831C0 | 3FA0222B | ----- 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3
+- File                | Application           |   N/A    | 0011802C | 5CDA6645 | ------ ABA3B456-5469-414A-9F79-47CECBD7C04E | Odin
++ Section             | Volume image          |   N/A    | 003851C4 | CA7C3A12 | ---- Volume image section
++ Volume              | FFSv2                 |   N/A    | 003851C0 | E5A791C7 | ----- 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3
++ File                | Application           |   N/A    | 0012402C | A044D337 | ------ ABA3B456-5469-414A-9F79-47CECBD7C04E | Odin
+  Section             | UI                    |   N/A    | 0000000E | 0A936800 | ------- UI section
+- Section             | PE32 image            |   N/A    | 00118004 | 7FBA4C38 | ------- PE32 image section
+- File                | Application           |   N/A    | 001B6038 | EA9968B0 | ------ F536D559-459F-48FA-8BBC-43B554ECAE8D | LinuxLoader
++ Section             | PE32 image            |   N/A    | 00124004 | 7C5FD848 | ------- PE32 image section
++ File                | Application           |   N/A    | 001AC038 | A6C66B8F | ------ F536D559-459F-48FA-8BBC-43B554ECAE8D | LinuxLoader
+  Section             | UI                    |   N/A    | 0000001C | 92012C79 | ------- UI section
+- Section             | PE32 image            |   N/A    | 001B6004 | 7F202EA6 | ------- PE32 image section
+- File                | Application           |   N/A    | 0009E034 | 4D9A731F | ------ FB925AC7-192A-9567-8586-7C6F5F710607 | Cryptest
++ Section             | PE32 image            |   N/A    | 001AC004 | ABD0E8BC | ------- PE32 image section
++ File                | Application           |   N/A    | 0009E034 | 7C15351F | ------ FB925AC7-192A-9567-8586-7C6F5F710607 | Cryptest
+  Section             | UI                    |   N/A    | 00000016 | 381B2281 | ------- UI section
+- Section             | PE32 image            |   N/A    | 0009E004 | 74225E13 | ------- PE32 image section
+- File                | Application           |   N/A    | 0000B034 | B62729A2 | ------ 1F6EE9C8-82E8-4DFF-8B57-F9281BC18517 | QuestSOD
++ Section             | PE32 image            |   N/A    | 0009E004 | 45AD1813 | ------- PE32 image section
++ File                | Application           |   N/A    | 0000B034 | E661AE19 | ------ 1F6EE9C8-82E8-4DFF-8B57-F9281BC18517 | QuestSOD
+  Section             | UI                    |   N/A    | 00000016 | 157DF753 | ------- UI section
+- Section             | PE32 image            |   N/A    | 0000B004 | CA848C17 | ------- PE32 image section
+- File                | Application           |   N/A    | 0000C034 | B10DD72E | ------ 9A70E61C-F392-4AA1-8B48-3F84009885E0 | QuestUSB
++ Section             | PE32 image            |   N/A    | 0000B004 | 9AC20BAC | ------- PE32 image section
++ File                | Application           |   N/A    | 0000C034 | FD1FF97B | ------ 9A70E61C-F392-4AA1-8B48-3F84009885E0 | QuestUSB
+  Section             | UI                    |   N/A    | 00000016 | 826D63E8 | ------- UI section
+- Section             | PE32 image            |   N/A    | 0000C004 | 60B38F4B | ------- PE32 image section
++ Section             | PE32 image            |   N/A    | 0000C004 | 2CA1A11E | ------- PE32 image section
+  Free space          |                       |   N/A    | 00000038 | D8BBABFB | ------ Volume free space
+- Free space          |                       | 000CA2D0 | 00187D30 | 2BA1C3EB | -- Volume free space
++ Free space          |                       | 000C2AD8 | 0018F528 | DE2B4BA4 | -- Volume free space

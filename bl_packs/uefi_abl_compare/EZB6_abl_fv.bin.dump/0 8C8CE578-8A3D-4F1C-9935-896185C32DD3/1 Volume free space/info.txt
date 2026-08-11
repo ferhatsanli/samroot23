@@ -1,0 +1,7 @@
+Type: Free space
+Subtype: 
+Base: C2AD8h
+Offset: C2AD8h
+Full size: 18F528h (1635624)
+Body size: 18F528h (1635624)
+

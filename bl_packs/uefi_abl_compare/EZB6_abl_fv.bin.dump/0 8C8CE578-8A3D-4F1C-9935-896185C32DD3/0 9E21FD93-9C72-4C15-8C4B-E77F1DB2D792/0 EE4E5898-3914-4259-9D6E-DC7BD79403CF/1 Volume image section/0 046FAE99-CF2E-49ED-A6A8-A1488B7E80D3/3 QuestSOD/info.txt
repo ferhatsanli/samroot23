@@ -1,0 +1,13 @@
+Type: File
+Subtype: Application
+Text: QuestSOD
+Offset: 36E118h
+Full size: B034h (45108)
+Header size: 18h (24)
+Body size: B01Ch (45084)
+File GUID: 1F6EE9C8-82E8-4DFF-8B57-F9281BC18517
+Type: 09h
+Attributes: 00h
+State: F8h
+Header checksum: A4h, valid
+Data checksum: AAh, valid

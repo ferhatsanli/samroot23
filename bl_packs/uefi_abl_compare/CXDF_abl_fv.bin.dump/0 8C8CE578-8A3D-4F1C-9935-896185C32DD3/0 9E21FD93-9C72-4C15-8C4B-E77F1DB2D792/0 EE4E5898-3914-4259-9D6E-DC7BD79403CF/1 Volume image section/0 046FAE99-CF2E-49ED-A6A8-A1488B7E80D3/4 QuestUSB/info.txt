@@ -1,0 +1,13 @@
+Type: File
+Subtype: Application
+Text: QuestUSB
+Offset: 377150h
+Full size: C034h (49204)
+Header size: 18h (24)
+Body size: C01Ch (49180)
+File GUID: 9A70E61C-F392-4AA1-8B48-3F84009885E0
+Type: 09h
+Attributes: 00h
+State: F8h
+Header checksum: F4h, valid
+Data checksum: AAh, valid

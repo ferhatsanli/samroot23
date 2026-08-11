@@ -1,0 +1,144 @@
+==================================================
+ Samsung ABL focused binary analysis
+ OLD: CXDF/abl.elf
+ NEW: EZB6/abl.elf
+==================================================
+
+[1] Basic ELF information
+-------------------------
+CXDF/abl.elf: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, no section header
+EZB6/abl.elf: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, no section header
+
+[2] Tool detection
+------------------
+objdump: objdump
+python3: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3
+
+[3] Locating changed regions
+----------------------------
+Image size      : 4194304 bytes
+Changed blocks  : 206
+
+Merged regions  : 2
+
+REGION 001 FILE=0x00001000-0x000CC000 VA=0x9FA01000-0x9FACC000 SIZE=831488 DIFF=824837 RATE=99.20%
+REGION 002 FILE=0x00253000-0x00256000 VA=0x9FC53000-0x9FC56000 SIZE=12288 DIFF=1035 RATE=8.42%
+
+Top regions by number of differing bytes:
+
+REGION 001: offset 0x00001000-0x000CC000 VA 0x9FA01000 diff=824837/831488 (99.20%)
+REGION 002: offset 0x00253000-0x00256000 VA 0x9FC53000 diff=1035/12288 (8.42%)
+
+Executable PT_LOAD:
+  differing bytes: 824837/2433024 (33.902%)
+
+Keyword-like strings in OLD:
+
+Keyword-like strings in NEW:
+
+[4] Generating ARM disassembly
+------------------------------
+CXDF disassembly:
+       1 abl_analysis/cxdf_disassembly.txt
+EZB6 disassembly:
+       1 abl_analysis/ezb6_disassembly.txt
+
+[5] Disassembly diff statistics
+--------------------------------
+Diff lines:
+       0 abl_analysis/disassembly.diff
+
+First meaningful disassembly differences:
+
+
+[6] First changed region context
+--------------------------------
+First difference offset: 0x1058
+
+--- CXDF ---
+00000fd8: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000fe8: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000ff8: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00001008: 0000 0000 0000 0000 78e5 8c8c 3d8a 1c4f  ........x...=..O
+00001018: 9935 8961 85c3 2dd3 0020 2500 0000 0000  .5.a..-.. %.....
+00001028: 5f46 5648 fffe 0300 4800 1bc2 0000 0002  _FVH....H.......
+00001038: 9012 0000 0002 0000 0000 0000 0000 0000  ................
+00001048: 93fd 219e 729c 154c 8c4b e77f 1db2 d792  ..!.r..L.K......
+00001058: 92aa 0b00 82a2 0cf8 6aa2 0c02 9858 4eee  ........j....XN.
+00001068: 1439 5942 9d6e dc7b d794 03cf 1800 0100  .9YB.n.{........
+00001078: 5d00 0000 01c8 3138 0000 0000 0000 0200  ].....18........
+00001088: 3273 dea4 80d7 fac5 d20d aafd 9808 6edd  2s............n.
+00001098: c893 4475 dc3c 2cc1 7b7a 7611 db90 2e46  ..Du.<,.{zv....F
+000010a8: 0700 9edc 6c53 ade6 fed2 9060 88a2 0756  ....lS.....`...V
+000010b8: 6450 d059 318f 0a0a 19bd 3f13 ae43 9413  dP.Y1.....?..C..
+000010c8: 092e a72c f2a5 7446 083e 783b 69f8 7f67  ...,..tF.>x;i..g
+000010d8: 9484 6276 8e9f 10a0 4e6b e95f 650d 39c6  ..bv....Nk._e.9.
+000010e8: 650f 9336 f75c 8f1d 39eb 2e7d b770 acb0  e..6.\..9..}.p..
+000010f8: 1be5 540e ee44 df53 86ba bb65 f7a8 075c  ..T..D.S...e...\
+00001108: 1521 2057 4794 6246 259a 3151 5293 9148  .! WG.bF%.1QR..H
+00001118: 8068 2827 5399 031d 1f26 afae 3dde bade  .h('S....&..=...
+00001128: a6c1 6d8c 8257 ca85 4922 d772 1e6d 259d  ..m..W..I".r.m%.
+00001138: 2232 5281 3d45 2168 8a4f a15a 8b51 2072  "2R.=E!h.O.Z.Q r
+00001148: fce4 48ec 3365 cb97 05b5 760b d94c 378c  ..H.3e....v..L7.
+00001158: 8a13 f467 7dd7 1d24 df67 b497 f381 a401  ...g}..$.g......
+00001168: 35d6 e407 b99c 6d36 bfa4 79bc b559 dc7c  5.....m6..y..Y.|
+00001178: 0059 a78e 8999 879b dc80 fe8d 3bac ceb3  .Y..........;...
+00001188: 7908 2bdb 28b2 61df bbca 5457 7f28 208d  y.+.(.a...TW.( .
+00001198: 5598 02ca c2ec 11c3 f909 66f7 f7bf 9ed7  U.........f.....
+000011a8: 065f 060f c430 dff0 83ba e796 304d 2901  ._...0......0M).
+000011b8: da2b a7a3 b8e6 3b1a d78c b693 0298 80ac  .+....;.........
+000011c8: 592c 8d35 c1d2 501c bc98 cd86 62dd 020c  Y,.5..P.....b...
+
+--- EZB6 ---
+00000fd8: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000fe8: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000ff8: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00001008: 0000 0000 0000 0000 78e5 8c8c 3d8a 1c4f  ........x...=..O
+00001018: 9935 8961 85c3 2dd3 0020 2500 0000 0000  .5.a..-.. %.....
+00001028: 5f46 5648 fffe 0300 4800 1bc2 0000 0002  _FVH....H.......
+00001038: 9012 0000 0002 0000 0000 0000 0000 0000  ................
+00001048: 93fd 219e 729c 154c 8c4b e77f 1db2 d792  ..!.r..L.K......
+00001058: fcaa 0b00 902a 0cf8 782a 0c02 9858 4eee  .....*..x*...XN.
+00001068: 1439 5942 9d6e dc7b d794 03cf 1800 0100  .9YB.n.{........
+00001078: 5d00 0000 01c8 5138 0000 0000 0000 0200  ].....Q8........
+00001088: 3273 deb5 7757 e3ef 3616 711b f69b 1c4f  2s..wW..6.q....O
+00001098: 8814 4add f37a b8cd adec a468 e6f5 5af2  ..J..z.....h..Z.
+000010a8: 7a09 d4d5 de6f 9a22 2ec5 20ef fe0a bbbf  z....o.".. .....
+000010b8: 1e24 0c2e 8096 5794 dfe5 ce62 f76e 6baf  .$....W....b.nk.
+000010c8: a9d9 8b91 c102 11eb b74b 26c5 e31d 01ad  .........K&.....
+000010d8: f1d5 252d 9472 12c4 08e9 e499 0e94 9d76  ..%-.r.........v
+000010e8: f910 3d05 3d3f 7820 9c8e 16b0 c16e c21c  ..=.=?x .....n..
+000010f8: 292f cc8d 24f9 b11c e3ad 716d feed 27e6  )/..$.....qm..'.
+00001108: 6439 45b9 5bd9 33fa d56f 75ae 7ed7 4e6d  d9E.[.3..ou.~.Nm
+00001118: a8f6 342e 7a13 edf2 f607 80aa 1ccf a979  ..4.z..........y
+00001128: c94a d1bd 14cf 4327 cd99 3021 7ccc 2ac4  .J....C'..0!|.*.
+00001138: 2f24 d8d5 66d7 e09b 0152 8eb2 6933 d15f  /$..f....R..i3._
+00001148: 5a19 ae70 3253 3b2b 76a6 6691 6cf2 deb4  Z..p2S;+v.f.l...
+00001158: d88d 75a8 e75d 2f2f 98f5 c1e5 9011 14c7  ..u..]//........
+00001168: 73f0 994e 6b60 d0af 039b a5fd e64a 657b  s..Nk`.......Je{
+00001178: 8bee 5857 de7f a949 f9f5 614a ed89 5b49  ..XW...I..aJ..[I
+00001188: 4572 2b18 5236 947e 2a30 a5fa 9d73 ab33  Er+.R6.~*0...s.3
+00001198: 9a2b 6879 86be a56a 3492 08bb 94fd eba0  .+hy...j4.......
+000011a8: af5a 6845 8e7a e404 fd4d 4efe a68c cd88  .ZhE.z...MN.....
+000011b8: 2516 1edc 6500 74ff 435b 0c50 7860 d2f5  %...e.t.C[.Px`..
+000011c8: 954d b2d0 8af3 8720 6ddb f41c 9700 b649  .M..... m......I
+
+==================================================
+ SUMMARY FILES
+==================================================
+total 32
+-rw-r--r--  1 ferhatsanli  staff   194B Aug 10 19:00 changed_regions.txt
+-rw-r--r--  1 ferhatsanli  staff    98B Aug 10 19:00 cxdf_disassembly.txt
+-rw-r--r--  1 ferhatsanli  staff     0B Aug 10 19:00 disassembly.diff
+-rw-r--r--  1 ferhatsanli  staff    98B Aug 10 19:00 ezb6_disassembly.txt
+-rw-r--r--  1 ferhatsanli  staff   479B Aug 10 19:00 fine_ranges.txt
+
+Most useful report for next step:
+
+    abl_analysis/changed_regions.txt
+
+Also useful:
+
+    abl_analysis/disassembly.diff
+
+==================================================

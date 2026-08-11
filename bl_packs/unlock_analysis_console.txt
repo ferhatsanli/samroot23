@@ -1,0 +1,334 @@
+============================================================
+ Samsung ABL OEM Unlock path analyzer
+============================================================
+
+=== MODULES ===
+
+OLD Odin:
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin
+
+NEW Odin:
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin
+
+OLD LinuxLoader:
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin
+
+NEW LinuxLoader:
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin
+
+=== MODULE SIZES ===
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin : 1146880 bytes
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin : 1196032 bytes
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin : 1794048 bytes
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin : 1753088 bytes
+
+=== MODULE SHA256 ===
+e5f2ef0e884cbca2bd2d86e0598efff202ccf136362b3837fe1d55f073786200  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin
+eeb074103510219b450d30b4dbaf1315cd2b58b61a393441c10f981fa5f0c51a  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin
+5e58ad88c1318ea5bc38295c0dc3d254ff37dcaaf17ec212d5b36265a951de0f  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin
+edce402b5f515a3c1ca21b8f6b34a41b989626baeaef6b2c59c25c51a1c492bd  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin
+
+=== PYTHON ENVIRONMENT ===
+Python: Python 3.13.1
+
+Analyzing CXDF ODIN ...
+Analyzing EZB6 ODIN ...
+Analyzing CXDF LINUXLOADER ...
+Analyzing EZB6 LINUXLOADER ...
+
+============================================================
+ ANALYSIS FINISHED
+============================================================
+
+Generated:
+
+/Users/ferhatsanli/Desktop/samroot/bl_packs/unlock_path_analysis/unlock_xref_report.txt
+/Users/ferhatsanli/Desktop/samroot/bl_packs/unlock_path_analysis/unlock_string_diff.txt
+
+
+============================================================
+ REPORT SUMMARY
+============================================================
+
+Interesting string changes:
+
+==============================================================================
+ODIN IMPORTANT STRING CHANGES
+==============================================================================
+
+--- REMOVED IN EZB6 ---
+ OEM LOCK : %a (%a%x)
+ OEM LOCK : %a (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseIoLibIntrinsic/IoLibArm.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/PitUpdate.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/out/target/product/dm1q/obj/ABL_OBJ/Build/DEBUG_CLANG35/AARCH64/QcomModulePkg/Application/OdinApp/OdinApp_8550/DEBUG/AutoGen.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/out/target/product/dm1q/obj/ABL_OBJ/Build/DEBUG_CLANG35/AARCH64/QcomModulePkg/Application/OdinApp/OdinApp_8550/DEBUG/Odin.dll
+[FRP][OEM] init succeed!
+[OEM]Oem unlock value is %d
+[OEM]PLC:%x
+[OEM]Unlock buffer Allocate fail
+]vbmeta
+
++++ ADDED IN EZB6 +++
+%a: Saving RebootReason mode: [0x%x] in DDI.
+%a: Saving bootloader mode: [%d] in DDI.
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseIoLibIntrinsic/IoLibArm.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/PitUpdate.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/out/target/product/dm1q/obj/ABL_OBJ/Build/DEBUG_CLANG35/AARCH64/QcomModulePkg/Application/OdinApp/OdinApp_8550/DEBUG/AutoGen.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/out/target/product/dm1q/obj/ABL_OBJ/Build/DEBUG_CLANG35/AARCH64/QcomModulePkg/Application/OdinApp/OdinApp_8550/DEBUG/Odin.dll
+4vbmeta
+GetKGFuseFromBL
+SetDdiBootMode
+SetDdiRebootReason
+[BLDP] %a : Error. Failed to set bootloader event on DDI
+[BLDP] %a : bootloader_event = 0x%x
+[BLDP] %a : bootloader_event_target[] = %a
+[KG] KGFuseBL %a : %d.%d
+tz_kg_a
+tz_kg_b
+vbmeta_b
+
+
+==============================================================================
+LINUXLOADER IMPORTANT STRING CHANGES
+==============================================================================
+
+--- REMOVED IN EZB6 ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseIoLibIntrinsic/IoLibArm.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LShiftU64.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/Board.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/UpdateDeviceTree.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_chain_partition_descriptor.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_cmdline.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_descriptor.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_footer.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_hash_descriptor.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_hashtree_descriptor.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_kernel_cmdline_descriptor.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_property_descriptor.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_rsa.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_slot_verify.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_util.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_vbmeta_image.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/out/target/product/dm1q/obj/ABL_OBJ/Build/DEBUG_CLANG35/AARCH64/QcomModulePkg/Application/LinuxLoader/LinuxLoader/DEBUG/AutoGen.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/out/target/product/dm1q/obj/ABL_OBJ/Build/DEBUG_CLANG35/AARCH64/QcomModulePkg/Application/LinuxLoader/LinuxLoader/DEBUG/LinuxLoader.dll
+0"kg%
+[FMM]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+[FMM]QseecomStartApp (vk) call success status=%d, vaultkeeperappid=%d
+[FRP][OEM] init succeed!
+[OEM]Oem unlock value is %d
+[OEM]PLC:%x
+[OEM]Unlock buffer Allocate fail
+
++++ ADDED IN EZB6 +++
+%a: Copying DDI data.
+%a: Deleting previous boot data from DDI.
+%a: Saving RebootReason mode: [0x%x] in DDI.
+%a: Saving bootloader mode: [%d] in DDI.
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseIoLibIntrinsic/IoLibArm.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LShiftU64.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/Board.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/UpdateDeviceTree.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_chain_partition_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_cmdline.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_footer.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_hash_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_hashtree_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_kernel_cmdline_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_property_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_rsa.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_slot_verify.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_util.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_vbmeta_image.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/out/target/product/dm1q/obj/ABL_OBJ/Build/DEBUG_CLANG35/AARCH64/QcomModulePkg/Application/LinuxLoader/LinuxLoader/DEBUG/AutoGen.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/out/target/product/dm1q/obj/ABL_OBJ/Build/DEBUG_CLANG35/AARCH64/QcomModulePkg/Application/LinuxLoader/LinuxLoader/DEBUG/LinuxLoader.dll
+ClearDdiPreviousBldpData
+CopyDdiData
+GetKGFuseFromBL
+SetDdiBootMode
+SetDdiKernelType
+SetDdiRebootReason
+[BLDP] %a : Error. Failed to clear previous data on DDI
+[BLDP] %a : Error. Failed to set bootloader event on DDI
+[BLDP] %a : Error. No previous boot data in DDI.
+[BLDP] %a : GetVbmetaType() = %d
+[BLDP] %a : Previous boot data found in DDI.
+[BLDP] %a : bootloader_event = 0x%x
+[BLDP] %a : bootloader_event_target[] = %a
+[BLDP] %a : vbmeta_type %d -> %d
+[BLDP] %a : vbmeta_type %d unknown
+[BLDP] bootloader_event = 0x%x
+[BLDP] bootloader_event_target[] = %a
+[BLDP] bootloader_mode = %d
+[BLDP] bootloader_rp = 0x%x
+[BLDP] kg_fuse = 0x%x
+[BLDP] kg_state = 0x%x
+[BLDP] secure_boot = 0x%x
+[BLDP] unlock_count = %d
+[BLDP] vbmeta_type = 0x%x
+[FMM]QseecomStartApp (%a) call Failed, status=%d, vaultkeeperappid=%d
+[FMM]QseecomStartApp (%a) call success status=%d, vaultkeeperappid=%d
+[KG] KGFuseBL %a : %d.%d
+androidboot.vbmeta.invalidate_on_error=
+bldp_internal_set_kg_info
+bldp_internal_set_secure_boot_info
+bldp_internal_set_vbmeta_type
+
+
+
+============================================================
+
+Full ARM64 xref report:
+
+/Users/ferhatsanli/Desktop/samroot/bl_packs/unlock_path_analysis/unlock_xref_report.txt
+
+String diff:
+
+/Users/ferhatsanli/Desktop/samroot/bl_packs/unlock_path_analysis/unlock_string_diff.txt
+
+============================================================

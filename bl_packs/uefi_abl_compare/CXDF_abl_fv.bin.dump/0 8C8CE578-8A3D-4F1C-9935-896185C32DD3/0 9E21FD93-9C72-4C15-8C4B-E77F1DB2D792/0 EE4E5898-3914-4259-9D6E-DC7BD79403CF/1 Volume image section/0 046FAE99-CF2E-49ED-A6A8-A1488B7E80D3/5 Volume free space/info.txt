@@ -1,0 +1,6 @@
+Type: Free space
+Subtype: 
+Offset: 383188h
+Full size: 38h (56)
+Body size: 38h (56)
+

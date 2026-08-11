@@ -1,0 +1,1477 @@
+============================================================
+ Samsung ABL / UEFI Firmware Volume Analyzer
+============================================================
+
+=== [1] ELF / FV STRUCTURE ===
+
+FILE: /Users/ferhatsanli/Desktop/samroot/bl_packs/CXDF/abl.elf
+ELF entry       : 0x9FA00000
+Program headers : 3
+
+PHDR 0: type=0x0 offset=0x0 vaddr=0x0 filesz=0x94 memsz=0x0 flags=0x7000000 align=0x0
+PHDR 1: type=0x1 offset=0x1000 vaddr=0x9FA00000 filesz=0x252000 memsz=0x252000 flags=0x7 align=0x1000
+PHDR 2: type=0x0 offset=0x253000 vaddr=0x0 filesz=0xF38 memsz=0xF38 flags=0x2000000 align=0x1000
+
+_FVH signatures : 1
+
+FV start        : 0x1000
+FV signature    : 0x1028
+Filesystem GUID : 8C8CE578-8A3D-4F1C-9935-896185C32DD3
+FV length       : 0x252000 (2433024 bytes)
+FV end          : 0x253000
+Header length   : 0x48
+Attributes      : 0x3FEFF
+Ext header      : 0x0
+Revision        : 2
+Extracted       : /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin
+FV SHA256       : 4bfdb1a5fe64f2c19b2742205b4995fd8ba698784f897c35550bd4345e818d29
+
+FILE: /Users/ferhatsanli/Desktop/samroot/bl_packs/EZB6/abl.elf
+ELF entry       : 0x9FA00000
+Program headers : 3
+
+PHDR 0: type=0x0 offset=0x0 vaddr=0x0 filesz=0x94 memsz=0x0 flags=0x7000000 align=0x0
+PHDR 1: type=0x1 offset=0x1000 vaddr=0x9FA00000 filesz=0x252000 memsz=0x252000 flags=0x7 align=0x1000
+PHDR 2: type=0x0 offset=0x253000 vaddr=0x0 filesz=0xF38 memsz=0xF38 flags=0x2000000 align=0x1000
+
+_FVH signatures : 1
+
+FV start        : 0x1000
+FV signature    : 0x1028
+Filesystem GUID : 8C8CE578-8A3D-4F1C-9935-896185C32DD3
+FV length       : 0x252000 (2433024 bytes)
+FV end          : 0x253000
+Header length   : 0x48
+Attributes      : 0x3FEFF
+Ext header      : 0x0
+Revision        : 2
+Extracted       : /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin
+FV SHA256       : 1555aca4ba4b0386517c16084d75a015c5385782451a3136d7b2bd63e8321403
+
+=== [2] UEFIEXTRACT SETUP ===
+UEFIExtract not installed.
+Cloning official UEFITool repository...
+Cloning into '/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool'...
+Building UEFIExtract...
+-- The C compiler identification is AppleClang 21.0.0.21000101
+-- The CXX compiler identification is AppleClang 21.0.0.21000101
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (3.2s)
+-- Generating done (0.3s)
+-- Build files have been written to: /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/build-uefiextract
+[  1%] Building CXX object CMakeFiles/UEFIExtract.dir/ffsdumper.cpp.o
+[  2%] Building CXX object CMakeFiles/UEFIExtract.dir/uefidump.cpp.o
+[  5%] Building CXX object CMakeFiles/UEFIExtract.dir/uefiextract_main.cpp.o
+[  6%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/filesystem.cpp.o
+[  6%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/guiddatabase.cpp.o
+[  7%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/descriptor.cpp.o
+[  8%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/types.cpp.o
+[ 10%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/ffs.cpp.o
+[ 11%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/nvram.cpp.o
+[ 12%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/treeitem.cpp.o
+[ 14%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/ffsreport.cpp.o
+[ 15%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/ffsparser.cpp.o
+[ 16%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/common/platform.c.o
+[ 17%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/common/dictionary.c.o
+[ 19%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/dec/bit_reader.c.o
+[ 20%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/meparser.cpp.o
+[ 21%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/LZMA/LzmaDecompress.c.o
+[ 23%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/fitparser.cpp.o
+[ 24%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/LZMA/SDK/C/CpuArch.c.o
+[ 25%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/dec/huffman.c.o
+[ 26%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/dell_dvar.cpp.o
+[ 29%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/edk2_ftw.cpp.o
+[ 30%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/common/shared_dictionary.c.o
+[ 32%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/amd_microcode.cpp.o
+[ 33%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/utility.cpp.o
+[ 35%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/peimage.cpp.o
+[ 35%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/common/context.c.o
+[ 37%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/nvramparser.cpp.o
+[ 38%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/common/constants.c.o
+[ 39%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/common/transform.c.o
+[ 41%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/dec/prefix.c.o
+[ 42%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/intel_acm.cpp.o
+[ 42%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/treemodel.cpp.o
+[ 43%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/Tiano/EfiTianoDecompress.c.o
+[ 44%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/dec/decode.c.o
+[ 46%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/bstrlib/bstrlib.c.o
+[ 47%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/dec/static_init.c.o
+[ 48%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/LZMA/SDK/C/LzmaDec.c.o
+[ 50%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/intel_acbp_v2.cpp.o
+[ 51%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/LZMA/SDK/C/Bra.c.o
+[ 52%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/ustring.cpp.o
+[ 53%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/brotli/dec/state.c.o
+[ 55%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/ami_nvar.cpp.o
+[ 56%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/insyde_fdc.cpp.o
+[ 57%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/LZMA/SDK/C/Bra86.c.o
+[ 58%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/ms_slic_marker.cpp.o
+[ 60%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/edk2_vss2.cpp.o
+[ 61%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/phoenix_evsa.cpp.o
+[ 62%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/bstrlib/bstrwrap.cpp.o
+[ 64%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/intel_acbp_v1.cpp.o
+[ 65%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/intel_keym_v1.cpp.o
+[ 66%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/edk2_vss.cpp.o
+[ 69%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/ms_slic_pubkey.cpp.o
+[ 69%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/apple_sysf.cpp.o
+[ 70%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/insyde_fdm.cpp.o
+[ 71%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/phoenix_flm.cpp.o
+[ 73%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/generated/intel_keym_v2.cpp.o
+[ 74%] Building CXX object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/kaitai/kaitaistream.cpp.o
+[ 75%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/digest/sha512.c.o
+[ 76%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/zutil.c.o
+[ 78%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/digest/sha1.c.o
+[ 79%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/inflate.c.o
+[ 80%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/gzclose.c.o
+[ 82%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/compress.c.o
+[ 83%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/inftrees.c.o
+[ 84%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/deflate.c.o
+[ 85%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/gzwrite.c.o
+[ 87%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/digest/sha256.c.o
+[ 88%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/trees.c.o
+[ 89%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/gzread.c.o
+[ 91%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/crc32.c.o
+[ 92%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/gzlib.c.o
+[ 93%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/inffast.c.o
+[ 94%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/infback.c.o
+[ 98%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/uncompr.c.o
+[ 98%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/zlib/adler32.c.o
+[ 96%] Building C object CMakeFiles/UEFIExtract.dir/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/common/digest/sm3.c.o
+[100%] Linking CXX executable uefiextract
+[100%] Built target UEFIExtract
+
+Using:
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/tools/UEFITool/build-uefiextract/uefiextract
+
+NE alpha 76 (Aug 10 2026)
+
+=== [3] EXTRACTING CXDF FIRMWARE TREE ===
+parse: not a single Volume Top File is found, the image may be corrupted
+
+CXDF UEFIExtract exit code: 0
+
+=== [4] EXTRACTING EZB6 FIRMWARE TREE ===
+parse: not a single Volume Top File is found, the image may be corrupted
+
+EZB6 UEFIExtract exit code: 0
+
+=== [5] EXTRACTION RESULTS ===
+[OK] /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump
+[OK] /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump
+[OK] /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.report.txt
+[OK] /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.report.txt
+
+=== [6] UEFI TREE REPORT DIFF ===
+Total report diff lines:
+      45 /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/uefi_report.diff
+
+--- First 300 report differences ---
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.report.txt	2026-08-10 19:06:34
++++ /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.report.txt	2026-08-10 19:06:35
+@@ -1,25 +1,25 @@
+         Type         |        Subtype        |   Base   |   Size   |  CRC32   |   Name 
+- Image               | UEFI                  | 00000000 | 00252000 | B0BF34EE |  UEFI image
+- Volume              | FFSv2                 | 00000000 | 00252000 | B0BF34EE | - 8C8CE578-8A3D-4F1C-9935-896185C32DD3
+- File                | Volume image          | 00000048 | 000CA282 | BD949F14 | -- 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792
+- Section             | GUID defined          | 00000060 | 000CA26A | 87201323 | --- EE4E5898-3914-4259-9D6E-DC7BD79403CF
++ Image               | UEFI                  | 00000000 | 00252000 | EE437298 |  UEFI image
++ Volume              | FFSv2                 | 00000000 | 00252000 | EE437298 | - 8C8CE578-8A3D-4F1C-9935-896185C32DD3
++ File                | Volume image          | 00000048 | 000C2A90 | 1283B97B | -- 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792
++ Section             | GUID defined          | 00000060 | 000C2A78 | 1DF3C851 | --- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+  Section             | Raw                   |   N/A    | 00000004 | CA4DE08B | ---- Raw section
+- Section             | Volume image          |   N/A    | 003831C4 | D09436EA | ---- Volume image section
+- Volume              | FFSv2                 |   N/A    | 003831C0 | 3FA0222B | ----- 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3
+- File                | Application           |   N/A    | 0011802C | 5CDA6645 | ------ ABA3B456-5469-414A-9F79-47CECBD7C04E | Odin
++ Section             | Volume image          |   N/A    | 003851C4 | CA7C3A12 | ---- Volume image section
++ Volume              | FFSv2                 |   N/A    | 003851C0 | E5A791C7 | ----- 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3
++ File                | Application           |   N/A    | 0012402C | A044D337 | ------ ABA3B456-5469-414A-9F79-47CECBD7C04E | Odin
+  Section             | UI                    |   N/A    | 0000000E | 0A936800 | ------- UI section
+- Section             | PE32 image            |   N/A    | 00118004 | 7FBA4C38 | ------- PE32 image section
+- File                | Application           |   N/A    | 001B6038 | EA9968B0 | ------ F536D559-459F-48FA-8BBC-43B554ECAE8D | LinuxLoader
++ Section             | PE32 image            |   N/A    | 00124004 | 7C5FD848 | ------- PE32 image section
++ File                | Application           |   N/A    | 001AC038 | A6C66B8F | ------ F536D559-459F-48FA-8BBC-43B554ECAE8D | LinuxLoader
+  Section             | UI                    |   N/A    | 0000001C | 92012C79 | ------- UI section
+- Section             | PE32 image            |   N/A    | 001B6004 | 7F202EA6 | ------- PE32 image section
+- File                | Application           |   N/A    | 0009E034 | 4D9A731F | ------ FB925AC7-192A-9567-8586-7C6F5F710607 | Cryptest
++ Section             | PE32 image            |   N/A    | 001AC004 | ABD0E8BC | ------- PE32 image section
++ File                | Application           |   N/A    | 0009E034 | 7C15351F | ------ FB925AC7-192A-9567-8586-7C6F5F710607 | Cryptest
+  Section             | UI                    |   N/A    | 00000016 | 381B2281 | ------- UI section
+- Section             | PE32 image            |   N/A    | 0009E004 | 74225E13 | ------- PE32 image section
+- File                | Application           |   N/A    | 0000B034 | B62729A2 | ------ 1F6EE9C8-82E8-4DFF-8B57-F9281BC18517 | QuestSOD
++ Section             | PE32 image            |   N/A    | 0009E004 | 45AD1813 | ------- PE32 image section
++ File                | Application           |   N/A    | 0000B034 | E661AE19 | ------ 1F6EE9C8-82E8-4DFF-8B57-F9281BC18517 | QuestSOD
+  Section             | UI                    |   N/A    | 00000016 | 157DF753 | ------- UI section
+- Section             | PE32 image            |   N/A    | 0000B004 | CA848C17 | ------- PE32 image section
+- File                | Application           |   N/A    | 0000C034 | B10DD72E | ------ 9A70E61C-F392-4AA1-8B48-3F84009885E0 | QuestUSB
++ Section             | PE32 image            |   N/A    | 0000B004 | 9AC20BAC | ------- PE32 image section
++ File                | Application           |   N/A    | 0000C034 | FD1FF97B | ------ 9A70E61C-F392-4AA1-8B48-3F84009885E0 | QuestUSB
+  Section             | UI                    |   N/A    | 00000016 | 826D63E8 | ------- UI section
+- Section             | PE32 image            |   N/A    | 0000C004 | 60B38F4B | ------- PE32 image section
++ Section             | PE32 image            |   N/A    | 0000C004 | 2CA1A11E | ------- PE32 image section
+  Free space          |                       |   N/A    | 00000038 | D8BBABFB | ------ Volume free space
+- Free space          |                       | 000CA2D0 | 00187D30 | 2BA1C3EB | -- Volume free space
++ Free space          |                       | 000C2AD8 | 0018F528 | DE2B4BA4 | -- Volume free space
+
+=== [7] MODULE-LEVEL HASH COMPARISON ===
+OLD extracted files : 69
+NEW extracted files : 69
+Common paths        : 69
+Identical files     : 30
+Changed files       : 39
+Only OLD            : 0
+Only NEW            : 0
+
+========== CHANGED FILES ==========
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin
+  OLD: 1146880 bytes e5f2ef0e884cbca2bd2d86e0598efff202ccf136362b3837fe1d55f073786200
+  NEW: 1196032 bytes eeb074103510219b450d30b4dbaf1315cd2b58b61a393441c10f981fa5f0c51a
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/header.bin
+  OLD: 4 bytes 05346eab526a14235a9543e49738005c991c2c163cc3d7140934a28c03bdfd32
+  NEW: 4 bytes 95b8ac8fd7782bea1e2cd7e7389f375f15819e122c60f5a14aea257670bb1187
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/info.txt
+  OLD: 361 bytes a972243e1b293375459f71a998cc0da123458ab7155b4b1ad48f06ce259f3bc1
+  NEW: 361 bytes e7d5312055b67f0f027bef7aa3dcfe07a2fd4ef34fc311571e6ebd71eb1cc394
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/body.bin
+  OLD: 1146900 bytes 8dd781d66c034dfe48fe256b811f4312712e5fa18a94961583b12f06c2c8c17f
+  NEW: 1196052 bytes 383685eed6dc446f783eaff54252d634fbded2ad5efe0e66baa6e2db6937340e
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/header.bin
+  OLD: 24 bytes 9915b3d8f664140576ac77414b95c213747914a952c2e4eedc288a6b15e58e03
+  NEW: 24 bytes d67b7eebdd64d84df8beeb860b462201925edccaed81fb851e7e957ba3bf40ee
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/info.txt
+  OLD: 274 bytes d9663ed019c7a5262c986f8cb362400c134ab348ca14c211430e1c62aac68005
+  NEW: 274 bytes 6f109ea3963eebc488f5b5a2175d50077d67d49e2e5cd90b978717f0c744892d
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin
+  OLD: 1794048 bytes 5e58ad88c1318ea5bc38295c0dc3d254ff37dcaaf17ec212d5b36265a951de0f
+  NEW: 1753088 bytes edce402b5f515a3c1ca21b8f6b34a41b989626baeaef6b2c59c25c51a1c492bd
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/header.bin
+  OLD: 4 bytes f9c566d02130cd2269684c87a70d792b8f3a5371c481eece872d5120adf78910
+  NEW: 4 bytes 46793112d704a36c3b1ae5de45b47f54de1ba4692e5d23dc107c7b4c5a570215
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/info.txt
+  OLD: 361 bytes acf5224dace28bd204edbccec48115beba0134d73f52e08c092d810629e9bd99
+  NEW: 361 bytes 2bfc65a5074ba442f5171a84dfec0b919c22d70cfb1ad5a24ca7fb2ff5f3c962
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/body.bin
+  OLD: 1794080 bytes c90e183669731209354af35cb12c01b37c699d4940c501f5b5c677cf857668f5
+  NEW: 1753120 bytes 21062cb6fac6793c5b7e807c05bf166b569bda853397f9fc00169b44fa29b620
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/header.bin
+  OLD: 24 bytes 57add4284360e4ab3b288f2db7e7987fd44a8d8b7995c016a88f6840eac51d21
+  NEW: 24 bytes ab1d25e401859b5bde8911dcb7b595c674e76b76503c5468092685300ec0ee16
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/info.txt
+  OLD: 285 bytes d16385ae3fbfb007b2e60bd8b1b1c29a1ff156939839b1299b7004d064fe5a39
+  NEW: 285 bytes d6e9f087986305820b9f742dc4554d3b9264e4cfae30d2fcf159af057a91df12
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/body.bin
+  OLD: 647168 bytes 8fe00125aa97bf2ee3cf75188de2c7aa6dd475788c3d6c4a8129b2788821915c
+  NEW: 647168 bytes 212814992992e84c568ff9c7fbefc7a287028ae5e7000cb4795655ba872a26fe
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/body.bin
+  OLD: 647196 bytes 498addbf02559953e5b470d1b9f8da651153281759a569e95143663bcc79ad1c
+  NEW: 647196 bytes 60d71604472d9a0151076c9be7ce5c3a67c00b776536c20c5588de781228c541
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/info.txt
+  OLD: 278 bytes 01f6a812eea8426981da98675aa8d5f1c4fed41bea46dd34d0fdb2a770a7688b
+  NEW: 278 bytes 5626cb69b14480f1a1292049cb6eaf34a930ccc8e9058b247f19b6db8afb745f
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/body.bin
+  OLD: 45056 bytes 835e2f30bdcfd35c7951c311ca8f45649f7af48fdaad3289190ddb87395dee56
+  NEW: 45056 bytes eb4fdc471ae36e405f4c58caf1fa3bae8d738483ac9324c839aac1a8ea2965f6
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/body.bin
+  OLD: 45084 bytes f4218adf36cc2f29c5695798a9a4e15e9303b8110f4ad38ebb8d2e90e78bb5ac
+  NEW: 45084 bytes 40c7a7231868daec14e6bde9718eb41c042c299de051002b2dde34eb5baba856
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/info.txt
+  OLD: 274 bytes e37e24ec5d6d50e1d4c07da4790e705dffc73ee8162da2c13c4af108d08a0594
+  NEW: 274 bytes c46c93d4e0d8b51b9c202dabaad64d3d35c304a639c7a106f55537ce38bc7a99
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/body.bin
+  OLD: 49152 bytes a61eaaa9c773a922ae42f96895b23e841801dc8a0683b4edd979cde46e8b55ee
+  NEW: 49152 bytes 26f7989526205db451a96f68bf4e38fa2d930127c0fb95ee0ddabda8bd32f389
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/body.bin
+  OLD: 49180 bytes c178b10996618d2a25a3e376bbf845bf0e3de986435dc3267aeea7df8fe34c03
+  NEW: 49180 bytes 7112367ff1ce6dea2c841994c4abb96061f258661e88e816670574f43e1ce85d
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/info.txt
+  OLD: 274 bytes 22bee17f37b16e432cdff171f80f31d28a9fb25ea731049c5dcc387490f2d016
+  NEW: 274 bytes 1a762693f22e12f6301468101bb61d79ad09cc3b9808fd17d8761d6ce5ca7263
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/5 Volume free space/info.txt
+  OLD: 84 bytes 2b13b7478c9fa2571ed2a69b8363505dbee78f01fc3c82817101c5171c752cb7
+  NEW: 84 bytes 9be46c315cf50cad518a5312ce660237b4603c0dd0b55e4efc2d82edd8b81d4c
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/body.bin
+  OLD: 3682632 bytes db14e0c627c9ee79eacfb73a10ce2513f9981a07cd4f63d4b6bcbe6fd0f263e5
+  NEW: 3690824 bytes bcb42e6f981ec0fabb04f656e2db9364ad61c5bebc58ba606e23b7b74e184dc9
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/header.bin
+  OLD: 120 bytes 0b45c584087ef1038501bd42a606eeee8b172e1a3f106bc52a3ac9902e28f6c9
+  NEW: 120 bytes 6d61d821c0f18d886e8950c7f9eb586bcc9241ed9ccd38d677cfa0d2b3eb93ef
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/info.txt
+  OLD: 446 bytes f56deecd66bf885906f45f2dbdb45b745b3faefbf8f6bec1c60d95ca4a003fd6
+  NEW: 446 bytes 2db3f9e1d9f8646efae54b3fe6ac164bd81509359795afffb5bebe88f45c4f97
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/body.bin
+  OLD: 3682752 bytes 528aeab7f00e4dd0205a194d4259cd0828114f6124ca657a62701590efe5baaf
+  NEW: 3690944 bytes 7c74921f61e737fdbd0c4e025f83cf38bf79a65cee2d9e7e0b356f56b8f85a29
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/header.bin
+  OLD: 4 bytes 733f275ddfab5bcf5b0d28fbcef0d6bbfd05085eac9a08efb8366eef13a02dfe
+  NEW: 4 bytes e55860cd3194eaa757da3d226cc2e5915258b78461183b3e990e1c012b512017
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/info.txt
+  OLD: 136 bytes 12f1146a6729f6cfb31ce9e002e7d9039b6447d14480e0caa2d63e28d76b68e5
+  NEW: 136 bytes b04f74db7e370921fa8a3b563fc36175c2ee80f0353e2f13f8189bfefa838230
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/body.bin
+  OLD: 827986 bytes 389488c8fba7ff2d00190494a0718ac4e2496bc7294190582cfffe39f6475e8b
+  NEW: 797280 bytes 63ba0c84aac2808dd4e06a02eeeed73fd94af5f1732672d97957ba4959e53c2b
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/header.bin
+  OLD: 24 bytes 3d5c6c59208da31b550759a19a46fb244fc43d3e65d8789ad05f20f27e38f65e
+  NEW: 24 bytes 899c1c17f2bfdc294c4a516cea1af51ce4716afba1e890f3bc29f8483d4378c7
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/info.txt
+  OLD: 310 bytes ab031f931d57f917781613593ee00a7bcc7b0f38b646677dcb7d0553ab4c1630
+  NEW: 310 bytes 5aebcdf8c506f12433e01d44a1054d603b53fd221e567332e5c03197ec624b4f
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/unc_data.bin
+  OLD: 3682760 bytes 8d68032a5b9bd6cb5f408da4c61b2a3d97d04594d276ab5efdceeb68b24b9065
+  NEW: 3690952 bytes e0923eecaa51c930f87e6ca8fa9f1fc124ee50a43d98b00e73d6beda0d02b81d
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/body.bin
+  OLD: 828010 bytes 929893ed7a93f0869fbed34d8e59a2a5174c5a3fb12a4e48b16665f2df73a5cd
+  NEW: 797304 bytes 8013e94b1e06a851382b507b1ee3a47103483238395a901656e38d57cdc8e1e5
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/header.bin
+  OLD: 24 bytes 6e4692083a946ccc8a94581d69b7a52b12987644e983cb5884515621402d651f
+  NEW: 24 bytes 269879e425cb31957787c43944776409d9503a9938dcb37f58abcf5894d32a77
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/info.txt
+  OLD: 270 bytes 78ba69297b7029fe31a10b457af2daa9c4f5aee4bd27aeae0dce59f3c3a629ab
+  NEW: 270 bytes a26ad255b85bf242872b7d4ff3e6d7511f4a953087cede1232c2297723128463
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/1 Volume free space/body.bin
+  OLD: 1604912 bytes 9434cc521df4926898685964c6767763f0df613d6680ab66050dfb9a602522fc
+  NEW: 1635624 bytes f6a16a04bed7898625f00d0d208749f35dff8f8df4d918db5cd51e87e406624f
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/1 Volume free space/info.txt
+  OLD: 114 bytes bffdb00031fdce97cdfa52daa6de6085eff3426450aa360251101fbb8437bb3a
+  NEW: 114 bytes fdc04ace55a25f43aa3106886afcac971a61f9382a0f2a56459e95bb651f2685
+
+0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/body.bin
+  OLD: 2432952 bytes 1b44a4cb9bb74a723886e198dad9422df2cd28687fa5c9a58d45eb1f3e947531
+  NEW: 2432952 bytes 9a7c566baab0ef719dabd8275f4e4e6c59f24fcf8ffcf0bc19d51816110ddf55
+
+body.bin
+  OLD: 2433024 bytes 4bfdb1a5fe64f2c19b2742205b4995fd8ba698784f897c35550bd4345e818d29
+  NEW: 2433024 bytes 1555aca4ba4b0386517c16084d75a015c5385782451a3136d7b2bd63e8321403
+
+========== ONLY OLD ==========
+
+========== ONLY NEW ==========
+
+=== [8] EXECUTABLE MODULES ===
+
+===== /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump =====
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/body.bin: Matlab v4 mat-file (little endian) =ŠO™5‰a…Ã-Ó, numeric, rows 0, columns 0
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/1 Volume free space/body.bin: ISO-8859 text, with very long lines (65536), with no line terminators
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/1 Volume free space/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/body.bin: Matlab v4 mat-file (little endian) =ŠO™5‰a…Ã-ÓÀ18, numeric, rows 0, columns 0
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/body.bin: MS-DOS executable PE32+ executable (EFI application) Aarch64, for MS Windows
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/0 UI section/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/0 UI section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/0 UI section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/body.bin: MS-DOS executable PE32+ executable (EFI application) Aarch64, for MS Windows
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/0 UI section/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/0 UI section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/0 UI section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin: MS-DOS executable PE32+ executable (EFI application) Aarch64, for MS Windows
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/0 UI section/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/0 UI section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/0 UI section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/5 Volume free space/body.bin: ISO-8859 text, with no line terminators
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/5 Volume free space/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/body.bin: MS-DOS executable PE32+ executable (EFI application) Aarch64, for MS Windows
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/0 UI section/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/0 UI section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/0 UI section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/header.bin: Matlab v4 mat-file (little endian) =ŠO™5‰a…Ã-ÓÀ18, numeric, rows 0, columns 0
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin: MS-DOS executable PE32+ executable (EFI application) Aarch64, for MS Windows
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/0 UI section/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/0 UI section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/0 UI section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/body.bin: LZMA compressed data, non-streamed, size 3682760
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/0 Raw section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/0 Raw section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/unc_data.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/header.bin: Matlab v4 mat-file (little endian) =ŠO™5‰a…Ã-Ó, numeric, rows 0, columns 0
+
+===== /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump =====
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/body.bin: Matlab v4 mat-file (little endian) =ŠO™5‰a…Ã-Ó, numeric, rows 0, columns 0
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/1 Volume free space/body.bin: ISO-8859 text, with very long lines (65536), with no line terminators
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/1 Volume free space/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/body.bin: Matlab v4 mat-file (little endian) =ŠO™5‰a…Ã-ÓÀQ8, numeric, rows 0, columns 0
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/body.bin: MS-DOS executable PE32+ executable (EFI application) Aarch64, for MS Windows
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/0 UI section/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/0 UI section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/0 UI section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/body.bin: MS-DOS executable PE32+ executable (EFI application) Aarch64, for MS Windows
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/0 UI section/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/0 UI section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/0 UI section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin: MS-DOS executable PE32+ executable (EFI application) Aarch64, for MS Windows
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/0 UI section/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/0 UI section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/0 UI section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/5 Volume free space/body.bin: ISO-8859 text, with no line terminators
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/5 Volume free space/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/body.bin: MS-DOS executable PE32+ executable (EFI application) Aarch64, for MS Windows
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/0 UI section/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/0 UI section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/0 UI section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/header.bin: Matlab v4 mat-file (little endian) =ŠO™5‰a…Ã-ÓÀQ8, numeric, rows 0, columns 0
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin: MS-DOS executable PE32+ executable (EFI application) Aarch64, for MS Windows
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/0 UI section/body.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/0 UI section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/0 UI section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/body.bin: LZMA compressed data, non-streamed, size 3690952
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/0 Raw section/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/0 Raw section/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/info.txt: ASCII text
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/unc_data.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/header.bin: data
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/header.bin: Matlab v4 mat-file (little endian) =ŠO™5‰a…Ã-Ó, numeric, rows 0, columns 0
+
+=== [9] BOOTLOADER / UNLOCK KEYWORD SEARCH ===
+
+==================================================
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump
+==================================================
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ QUALCOMM SECUREBOOT : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+Already set the warrantybit
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[%a]: has cust tk but not bootloader 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+Success set the warrantybit
+[OEM]Oem unlock value is %d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/x509/x509_vfy.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/Pk/CryptPkcs7Sign.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/x509/x509_vfy.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/Pk/CryptPkcs7Sign.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ QUALCOMM SECUREBOOT : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+Already set the warrantybit
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[%a]: has cust tk but not bootloader 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+Success set the warrantybit
+[OEM]Oem unlock value is %d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+VB2: The device unlocked %d times
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_vbmeta_image.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ERROR: Device State %a,AvbSlotVerify returned %a
+GetUnlockCount
+androidboot.vbmeta.hash_alg
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_hashtree_descriptor.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/UpdateDeviceTree.c
+AuthVbmetaOnboot
+No fastboot support for flashless chipsets, Infinte loop
+androidboot.vbmeta.device_state
+unlocked
+VB2: Found SecurityLevel from vbmeta (override)
+vbmeta
+Unlock
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+androidboot.vbmeta.size
+device_unlock.jpg
+ValidateVbmetaPublicKey: public key length too large %d
+assert fail: avb_strcmp(slot_data->vbmeta_images[0].partition_name, "boot") == 0
+[KnoxCustom] knoxcustom_value : %x 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+VB2: Found OsVersion from vbmeta (override)
+assert fail: ops->validate_vbmeta_public_key != NULL
+ERROR_NOT_ALLOW_DEBUG_VBMETA
+: Error verifying vbmeta image: invalid vbmeta header
+ androidboot.verifiedbootstate=
+androidboot.vbmeta.digest
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+VBMETA : No sign info
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+IsUnlockCritical
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+VB2: The device unlocked %d times
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_vbmeta_image.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ERROR: Device State %a,AvbSlotVerify returned %a
+GetUnlockCount
+androidboot.vbmeta.hash_alg
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_hashtree_descriptor.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/UpdateDeviceTree.c
+AuthVbmetaOnboot
+No fastboot support for flashless chipsets, Infinte loop
+androidboot.vbmeta.device_state
+unlocked
+VB2: Found SecurityLevel from vbmeta (override)
+vbmeta
+Unlock
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+androidboot.vbmeta.size
+device_unlock.jpg
+ValidateVbmetaPublicKey: public key length too large %d
+assert fail: avb_strcmp(slot_data->vbmeta_images[0].partition_name, "boot") == 0
+[KnoxCustom] knoxcustom_value : %x 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+VB2: Found OsVersion from vbmeta (override)
+assert fail: ops->validate_vbmeta_public_key != NULL
+ERROR_NOT_ALLOW_DEBUG_VBMETA
+: Error verifying vbmeta image: invalid vbmeta header
+ androidboot.verifiedbootstate=
+androidboot.vbmeta.digest
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+VBMETA : No sign info
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+IsUnlockCritical
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/SamsungQuestUSB/SamsungQuestUSB.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/SamsungQuestUSB/SamsungQuestUSB.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ QUALCOMM SECUREBOOT : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+Already set the warrantybit
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[%a]: has cust tk but not bootloader 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+Success set the warrantybit
+[OEM]Oem unlock value is %d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ QUALCOMM SECUREBOOT : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+Already set the warrantybit
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[%a]: has cust tk but not bootloader 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+Success set the warrantybit
+[OEM]Oem unlock value is %d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/unc_data.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ QUALCOMM SECUREBOOT : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+Already set the warrantybit
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[%a]: has cust tk but not bootloader 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+Success set the warrantybit
+[OEM]Oem unlock value is %d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+
+==================================================
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump
+==================================================
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ QUALCOMM SECUREBOOT : 0x%x
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+Already set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+[%a]: has cust tk but not bootloader 
+[BLDP] %a : bootloader_event = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+Success set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+ QUALCOMM SECUREBOOT : NONE
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+vbmeta_system
+[WB] KNOX warranty void
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/x509/x509_vfy.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/Pk/CryptPkcs7Sign.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/x509/x509_vfy.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/Pk/CryptPkcs7Sign.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ QUALCOMM SECUREBOOT : 0x%x
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+Already set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+[%a]: has cust tk but not bootloader 
+[BLDP] %a : bootloader_event = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+Success set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+ QUALCOMM SECUREBOOT : NONE
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+vbmeta_system
+[WB] KNOX warranty void
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+VB2: The device unlocked %d times
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ERROR: Device State %a,AvbSlotVerify returned %a
+GetUnlockCount
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_cmdline.c
+androidboot.vbmeta.hash_alg
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_rsa.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_footer.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_descriptor.c
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+AuthVbmetaOnboot
+No fastboot support for flashless chipsets, Infinte loop
+androidboot.vbmeta.device_state
+unlocked
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_property_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+VB2: Found SecurityLevel from vbmeta (override)
+vbmeta
+Unlock
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_chain_partition_descriptor.c
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_util.c
+androidboot.vbmeta.size
+device_unlock.jpg
+[BLDP] vbmeta_type = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+ValidateVbmetaPublicKey: public key length too large %d
+assert fail: avb_strcmp(slot_data->vbmeta_images[0].partition_name, "boot") == 0
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_kernel_cmdline_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[KnoxCustom] knoxcustom_value : %x 
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+VB2: Found OsVersion from vbmeta (override)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+VB2: The device unlocked %d times
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ERROR: Device State %a,AvbSlotVerify returned %a
+GetUnlockCount
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_cmdline.c
+androidboot.vbmeta.hash_alg
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_rsa.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_footer.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_descriptor.c
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+AuthVbmetaOnboot
+No fastboot support for flashless chipsets, Infinte loop
+androidboot.vbmeta.device_state
+unlocked
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_property_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+VB2: Found SecurityLevel from vbmeta (override)
+vbmeta
+Unlock
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_chain_partition_descriptor.c
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_util.c
+androidboot.vbmeta.size
+device_unlock.jpg
+[BLDP] vbmeta_type = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+ValidateVbmetaPublicKey: public key length too large %d
+assert fail: avb_strcmp(slot_data->vbmeta_images[0].partition_name, "boot") == 0
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_kernel_cmdline_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[KnoxCustom] knoxcustom_value : %x 
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+VB2: Found OsVersion from vbmeta (override)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/SamsungQuestUSB/SamsungQuestUSB.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/SamsungQuestUSB/SamsungQuestUSB.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ QUALCOMM SECUREBOOT : 0x%x
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+Already set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+[%a]: has cust tk but not bootloader 
+[BLDP] %a : bootloader_event = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+Success set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+ QUALCOMM SECUREBOOT : NONE
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+vbmeta_system
+[WB] KNOX warranty void
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ QUALCOMM SECUREBOOT : 0x%x
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+Already set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+[%a]: has cust tk but not bootloader 
+[BLDP] %a : bootloader_event = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+Success set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+ QUALCOMM SECUREBOOT : NONE
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+vbmeta_system
+[WB] KNOX warranty void
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/unc_data.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ QUALCOMM SECUREBOOT : 0x%x
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+Already set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+[%a]: has cust tk but not bootloader 
+[BLDP] %a : bootloader_event = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+Success set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+ QUALCOMM SECUREBOOT : NONE
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+vbmeta_system
+[WB] KNOX warranty void
+
+============================================================
+ ANALYSIS COMPLETE
+============================================================
+
+Important output files:
+
+  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/module_comparison.txt
+  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/uefi_report.diff
+  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/executable_modules.txt
+  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/keyword_hits.txt
+
+Extracted firmware volumes:
+
+  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin
+  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin
+
+UEFI trees:
+
+  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump
+  /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump
+
+============================================================

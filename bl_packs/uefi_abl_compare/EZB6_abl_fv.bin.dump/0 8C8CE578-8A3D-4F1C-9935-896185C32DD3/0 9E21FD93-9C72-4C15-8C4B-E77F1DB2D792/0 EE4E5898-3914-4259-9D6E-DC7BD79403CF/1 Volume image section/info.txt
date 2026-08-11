@@ -1,0 +1,7 @@
+Type: Section
+Subtype: Volume image
+Offset: 1Ch
+Full size: 3851C4h (3690948)
+Header size: 4h (4)
+Body size: 3851C0h (3690944)
+Type: 17h

@@ -1,0 +1,529 @@
+====================================================================================================
+CXDF <-> EZB6 FUNCTION COMPARISON
+====================================================================================================
+
+Unable set the unlock value: %r
+-------------------------------
+OLD xref     : 0x268EC
+NEW xref     : 0x26A2C
+XREF delta   : +0x140
+OLD function : 0x26810-0x2695C
+NEW function : 0x26950-0x26A9C
+Function delta: +0x140
+Normalized identical: False
+OLD normalized hash: 872ba8068a81c8a763eba7cbc87453eb80b15b977ab7d1ad533e21d18b40f67a
+NEW normalized hash: f5e18f4d662b3dc4129a01fb2bfc4131601fdf6b2b65ed71eec96e0bb656240b
+First normalized difference: instruction 14
+
+OLD:
+0006: mov x8,xzr
+0007: str x8,[sp+16]
+0008: bl <ADDR>
+0009: ldrb w8,[sp+28]
+0010: subs w8,w8,w0
+0011: b.eq <ADDR>
+0012: b <ADDR>
+0013: ldrb w8,[sp+28]
+0014: cbz w8,#157796
+0015: b <ADDR>
+0016: adrp x9,<ADDR>
+0017: ldr w8,[x9+3064]
+0018: add w8,w8,#1
+0019: str w8,[x9+3064]
+0020: b <ADDR>
+0021: adrp x8,<ADDR>
+0022: ldr w8,[x8+3064]
+0023: lsr w8,w8,#4
+0024: subs w8,w8,#625
+0025: b.lo <ADDR>
+0026: b <ADDR>
+0027: adrp x9,<ADDR>
+0028: mov w8,wzr
+0029: str w8,[x9+3064]
+
+NEW:
+0006: mov x8,xzr
+0007: str x8,[sp+16]
+0008: bl <ADDR>
+0009: ldrb w8,[sp+28]
+0010: subs w8,w8,w0
+0011: b.eq <ADDR>
+0012: b <ADDR>
+0013: ldrb w8,[sp+28]
+0014: cbz w8,#158116
+0015: b <ADDR>
+0016: adrp x9,<ADDR>
+0017: ldr w8,[x9+1952]
+0018: add w8,w8,#1
+0019: str w8,[x9+1952]
+0020: b <ADDR>
+0021: adrp x8,<ADDR>
+0022: ldr w8,[x8+1952]
+0023: lsr w8,w8,#4
+0024: subs w8,w8,#625
+0025: b.lo <ADDR>
+0026: b <ADDR>
+0027: adrp x9,<ADDR>
+0028: mov w8,wzr
+0029: str w8,[x9+1952]
+
+
+Unable set the unlock critical value: %r
+----------------------------------------
+OLD xref     : 0x269F4
+NEW xref     : 0x26B34
+XREF delta   : +0x140
+OLD function : 0x26960-0x26A64
+NEW function : 0x26AA0-0x26BA4
+Function delta: +0x140
+Normalized identical: False
+OLD normalized hash: 762bc162104fb6299264eb271609efcf0863808f6827518e05a95e2ca4c5ab21
+NEW normalized hash: d949120b39a4c7bb22311646e32c848767ebd743a34d13a14dff19467e8b955e
+First normalized difference: instruction 15
+
+OLD:
+0007: str x8,[sp+16]
+0008: bl <ADDR>
+0009: ldrb w8,[sp+28]
+0010: subs w8,w8,w0
+0011: b.eq <ADDR>
+0012: b <ADDR>
+0013: ldrb w8,[sp+28]
+0014: adrp x1,<ADDR>
+0015: add x1,x1,#3928
+0016: strb w8,[x1+14]
+0017: mov w0,#1
+0018: mov w2,#3240
+0019: bl <ADDR>
+0020: str x0,[sp+16]
+0021: ldr x8,[sp+16]
+0022: cbz x8,#158244
+0023: b <ADDR>
+0024: b <ADDR>
+0025: bl <ADDR>
+0026: and w8,w0,#255
+0027: cbz w8,#158228
+0028: b <ADDR>
+0029: b <ADDR>
+0030: mov w8,#-2147483648
+
+NEW:
+0007: str x8,[sp+16]
+0008: bl <ADDR>
+0009: ldrb w8,[sp+28]
+0010: subs w8,w8,w0
+0011: b.eq <ADDR>
+0012: b <ADDR>
+0013: ldrb w8,[sp+28]
+0014: adrp x1,<ADDR>
+0015: add x1,x1,#2816
+0016: strb w8,[x1+14]
+0017: mov w0,#1
+0018: mov w2,#3240
+0019: bl <ADDR>
+0020: str x0,[sp+16]
+0021: ldr x8,[sp+16]
+0022: cbz x8,#158564
+0023: b <ADDR>
+0024: b <ADDR>
+0025: bl <ADDR>
+0026: and w8,w0,#255
+0027: cbz w8,#158548
+0028: b <ADDR>
+0029: b <ADDR>
+0030: mov w8,#-2147483648
+
+
+GetUnlockCount
+--------------
+OLD xref     : 0x25D24
+NEW xref     : 0x25E64
+XREF delta   : +0x140
+OLD function : 0x25CD0-0x25D7C
+NEW function : 0x25E10-0x25EBC
+Function delta: +0x140
+Normalized identical: False
+OLD normalized hash: fea4232fc86fc4259340aa376745a121463ef3a4f95a93f245ad69675a61f20f
+NEW normalized hash: 4b49ab69b6a1efd061749cbfe748de502501c3316f452a1024ad4c6832e44def
+First normalized difference: instruction 8
+
+OLD:
+0000: sub sp,sp,#32
+0001: str lr,[sp+16]
+0002: adrp x8,<ADDR>
+0003: ldr x8,[x8+8]
+0004: str x8,[sp+8]
+0005: b <ADDR>
+0006: bl <ADDR>
+0007: and w8,w0,#255
+0008: cbz w8,#154948
+0009: b <ADDR>
+0010: b <ADDR>
+0011: mov w8,#64
+0012: mov w0,w8
+0013: bl <ADDR>
+0014: and w8,w0,#255
+0015: cbz w8,#154940
+0016: b <ADDR>
+0017: adrp x8,<ADDR>
+0018: ldr w3,[x8+3064]
+0019: adrp x1,<ADDR>
+0020: add x1,x1,#985
+0021: adrp x2,<ADDR>
+0022: add x2,x2,#2856
+0023: mov w8,#64
+
+NEW:
+0000: sub sp,sp,#32
+0001: str lr,[sp+16]
+0002: adrp x8,<ADDR>
+0003: ldr x8,[x8+8]
+0004: str x8,[sp+8]
+0005: b <ADDR>
+0006: bl <ADDR>
+0007: and w8,w0,#255
+0008: cbz w8,#155268
+0009: b <ADDR>
+0010: b <ADDR>
+0011: mov w8,#64
+0012: mov w0,w8
+0013: bl <ADDR>
+0014: and w8,w0,#255
+0015: cbz w8,#155260
+0016: b <ADDR>
+0017: adrp x8,<ADDR>
+0018: ldr w3,[x8+1952]
+0019: adrp x1,<ADDR>
+0020: add x1,x1,#1404
+0021: adrp x2,<ADDR>
+0022: add x2,x2,#2974
+0023: mov w8,#64
+
+
+IsUnlocked
+----------
+OLD xref     : 0x25DD4
+NEW xref     : 0x25F14
+XREF delta   : +0x140
+OLD function : 0x25D80-0x25E2C
+NEW function : 0x25EC0-0x25F6C
+Function delta: +0x140
+Normalized identical: False
+OLD normalized hash: f569e95902e518d49073c0848d3d10863f1eaef39cfe31d99fd65491c600b576
+NEW normalized hash: 5a17d6514399366a1de9d61b084bba374b4d5fe0113ad6fb5c20f64a583f4e91
+First normalized difference: instruction 8
+
+OLD:
+0000: sub sp,sp,#32
+0001: str lr,[sp+16]
+0002: adrp x8,<ADDR>
+0003: ldr x8,[x8+8]
+0004: str x8,[sp+8]
+0005: b <ADDR>
+0006: bl <ADDR>
+0007: and w8,w0,#255
+0008: cbz w8,#155124
+0009: b <ADDR>
+0010: b <ADDR>
+0011: mov w8,#-2147483648
+0012: mov w0,w8
+0013: bl <ADDR>
+0014: and w8,w0,#255
+0015: cbz w8,#155116
+0016: b <ADDR>
+0017: adrp x8,<ADDR>
+0018: ldrb w3,[x8+3941]
+0019: adrp x1,<ADDR>
+0020: add x1,x1,#985
+0021: adrp x2,<ADDR>
+0022: add x2,x2,#1246
+0023: mov w8,#-2147483648
+
+NEW:
+0000: sub sp,sp,#32
+0001: str lr,[sp+16]
+0002: adrp x8,<ADDR>
+0003: ldr x8,[x8+8]
+0004: str x8,[sp+8]
+0005: b <ADDR>
+0006: bl <ADDR>
+0007: and w8,w0,#255
+0008: cbz w8,#155444
+0009: b <ADDR>
+0010: b <ADDR>
+0011: mov w8,#-2147483648
+0012: mov w0,w8
+0013: bl <ADDR>
+0014: and w8,w0,#255
+0015: cbz w8,#155436
+0016: b <ADDR>
+0017: adrp x8,<ADDR>
+0018: ldrb w3,[x8+2829]
+0019: adrp x1,<ADDR>
+0020: add x1,x1,#1404
+0021: adrp x2,<ADDR>
+0022: add x2,x2,#282
+0023: mov w8,#-2147483648
+
+
+IsUnlockCritical
+----------------
+OLD xref     : 0x25E84
+NEW xref     : 0x25FC4
+XREF delta   : +0x140
+OLD function : 0x25E30-0x25EDC
+NEW function : 0x25F70-0x2601C
+Function delta: +0x140
+Normalized identical: False
+OLD normalized hash: a09559ed1645470fcd4cd1715ad4915a5372c89c7ee415d6e69784eb06693eba
+NEW normalized hash: 2267fc7448b8e74b0872e03b00271c85c09df9ed0a0fa31f4be92cb516143849
+First normalized difference: instruction 8
+
+OLD:
+0000: sub sp,sp,#32
+0001: str lr,[sp+16]
+0002: adrp x8,<ADDR>
+0003: ldr x8,[x8+8]
+0004: str x8,[sp+8]
+0005: b <ADDR>
+0006: bl <ADDR>
+0007: and w8,w0,#255
+0008: cbz w8,#155300
+0009: b <ADDR>
+0010: b <ADDR>
+0011: mov w8,#-2147483648
+0012: mov w0,w8
+0013: bl <ADDR>
+0014: and w8,w0,#255
+0015: cbz w8,#155292
+0016: b <ADDR>
+0017: adrp x8,<ADDR>
+0018: ldrb w3,[x8+3942]
+0019: adrp x1,<ADDR>
+0020: add x1,x1,#985
+0021: adrp x2,<ADDR>
+0022: add x2,x2,#3087
+0023: mov w8,#-2147483648
+
+NEW:
+0000: sub sp,sp,#32
+0001: str lr,[sp+16]
+0002: adrp x8,<ADDR>
+0003: ldr x8,[x8+8]
+0004: str x8,[sp+8]
+0005: b <ADDR>
+0006: bl <ADDR>
+0007: and w8,w0,#255
+0008: cbz w8,#155620
+0009: b <ADDR>
+0010: b <ADDR>
+0011: mov w8,#-2147483648
+0012: mov w0,w8
+0013: bl <ADDR>
+0014: and w8,w0,#255
+0015: cbz w8,#155612
+0016: b <ADDR>
+0017: adrp x8,<ADDR>
+0018: ldrb w3,[x8+2830]
+0019: adrp x1,<ADDR>
+0020: add x1,x1,#1404
+0021: adrp x2,<ADDR>
+0022: add x2,x2,#1390
+0023: mov w8,#-2147483648
+
+
+Device is unlocked, Skipping boot verification
+----------------------------------------------
+OLD xref     : 0x1E2D0
+NEW xref     : 0x1E410
+XREF delta   : +0x140
+OLD function : 0x1E180-0x1E340
+NEW function : 0x1E2C0-0x1E480
+Function delta: +0x140
+Normalized identical: False
+OLD normalized hash: 1a98f8b1308433aaf9e160a9f3bde521aca4323c0fa0a6977bf9af6fc9a6af0e
+NEW normalized hash: f0c2aceb4045d31878b001e8458edab55d58b22d4c4e0d4d38a3f6e1d54885bf
+First normalized difference: instruction 19
+
+OLD:
+0011: bl <ADDR>
+0012: mov x21,x0
+0013: lsl x8,x0,#1
+0014: sub x8,x8,#9
+0015: cmn x8,#12
+0016: b.ls <ADDR>
+0017: adrp x1,<ADDR>
+0018: mov x0,x20
+0019: add x1,x1,#236
+0020: mov x2,x21
+0021: bl <ADDR>
+0022: cbnz x0,#123424
+0023: mov x0,sp
+0024: mov w1,#8
+0025: bl <ADDR>
+0026: cbz x0,#123424
+0027: mov x20,x0
+0028: bl <ADDR>
+0029: tst w0,#255
+0030: b.eq <ADDR>
+0031: bl <ADDR>
+0032: tst w0,#255
+0033: b.eq <ADDR>
+0034: adrp x1,<ADDR>
+
+NEW:
+0011: bl <ADDR>
+0012: mov x21,x0
+0013: lsl x8,x0,#1
+0014: sub x8,x8,#9
+0015: cmn x8,#12
+0016: b.ls <ADDR>
+0017: adrp x1,<ADDR>
+0018: mov x0,x20
+0019: add x1,x1,#1012
+0020: mov x2,x21
+0021: bl <ADDR>
+0022: cbnz x0,#123744
+0023: mov x0,sp
+0024: mov w1,#8
+0025: bl <ADDR>
+0026: cbz x0,#123744
+0027: mov x20,x0
+0028: bl <ADDR>
+0029: tst w0,#255
+0030: b.eq <ADDR>
+0031: bl <ADDR>
+0032: tst w0,#255
+0033: b.eq <ADDR>
+0034: adrp x1,<ADDR>
+
+
+setOEMFlags
+-----------
+OLD xref     : 0x80040
+NEW xref     : 0x80540
+XREF delta   : +0x500
+OLD function : 0x7FFE0-0x80290
+NEW function : 0x804E0-0x80790
+Function delta: +0x500
+Normalized identical: False
+OLD normalized hash: a84c575ee6a827d23e1e07a9b670a07e6ee4cf95f66331191dbcc6a1b8a919c1
+NEW normalized hash: 163196c1d172804c8ada24128233c25fab9994916fbdc496489dc07e83f5d8cd
+First normalized difference: instruction 7
+
+OLD:
+0000: sub sp,sp,#176
+0001: str lr,[sp+144]
+0002: stp x20,x19,[sp+160]
+0003: adrp x8,<ADDR>
+0004: adrp x9,<ADDR>
+0005: adrp x0,<ADDR>
+0006: add x2,sp,#8
+0007: add x0,x0,#3292
+0008: mov x1,xzr
+0009: ldr x8,[x8+8]
+0010: str x8,[sp+136]
+0011: ldr x8,[x9+1400]
+0012: str xzr,[sp+8]
+0013: ldr x8,[x8+320]
+0014: blr x8
+0015: mov x19,x0
+0016: bl <ADDR>
+0017: tst w0,#255
+0018: b.eq <ADDR>
+0019: mov w0,#-2147483648
+0020: bl <ADDR>
+0021: tst w0,#255
+0022: b.eq <ADDR>
+
+NEW:
+0000: sub sp,sp,#176
+0001: str lr,[sp+144]
+0002: stp x20,x19,[sp+160]
+0003: adrp x8,<ADDR>
+0004: adrp x9,<ADDR>
+0005: adrp x0,<ADDR>
+0006: add x2,sp,#8
+0007: add x0,x0,#272
+0008: mov x1,xzr
+0009: ldr x8,[x8+8]
+0010: str x8,[sp+136]
+0011: ldr x8,[x9+288]
+0012: str xzr,[sp+8]
+0013: ldr x8,[x8+320]
+0014: blr x8
+0015: mov x19,x0
+0016: bl <ADDR>
+0017: tst w0,#255
+0018: b.eq <ADDR>
+0019: mov w0,#-2147483648
+0020: bl <ADDR>
+0021: tst w0,#255
+0022: b.eq <ADDR>
+
+
+androidboot.vbmeta.device_state
+-------------------------------
+OLD xref     : 0x2D898
+NEW xref     : 0x2D9D8
+XREF delta   : +0x140
+OLD function : 0x2D760-0x2DAE4
+NEW function : 0x2D8A0-0x2DC24
+Function delta: +0x140
+Normalized identical: False
+OLD normalized hash: ab6ff4955f84ba6ae832bfd712e0b7bc861f1eec6c4606e35567b1476d94b0e3
+NEW normalized hash: bce03741af8b9f914f2d0645de0a67d6d509bb057ff94532bb133c4170f47bcf
+First normalized difference: instruction 16
+
+OLD:
+0008: mov w21,w6
+0009: mov w20,w5
+0010: mov w23,w4
+0011: mov x22,x3
+0012: mov x19,x2
+0013: ldr x8,[x8+8]
+0014: mov x25,x0
+0015: str x8,[sp+136]
+0016: tbnz w1,#2,#186300
+0017: adrp x1,<ADDR>
+0018: adrp x2,<ADDR>
+0019: add x1,x1,#2877
+0020: add x2,x2,#3583
+0021: bl <ADDR>
+0022: cbz w0,#187056
+0023: add x1,sp,#104
+0024: mov w0,#1
+0025: mov w24,#1
+0026: bl <ADDR>
+0027: mov x26,x0
+0028: add x1,sp,#72
+0029: mov w0,#2
+0030: bl <ADDR>
+0031: mov x27,x0
+
+NEW:
+0008: mov w21,w6
+0009: mov w20,w5
+0010: mov w23,w4
+0011: mov x22,x3
+0012: mov x19,x2
+0013: ldr x8,[x8+8]
+0014: mov x25,x0
+0015: str x8,[sp+136]
+0016: tbnz w1,#2,#186620
+0017: adrp x1,<ADDR>
+0018: adrp x2,<ADDR>
+0019: add x1,x1,#3470
+0020: add x2,x2,#65
+0021: bl <ADDR>
+0022: cbz w0,#187376
+0023: add x1,sp,#104
+0024: mov w0,#1
+0025: mov w24,#1
+0026: bl <ADDR>
+0027: mov x26,x0
+0028: add x1,sp,#72
+0029: mov w0,#2
+0030: bl <ADDR>
+0031: mov x27,x0
+

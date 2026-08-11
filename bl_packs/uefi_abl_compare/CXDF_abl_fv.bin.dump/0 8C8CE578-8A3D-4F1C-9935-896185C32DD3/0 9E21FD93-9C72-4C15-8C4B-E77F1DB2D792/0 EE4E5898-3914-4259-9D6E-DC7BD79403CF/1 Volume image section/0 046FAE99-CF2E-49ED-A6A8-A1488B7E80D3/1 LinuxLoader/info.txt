@@ -1,0 +1,13 @@
+Type: File
+Subtype: Application
+Text: LinuxLoader
+Offset: 1180A8h
+Full size: 1B6038h (1794104)
+Header size: 18h (24)
+Body size: 1B6020h (1794080)
+File GUID: F536D559-459F-48FA-8BBC-43B554ECAE8D
+Type: 09h
+Attributes: 00h
+State: F8h
+Header checksum: 0Bh, valid
+Data checksum: AAh, valid

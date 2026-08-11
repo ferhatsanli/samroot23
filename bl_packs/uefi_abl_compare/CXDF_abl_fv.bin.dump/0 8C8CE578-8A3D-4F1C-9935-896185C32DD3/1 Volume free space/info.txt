@@ -1,0 +1,7 @@
+Type: Free space
+Subtype: 
+Base: CA2D0h
+Offset: CA2D0h
+Full size: 187D30h (1604912)
+Body size: 187D30h (1604912)
+

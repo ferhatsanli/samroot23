@@ -1,0 +1,31 @@
+====================================================================================================
+UNLOCK GLOBAL ACCESS SUMMARY
+====================================================================================================
+
+CXDF
+----
+IsUnlocked           0x199F65  reads= 2 writes= 3
+    WRITE 0x26898: strb w8, [x1, #0xd]
+    WRITE 0x26C74: strb w8, [x9]
+    WRITE 0x26C8C: strb w8, [x9]
+IsUnlockCritical     0x199F66  reads= 2 writes= 3
+    WRITE 0x269A0: strb w8, [x1, #0xe]
+    WRITE 0x26C78: strb w8, [x9, #1]
+    WRITE 0x26C90: strb w8, [x9, #1]
+UnlockCount          0x19ABF8  reads= 4 writes= 2
+    WRITE 0x2685C: str w8, [x9, #0xbf8]
+    WRITE 0x26884: str w8, [x9, #0xbf8]
+
+EZB6
+----
+IsUnlocked           0x18BB0D  reads= 2 writes= 3
+    WRITE 0x269D8: strb w8, [x1, #0xd]
+    WRITE 0x26DB4: strb w8, [x9]
+    WRITE 0x26DCC: strb w8, [x9]
+IsUnlockCritical     0x18BB0E  reads= 2 writes= 3
+    WRITE 0x26AE0: strb w8, [x1, #0xe]
+    WRITE 0x26DB8: strb w8, [x9, #1]
+    WRITE 0x26DD0: strb w8, [x9, #1]
+UnlockCount          0x18C7A0  reads= 4 writes= 2
+    WRITE 0x2699C: str w8, [x9, #0x7a0]
+    WRITE 0x269C4: str w8, [x9, #0x7a0]

@@ -1,0 +1,13 @@
+Type: File
+Subtype: Application
+Text: Odin
+Offset: 78h
+Full size: 11802Ch (1146924)
+Header size: 18h (24)
+Body size: 118014h (1146900)
+File GUID: ABA3B456-5469-414A-9F79-47CECBD7C04E
+Type: 09h
+Attributes: 00h
+State: F8h
+Header checksum: BDh, valid
+Data checksum: AAh, valid

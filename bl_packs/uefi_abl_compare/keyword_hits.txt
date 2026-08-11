@@ -1,0 +1,916 @@
+
+==================================================
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump
+==================================================
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ QUALCOMM SECUREBOOT : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+Already set the warrantybit
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[%a]: has cust tk but not bootloader 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+Success set the warrantybit
+[OEM]Oem unlock value is %d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/x509/x509_vfy.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/Pk/CryptPkcs7Sign.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/x509/x509_vfy.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/Pk/CryptPkcs7Sign.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ QUALCOMM SECUREBOOT : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+Already set the warrantybit
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[%a]: has cust tk but not bootloader 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+Success set the warrantybit
+[OEM]Oem unlock value is %d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+VB2: The device unlocked %d times
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_vbmeta_image.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ERROR: Device State %a,AvbSlotVerify returned %a
+GetUnlockCount
+androidboot.vbmeta.hash_alg
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_hashtree_descriptor.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/UpdateDeviceTree.c
+AuthVbmetaOnboot
+No fastboot support for flashless chipsets, Infinte loop
+androidboot.vbmeta.device_state
+unlocked
+VB2: Found SecurityLevel from vbmeta (override)
+vbmeta
+Unlock
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+androidboot.vbmeta.size
+device_unlock.jpg
+ValidateVbmetaPublicKey: public key length too large %d
+assert fail: avb_strcmp(slot_data->vbmeta_images[0].partition_name, "boot") == 0
+[KnoxCustom] knoxcustom_value : %x 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+VB2: Found OsVersion from vbmeta (override)
+assert fail: ops->validate_vbmeta_public_key != NULL
+ERROR_NOT_ALLOW_DEBUG_VBMETA
+: Error verifying vbmeta image: invalid vbmeta header
+ androidboot.verifiedbootstate=
+androidboot.vbmeta.digest
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+VBMETA : No sign info
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+IsUnlockCritical
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+VB2: The device unlocked %d times
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_vbmeta_image.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ERROR: Device State %a,AvbSlotVerify returned %a
+GetUnlockCount
+androidboot.vbmeta.hash_alg
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_hashtree_descriptor.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/UpdateDeviceTree.c
+AuthVbmetaOnboot
+No fastboot support for flashless chipsets, Infinte loop
+androidboot.vbmeta.device_state
+unlocked
+VB2: Found SecurityLevel from vbmeta (override)
+vbmeta
+Unlock
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+androidboot.vbmeta.size
+device_unlock.jpg
+ValidateVbmetaPublicKey: public key length too large %d
+assert fail: avb_strcmp(slot_data->vbmeta_images[0].partition_name, "boot") == 0
+[KnoxCustom] knoxcustom_value : %x 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+VB2: Found OsVersion from vbmeta (override)
+assert fail: ops->validate_vbmeta_public_key != NULL
+ERROR_NOT_ALLOW_DEBUG_VBMETA
+: Error verifying vbmeta image: invalid vbmeta header
+ androidboot.verifiedbootstate=
+androidboot.vbmeta.digest
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+VBMETA : No sign info
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+IsUnlockCritical
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/SamsungQuestUSB/SamsungQuestUSB.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/SamsungQuestUSB/SamsungQuestUSB.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ QUALCOMM SECUREBOOT : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+Already set the warrantybit
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[%a]: has cust tk but not bootloader 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+Success set the warrantybit
+[OEM]Oem unlock value is %d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ QUALCOMM SECUREBOOT : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+Already set the warrantybit
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[%a]: has cust tk but not bootloader 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+Success set the warrantybit
+[OEM]Oem unlock value is %d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/unc_data.bin ---
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+tima_get_warranty_vio_fuse
+ QUALCOMM SECUREBOOT : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+Already set the warrantybit
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinProtocol.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[%a]: has cust tk but not bootloader 
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+Success set the warrantybit
+[OEM]Oem unlock value is %d
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8814/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.c
+
+==================================================
+/Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump
+==================================================
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ QUALCOMM SECUREBOOT : 0x%x
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+Already set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+[%a]: has cust tk but not bootloader 
+[BLDP] %a : bootloader_event = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+Success set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+ QUALCOMM SECUREBOOT : NONE
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+vbmeta_system
+[WB] KNOX warranty void
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/x509/x509_vfy.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/Pk/CryptPkcs7Sign.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/2 Cryptest/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/x509/x509_vfy.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CompareMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/BaseMemAllocation.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/hmac/hmac.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/Pk/CryptPkcs7Sign.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/BaseCryptLib/SysCall/CrtWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/kdf/tls1_prf.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ QUALCOMM SECUREBOOT : 0x%x
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+Already set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+[%a]: has cust tk but not bootloader 
+[BLDP] %a : bootloader_event = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+Success set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+ QUALCOMM SECUREBOOT : NONE
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+vbmeta_system
+[WB] KNOX warranty void
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/3 QuestSOD/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/SetMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+VB2: The device unlocked %d times
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ERROR: Device State %a,AvbSlotVerify returned %a
+GetUnlockCount
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_cmdline.c
+androidboot.vbmeta.hash_alg
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_rsa.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_footer.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_descriptor.c
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+AuthVbmetaOnboot
+No fastboot support for flashless chipsets, Infinte loop
+androidboot.vbmeta.device_state
+unlocked
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_property_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+VB2: Found SecurityLevel from vbmeta (override)
+vbmeta
+Unlock
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_chain_partition_descriptor.c
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_util.c
+androidboot.vbmeta.size
+device_unlock.jpg
+[BLDP] vbmeta_type = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+ValidateVbmetaPublicKey: public key length too large %d
+assert fail: avb_strcmp(slot_data->vbmeta_images[0].partition_name, "boot") == 0
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_kernel_cmdline_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[KnoxCustom] knoxcustom_value : %x 
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+VB2: Found OsVersion from vbmeta (override)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+VB2: The device unlocked %d times
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ERROR: Device State %a,AvbSlotVerify returned %a
+GetUnlockCount
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_cmdline.c
+androidboot.vbmeta.hash_alg
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_rsa.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_footer.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_descriptor.c
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+AuthVbmetaOnboot
+No fastboot support for flashless chipsets, Infinte loop
+androidboot.vbmeta.device_state
+unlocked
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_property_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+VB2: Found SecurityLevel from vbmeta (override)
+vbmeta
+Unlock
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_chain_partition_descriptor.c
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_util.c
+androidboot.vbmeta.size
+device_unlock.jpg
+[BLDP] vbmeta_type = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+ValidateVbmetaPublicKey: public key length too large %d
+assert fail: avb_strcmp(slot_data->vbmeta_images[0].partition_name, "boot") == 0
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/avb/libavb/avb_kernel_cmdline_descriptor.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+[KnoxCustom] knoxcustom_value : %x 
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+VB2: Found OsVersion from vbmeta (override)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/SamsungQuestUSB/SamsungQuestUSB.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/4 QuestUSB/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/ReportStatusCodeLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/LinkedList.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLibPrint.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BasePrintLib/PrintLibInternal.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/Arm/Unaligned.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/DxeHobLib/HobLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/SamsungQuestUSB/SamsungQuestUSB.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiDevicePathLib/DevicePathUtilities.c
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ QUALCOMM SECUREBOOT : 0x%x
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+Already set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+[%a]: has cust tk but not bootloader 
+[BLDP] %a : bootloader_event = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+Success set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+ QUALCOMM SECUREBOOT : NONE
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+vbmeta_system
+[WB] KNOX warranty void
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/0 Odin/1 PE32 image section/body.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ QUALCOMM SECUREBOOT : 0x%x
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+Already set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+[%a]: has cust tk but not bootloader 
+[BLDP] %a : bootloader_event = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+Success set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+ QUALCOMM SECUREBOOT : NONE
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+vbmeta_system
+[WB] KNOX warranty void
+
+--- /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/unc_data.bin ---
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/SafeString.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/Arm/MemLibGuid.c
+tima_get_warranty_vio_fuse
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/String.c
+ QUALCOMM SECUREBOOT : 0x%x
+%a: Saving bootloader mode: [%d] in DDI.
+[Rampart]QseecomStartApp (vk) call Failed, status=%d, vaultkeeperappid=%d
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32Remainder.c
+Already set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ZeroMemWrapper.c
+vbmeta
+ This is Not KNOX TEST binary. Please use KNOX TEST binary! (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/DebugLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/SamsungLib/Common/Glib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/CopyMemWrapper.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiLib.c
+ WARRANTY VOID : 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/BootLib/ShutdownServices.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiLib/UefiNotTiano.c
+[%a]: has cust tk but not bootloader 
+[BLDP] %a : bootloader_event = 0x%x
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.c
+[WB] Set Warranty bit (%a)
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseMemoryLibOptDxe/ScanMem8Wrapper.c
+[AR] Not enable the secure boot 
+Failed set the warrantybit(RP enabled)
+Success set the warrantybit
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Application/OdinApp/OdinMain.c
+ QUALCOMM SECUREBOOT : ENABLE
+Bootloader
+Error Reseting device state: %r
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/CryptoPkg/Library/OpensslLib/openssl/crypto/threads_none.c
+Failed set the warrantybit(ARP device)
+[EM]BootLoader doesn't keysharing
+ QUALCOMM SECUREBOOT : NONE
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/MdePkg/Library/BaseLib/DivU64x32.c
+/home/dpi/qb5_8815/workspace/P4_1716/android/bootable/bootloader/edk2/QcomModulePkg/Library/Sec_Secure/Sec_Auth_Odin.c
+vbmeta_system
+[WB] KNOX warranty void

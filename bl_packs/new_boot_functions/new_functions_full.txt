@@ -1,0 +1,477 @@
+FUNCTION NOT FOUND
+
+####################################################################################################
+new_call_26020 @ 0x26020
+####################################################################################################
+Instructions : 136
+End          : 0x2623C
+Norm SHA256  : 5e4ddb13e811c764ca418d0a06af1d0e52374cde466819bacf374c0f040942e7
+Callers      : 1
+Calls out    : 49
+Strings      : 4
+
+CALLERS
+  0x9324 bl
+
+REFERENCED STRINGS
+  code=0x260A0 string=0xF8127 Lock  <<< IMPORTANT
+  code=0x260A8 string=0xF93F0 Unlock  <<< IMPORTANT
+  code=0x261C4 string=0x116626 LOCK  <<< IMPORTANT
+  code=0x261CC string=0x10FFEE UNLOCK  <<< IMPORTANT
+
+DIRECT / TAIL CALLS
+  0x2604C bl -> 0x25EC0
+  0x26060 b.ne -> 0x260F8
+  0x26064 b -> 0x26068
+  0x26068 b -> 0x2606C
+  0x2606C bl -> 0x1C20
+  0x26078 b -> 0x2607C
+  0x2607C b -> 0x26080
+  0x26088 bl -> 0x1C48
+  0x26094 b -> 0x26098
+  0x260C8 bl -> 0x162C
+  0x260CC b -> 0x260D0
+  0x260D0 b -> 0x260D4
+  0x260D4 b -> 0x260D8
+  0x260D8 b -> 0x260DC
+  0x260E4 b -> 0x260E8
+  0x260EC bl -> 0x27EE0
+  0x260F0 b -> 0x260F4
+  0x260F4 b -> 0x26218
+  0x26100 bl -> 0x26240
+  0x26110 b -> 0x26114
+  0x26114 b -> 0x26118
+  0x26118 bl -> 0x1C20
+  0x26124 b -> 0x26128
+  0x26128 b -> 0x2612C
+  0x26134 bl -> 0x1C48
+  0x26140 b -> 0x26144
+  0x26174 bl -> 0x162C
+  0x26178 b -> 0x2617C
+  0x2617C b -> 0x26180
+  0x26180 b -> 0x26184
+  0x26184 b -> 0x26188
+  0x26188 b -> 0x26218
+  0x2618C b -> 0x26190
+  0x26190 bl -> 0x1C20
+  0x2619C b -> 0x261A0
+  0x261A0 b -> 0x261A4
+  0x261AC bl -> 0x1C48
+  0x261B8 b -> 0x261BC
+  0x261F0 bl -> 0x162C
+  0x261F4 b -> 0x261F8
+  0x261F8 b -> 0x261FC
+  0x261FC b -> 0x26200
+  0x26200 b -> 0x26204
+  0x26208 bl -> 0x73B70
+  0x26210 bl -> 0x27EE0
+  0x26214 b -> 0x26218
+  0x26228 b.ne -> 0x26230
+  0x2622C b -> 0x26234
+  0x26230 bl -> 0x1488
+
+BEST CXDF FUNCTION MATCHES
+  score=100.00% CXDF=0x25EE0 old_len=136
+  score= 92.91% CXDF=0x25F28 old_len=118
+  score= 92.49% CXDF=0x25F2C old_len=117
+  score= 90.76% CXDF=0x25F3C old_len=113
+  score= 90.32% CXDF=0x25F40 old_len=112
+  score= 87.60% CXDF=0x25F58 old_len=106
+  score= 80.70% CXDF=0x25F90 old_len=92
+  score= 80.18% CXDF=0x25F94 old_len=91
+
+FULL DISASSEMBLY
+----------------------------------------------------------------------------------------------------
+0x00026020: sub      sp, sp, #0x30
+0x00026024: str      x30, [sp, #0x20]
+0x00026028: adrp     x8, #0x13e000
+0x0002602C: ldr      x8, [x8, #8]
+0x00026030: str      x8, [sp, #0x18]
+0x00026034: str      w0, [sp, #0x14]
+0x00026038: str      w1, [sp, #0x10]
+0x0002603C: mov      w8, wzr
+0x00026040: strb     w8, [sp, #0xc]
+0x00026044: mov      x8, #-0x7ffffffffffffffd
+0x00026048: str      x8, [sp]
+0x0002604C: bl       #0x25ec0
+0x00026050: strb     w0, [sp, #0xc]
+0x00026054: ldrb     w8, [sp, #0xc]
+0x00026058: ldr      w9, [sp, #0x14]
+0x0002605C: subs     w8, w8, w9
+0x00026060: b.ne     #0x260f8
+0x00026064: b        #0x26068
+0x00026068: b        #0x2606c
+0x0002606C: bl       #0x1c20
+0x00026070: and      w8, w0, #0xff
+0x00026074: cbz      w8, #0x260d8
+0x00026078: b        #0x2607c
+0x0002607C: b        #0x26080
+0x00026080: mov      w8, #0x40
+0x00026084: mov      w0, w8
+0x00026088: bl       #0x1c48
+0x0002608C: and      w8, w0, #0xff
+0x00026090: cbz      w8, #0x260d0
+0x00026094: b        #0x26098
+0x00026098: ldr      w10, [sp, #0x14]
+0x0002609C: adrp     x9, #0xf8000
+0x000260A0: add      x9, x9, #0x127
+0x000260A4: adrp     x8, #0xf9000
+0x000260A8: add      x8, x8, #0x3f0
+0x000260AC: subs     w10, w10, #0
+0x000260B0: csel     x2, x8, x9, ne
+0x000260B4: ldr      w3, [sp, #0x10]
+0x000260B8: adrp     x1, #0x10d000
+0x000260BC: add      x1, x1, #0xb70
+0x000260C0: mov      w8, #0x40
+0x000260C4: mov      w0, w8
+0x000260C8: bl       #0x162c
+0x000260CC: b        #0x260d0
+0x000260D0: b        #0x260d4
+0x000260D4: b        #0x260d8
+0x000260D8: b        #0x260dc
+0x000260DC: ldr      w8, [sp, #0x10]
+0x000260E0: cbz      w8, #0x260f4
+0x000260E4: b        #0x260e8
+0x000260E8: mov      w0, wzr
+0x000260EC: bl       #0x27ee0
+0x000260F0: b        #0x260f4
+0x000260F4: b        #0x26218
+0x000260F8: ldr      w1, [sp, #0x14]
+0x000260FC: mov      w0, wzr
+0x00026100: bl       #0x26240
+0x00026104: str      x0, [sp]
+0x00026108: ldr      x8, [sp]
+0x0002610C: cbz      x8, #0x2618c
+0x00026110: b        #0x26114
+0x00026114: b        #0x26118
+0x00026118: bl       #0x1c20
+0x0002611C: and      w8, w0, #0xff
+0x00026120: cbz      w8, #0x26184
+0x00026124: b        #0x26128
+0x00026128: b        #0x2612c
+0x0002612C: mov      w8, #-0x80000000
+0x00026130: mov      w0, w8
+0x00026134: bl       #0x1c48
+0x00026138: and      w8, w0, #0xff
+0x0002613C: cbz      w8, #0x2617c
+0x00026140: b        #0x26144
+0x00026144: ldr      w10, [sp, #0x14]
+0x00026148: adrp     x9, #0xf8000
+0x0002614C: add      x9, x9, #0x127
+0x00026150: adrp     x8, #0xf9000
+0x00026154: add      x8, x8, #0x3f0
+0x00026158: subs     w10, w10, #0
+0x0002615C: csel     x2, x8, x9, ne
+0x00026160: ldr      w3, [sp, #0x10]
+0x00026164: adrp     x1, #0xfe000
+0x00026168: add      x1, x1, #0x3e7
+0x0002616C: mov      w8, #-0x80000000
+0x00026170: mov      w0, w8
+0x00026174: bl       #0x162c
+0x00026178: b        #0x2617c
+0x0002617C: b        #0x26180
+0x00026180: b        #0x26184
+0x00026184: b        #0x26188
+0x00026188: b        #0x26218
+0x0002618C: b        #0x26190
+0x00026190: bl       #0x1c20
+0x00026194: and      w8, w0, #0xff
+0x00026198: cbz      w8, #0x26200
+0x0002619C: b        #0x261a0
+0x000261A0: b        #0x261a4
+0x000261A4: mov      w8, #-0x80000000
+0x000261A8: mov      w0, w8
+0x000261AC: bl       #0x1c48
+0x000261B0: and      w8, w0, #0xff
+0x000261B4: cbz      w8, #0x261f8
+0x000261B8: b        #0x261bc
+0x000261BC: ldrb     w10, [sp, #0xc]
+0x000261C0: adrp     x8, #0x116000
+0x000261C4: add      x8, x8, #0x626
+0x000261C8: adrp     x9, #0x10f000
+0x000261CC: add      x9, x9, #0xfee
+0x000261D0: subs     w10, w10, #0
+0x000261D4: csel     x2, x9, x8, ne
+0x000261D8: csel     x3, x8, x9, ne
+0x000261DC: ldr      w4, [sp, #0x10]
+0x000261E0: adrp     x1, #0x10f000
+0x000261E4: add      x1, x1, #0xfb3
+0x000261E8: mov      w8, #-0x80000000
+0x000261EC: mov      w0, w8
+0x000261F0: bl       #0x162c
+0x000261F4: b        #0x261f8
+0x000261F8: b        #0x261fc
+0x000261FC: b        #0x26200
+0x00026200: b        #0x26204
+0x00026204: mov      w0, #2
+0x00026208: bl       #0x73b70
+0x0002620C: mov      w0, #1
+0x00026210: bl       #0x27ee0
+0x00026214: b        #0x26218
+0x00026218: ldr      x9, [sp, #0x18]
+0x0002621C: adrp     x8, #0x13e000
+0x00026220: ldr      x8, [x8, #8]
+0x00026224: subs     x8, x8, x9
+0x00026228: b.ne     #0x26230
+0x0002622C: b        #0x26234
+0x00026230: bl       #0x1488
+0x00026234: ldr      x30, [sp, #0x20]
+0x00026238: add      sp, sp, #0x30
+0x0002623C: ret      
+
+BEST OLD MATCH DISASSEMBLY
+----------------------------------------------------------------------------------------------------
+Similarity: 100.00%
+CXDF address: 0x25EE0
+0x00025EE0: sub      sp, sp, #0x30
+0x00025EE4: str      x30, [sp, #0x20]
+0x00025EE8: adrp     x8, #0x137000
+0x00025EEC: ldr      x8, [x8, #8]
+0x00025EF0: str      x8, [sp, #0x18]
+0x00025EF4: str      w0, [sp, #0x14]
+0x00025EF8: str      w1, [sp, #0x10]
+0x00025EFC: mov      w8, wzr
+0x00025F00: strb     w8, [sp, #0xc]
+0x00025F04: mov      x8, #-0x7ffffffffffffffd
+0x00025F08: str      x8, [sp]
+0x00025F0C: bl       #0x25d80
+0x00025F10: strb     w0, [sp, #0xc]
+0x00025F14: ldrb     w8, [sp, #0xc]
+0x00025F18: ldr      w9, [sp, #0x14]
+0x00025F1C: subs     w8, w8, w9
+0x00025F20: b.ne     #0x25fb8
+0x00025F24: b        #0x25f28
+0x00025F28: b        #0x25f2c
+0x00025F2C: bl       #0x1c20
+0x00025F30: and      w8, w0, #0xff
+0x00025F34: cbz      w8, #0x25f98
+0x00025F38: b        #0x25f3c
+0x00025F3C: b        #0x25f40
+0x00025F40: mov      w8, #0x40
+0x00025F44: mov      w0, w8
+0x00025F48: bl       #0x1c48
+0x00025F4C: and      w8, w0, #0xff
+0x00025F50: cbz      w8, #0x25f90
+0x00025F54: b        #0x25f58
+0x00025F58: ldr      w10, [sp, #0x14]
+0x00025F5C: adrp     x9, #0xf2000
+0x00025F60: add      x9, x9, #0xf61
+0x00025F64: adrp     x8, #0xf4000
+0x00025F68: add      x8, x8, #0x1d
+0x00025F6C: subs     w10, w10, #0
+0x00025F70: csel     x2, x8, x9, ne
+0x00025F74: ldr      w3, [sp, #0x10]
+0x00025F78: adrp     x1, #0x107000
+0x00025F7C: add      x1, x1, #0xc5d
+0x00025F80: mov      w8, #0x40
+0x00025F84: mov      w0, w8
+0x00025F88: bl       #0x162c
+0x00025F8C: b        #0x25f90
+0x00025F90: b        #0x25f94
+0x00025F94: b        #0x25f98
+0x00025F98: b        #0x25f9c
+0x00025F9C: ldr      w8, [sp, #0x10]
+0x00025FA0: cbz      w8, #0x25fb4
+0x00025FA4: b        #0x25fa8
+0x00025FA8: mov      w0, wzr
+0x00025FAC: bl       #0x27da0
+0x00025FB0: b        #0x25fb4
+0x00025FB4: b        #0x260d8
+0x00025FB8: ldr      w1, [sp, #0x14]
+0x00025FBC: mov      w0, wzr
+0x00025FC0: bl       #0x26100
+0x00025FC4: str      x0, [sp]
+0x00025FC8: ldr      x8, [sp]
+0x00025FCC: cbz      x8, #0x2604c
+0x00025FD0: b        #0x25fd4
+0x00025FD4: b        #0x25fd8
+0x00025FD8: bl       #0x1c20
+0x00025FDC: and      w8, w0, #0xff
+0x00025FE0: cbz      w8, #0x26044
+0x00025FE4: b        #0x25fe8
+0x00025FE8: b        #0x25fec
+0x00025FEC: mov      w8, #-0x80000000
+0x00025FF0: mov      w0, w8
+0x00025FF4: bl       #0x1c48
+0x00025FF8: and      w8, w0, #0xff
+0x00025FFC: cbz      w8, #0x2603c
+0x00026000: b        #0x26004
+0x00026004: ldr      w10, [sp, #0x14]
+0x00026008: adrp     x9, #0xf2000
+0x0002600C: add      x9, x9, #0xf61
+0x00026010: adrp     x8, #0xf4000
+0x00026014: add      x8, x8, #0x1d
+0x00026018: subs     w10, w10, #0
+0x0002601C: csel     x2, x8, x9, ne
+0x00026020: ldr      w3, [sp, #0x10]
+0x00026024: adrp     x1, #0xf8000
+0x00026028: add      x1, x1, #0xa8d
+0x0002602C: mov      w8, #-0x80000000
+0x00026030: mov      w0, w8
+0x00026034: bl       #0x162c
+0x00026038: b        #0x2603c
+0x0002603C: b        #0x26040
+0x00026040: b        #0x26044
+0x00026044: b        #0x26048
+0x00026048: b        #0x260d8
+0x0002604C: b        #0x26050
+0x00026050: bl       #0x1c20
+0x00026054: and      w8, w0, #0xff
+0x00026058: cbz      w8, #0x260c0
+0x0002605C: b        #0x26060
+0x00026060: b        #0x26064
+0x00026064: mov      w8, #-0x80000000
+0x00026068: mov      w0, w8
+0x0002606C: bl       #0x1c48
+0x00026070: and      w8, w0, #0xff
+0x00026074: cbz      w8, #0x260b8
+0x00026078: b        #0x2607c
+0x0002607C: ldrb     w10, [sp, #0xc]
+0x00026080: adrp     x8, #0x110000
+0x00026084: add      x8, x8, #0x135
+0x00026088: adrp     x9, #0x109000
+0x0002608C: add      x9, x9, #0xefc
+0x00026090: subs     w10, w10, #0
+0x00026094: csel     x2, x9, x8, ne
+0x00026098: csel     x3, x8, x9, ne
+0x0002609C: ldr      w4, [sp, #0x10]
+0x000260A0: adrp     x1, #0x109000
+0x000260A4: add      x1, x1, #0xec1
+0x000260A8: mov      w8, #-0x80000000
+0x000260AC: mov      w0, w8
+0x000260B0: bl       #0x162c
+0x000260B4: b        #0x260b8
+0x000260B8: b        #0x260bc
+0x000260BC: b        #0x260c0
+0x000260C0: b        #0x260c4
+0x000260C4: mov      w0, #2
+0x000260C8: bl       #0x73850
+0x000260CC: mov      w0, #1
+0x000260D0: bl       #0x27da0
+0x000260D4: b        #0x260d8
+0x000260D8: ldr      x9, [sp, #0x18]
+0x000260DC: adrp     x8, #0x137000
+0x000260E0: ldr      x8, [x8, #8]
+0x000260E4: subs     x8, x8, x9
+0x000260E8: b.ne     #0x260f0
+0x000260EC: b        #0x260f4
+0x000260F0: bl       #0x1488
+0x000260F4: ldr      x30, [sp, #0x20]
+0x000260F8: add      sp, sp, #0x30
+0x000260FC: ret      
+
+
+
+####################################################################################################
+new_call_6EE10 @ 0x6EE10
+####################################################################################################
+Instructions : 15
+End          : 0x6EE48
+Norm SHA256  : 446c966260f8f23b9e4c70675c343ca1d702ed533389ff7b032f5c31f19f9e74
+Callers      : 1
+Calls out    : 1
+Strings      : 0
+
+CALLERS
+  0x9328 bl
+
+REFERENCED STRINGS
+  (none detected)
+
+DIRECT / TAIL CALLS
+  0x6EE3C b.ne -> 0x6EE4C
+
+BEST CXDF FUNCTION MATCHES
+  score=100.00% CXDF=0x814C0 old_len=15
+  score=100.00% CXDF=0x6EBA0 old_len=15
+  score= 93.75% CXDF=0x6EB98 old_len=17
+  score= 90.91% CXDF=0x814B4 old_len=18
+  score= 90.32% CXDF=0x83C7C old_len=16
+  score= 90.32% CXDF=0x7F970 old_len=16
+  score= 90.32% CXDF=0x641F8 old_len=16
+  score= 90.32% CXDF=0x7324 old_len=16
+
+FULL DISASSEMBLY
+----------------------------------------------------------------------------------------------------
+0x0006EE10: sub      sp, sp, #0x20
+0x0006EE14: str      x30, [sp, #0x10]
+0x0006EE18: adrp     x8, #0x13e000
+0x0006EE1C: adrp     x9, #0x18d000
+0x0006EE20: ldr      x8, [x8, #8]
+0x0006EE24: str      x8, [sp, #8]
+0x0006EE28: ldr      w0, [x9, #0xb94]
+0x0006EE2C: adrp     x9, #0x13e000
+0x0006EE30: ldr      x8, [sp, #8]
+0x0006EE34: ldr      x9, [x9, #8]
+0x0006EE38: cmp      x9, x8
+0x0006EE3C: b.ne     #0x6ee4c
+0x0006EE40: ldr      x30, [sp, #0x10]
+0x0006EE44: add      sp, sp, #0x20
+0x0006EE48: ret      
+
+BEST OLD MATCH DISASSEMBLY
+----------------------------------------------------------------------------------------------------
+Similarity: 100.00%
+CXDF address: 0x814C0
+0x000814C0: sub      sp, sp, #0x20
+0x000814C4: str      x30, [sp, #0x10]
+0x000814C8: adrp     x8, #0x137000
+0x000814CC: adrp     x9, #0x177000
+0x000814D0: ldr      x8, [x8, #8]
+0x000814D4: str      x8, [sp, #8]
+0x000814D8: ldr      w0, [x9, #0x308]
+0x000814DC: adrp     x9, #0x137000
+0x000814E0: ldr      x8, [sp, #8]
+0x000814E4: ldr      x9, [x9, #8]
+0x000814E8: cmp      x9, x8
+0x000814EC: b.ne     #0x814fc
+0x000814F0: ldr      x30, [sp, #0x10]
+0x000814F4: add      sp, sp, #0x20
+0x000814F8: ret      
+
+
+state_wrapper_9688 @ 0x9688
+####################################################################################################
+Instructions : 4
+End          : 0x9694
+Norm SHA256  : d0227e010348dda88b7fc9d2e38ebdcacd77fa72eca7dfe388b0484de0a8cac0
+Callers      : 3
+Calls out    : 1
+Strings      : 0
+
+CALLERS
+  0x9370 bl
+  0x93C0 bl
+  0x9594 bl
+
+REFERENCED STRINGS
+  (none detected)
+
+DIRECT / TAIL CALLS
+  0x9694 b -> 0xC7CF0
+
+BEST CXDF FUNCTION MATCHES
+  score= 85.71% CXDF=0x98090 old_len=3
+  score= 85.71% CXDF=0x9618C old_len=3
+  score= 85.71% CXDF=0x8F968 old_len=3
+  score= 85.71% CXDF=0x8A350 old_len=3
+  score= 85.71% CXDF=0x1E980 old_len=3
+  score= 85.71% CXDF=0x1B930 old_len=3
+  score= 85.71% CXDF=0x1B888 old_len=3
+  score= 75.00% CXDF=0x987E8 old_len=4
+
+FULL DISASSEMBLY
+----------------------------------------------------------------------------------------------------
+0x00009688: add      x1, sp, #0x30
+0x0000968C: mov      w0, wzr
+0x00009690: strb     w8, [sp, #0x30]
+0x00009694: b        #0xc7cf0
+
+BEST OLD MATCH DISASSEMBLY
+----------------------------------------------------------------------------------------------------
+Similarity: 85.71%
+CXDF address: 0x98090
+0x00098090: add      x1, x1, #0xa23
+0x00098094: mov      w2, wzr
+0x00098098: b        #0x84768
+
