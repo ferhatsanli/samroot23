@@ -1,15 +1,14 @@
-COMMAND_ID: 2026-08-13-boundary-search-005
-RESULT: NEEDS_INPUT
+COMMAND_ID: 2026-08-13-cyb4-probe-006
+RESULT: BLOCKED
 VERIFIED:
-- No B6/B7/B8 SM-S911B input is local.
-- CXDF B5 remains dynamic; FZDP B9 and EZB6 B9 are hard-disabled, fixing the current interval after B5 and no later than B9.
-- S911BXXU8CYB4 is verified as an SM-S911B/EUX B8 Android 14 build; its exact BL child archive name is recorded in UNLOCK_ENTRY_BOUNDARY.md.
-- Public indexing lists the ~97 MB BL child, but no unrestricted direct CLI download URL was exposed.
+- CYB4 is absent from all four authorized local locations: firmware_inputs, CYB4, Downloads, and Desktop.
+- Existing CXDF/EZB6/FZDP artifacts were found but are not new CYB4 input.
+- The exact CYB4 B8 BL child filename remains recorded in UNLOCK_ENTRY_BOUNDARY.md.
 INFERENCE:
-- The policy change is a firmware-code boundary, not the observed device KG/FRP state.
+- No new boundary classification is possible without CYB4; current interval remains after B5 and no later than B9.
 UNKNOWN:
-- Whether CYB4 B8 is dynamic or hard-disabled, and therefore the narrower B5→B9 transition point.
+- CYB4 B8 entry-policy classification and the narrower firmware boundary.
 FILES_CHANGED:
-- .gitignore, UNLOCK_ENTRY_BOUNDARY.md, DEVICE_UNLOCK_PLAN.md, PROJECT_STATE.md, ROADMAP.md, REPORT_INDEX.md, EVIDENCE_LEDGER.csv, CHECKPOINT.md, NEXT_TASK.md, CODEX_STATUS.md.
+- UNLOCK_ENTRY_BOUNDARY.md, PROJECT_STATE.md, ROADMAP.md, EVIDENCE_LEDGER.csv, CHECKPOINT.md, NEXT_TASK.md, CODEX_STATUS.md.
 NEXT_RECOMMENDED_ACTION:
-- Supply unmodified BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip (or identified abl.elf/LinuxLoader PE); do not supply/download a full AP firmware or flash it.
+- Restore GitHub SSH push authorization, then push the local rebased commit. Separately supply unmodified BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip or identified extracted CYB4 abl.elf/LinuxLoader PE; do not flash it.

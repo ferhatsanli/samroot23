@@ -163,6 +163,8 @@ Unmodified `S911BXXU9FZDP` B9 ABL was extracted locally (archive SHA-256 `9c8508
 ## Historical boundary probe — BLOCKED ON EXACT INPUT
 No B6/B7/B8 component is local. The highest-value first probe is verified B8 `S911BXXU8CYB4` (SM-S911B/EUX, Android 14; exact child `BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`). Normal public indexing exposes the ~97 MB BL child but no unrestricted direct CLI URL; restricted/browser acquisition and full-firmware download were deliberately not used. Current boundary remains after CXDF B5 and no later than FZDP B9.
 
+The four authorized local CYB4 search locations were checked in command `2026-08-13-cyb4-probe-006`; none contains a CYB4 archive or extracted ABL/LinuxLoader input.
+
 The interactive `0x26020` path is persistent and destructive by design: it reaches retained `set unlock value` → VB-protocol device-write, resets device state, erases `userdata`, then reboots to recovery.  It is not a cosmetic ABL bitmap change.  Static evidence does not yet expose the VB service’s internal trusted-app linkage, so VaultKeeper/KG connection is not asserted.
 
 `codex_context/DEVICE_UNLOCK_PLAN.md` now records the supported result: no firmware patch/downgrade procedure is justified offline; the next physical work is a minimal read-only OEM-unlock visibility/prerequisite and Download-Mode observation set.

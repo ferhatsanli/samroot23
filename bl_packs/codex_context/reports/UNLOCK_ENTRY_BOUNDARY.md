@@ -18,6 +18,8 @@ Current evidence-supported interval: **the consumer Download-Mode entry hard-dis
 
 No B6/B7/B8 input exists locally. A public firmware index lists the BL child as approximately 97.32 MB, but its available controls require browser/login flow and no normal direct CLI download URL was exposed. Per acquisition constraints, no restricted-flow retrieval or full 13.66 GB firmware download was attempted.
 
+Remote command `2026-08-13-cyb4-probe-006` then searched only the designated local locations (`firmware_inputs/`, `CYB4/`, Downloads, and Desktop). No CYB4 archive, `abl.elf`, or LinuxLoader input was present; only already-analyzed CXDF/EZB6/FZDP artifacts were found.
+
 ## Next decision
 
 Supply the exact unmodified CYB4 BL child archive above (or extracted `abl.elf` / LinuxLoader PE plus archive identity). It is the single highest-information first probe:

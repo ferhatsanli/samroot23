@@ -81,7 +81,7 @@ Status legend:
 
 ## E3. Historical hard-disable boundary
 - [x] Establish initial interval: CXDF B5 dynamic; FZDP B9 and EZB6 B9 hard-disabled.
-- [!] Acquire/classify earliest B8 `S911BXXU8CYB4`. (Exact BL child identified; no unrestricted normal CLI download was exposed, so manual input is required.)
+- [!] Acquire/classify earliest B8 `S911BXXU8CYB4`. (Exact BL child identified; authorized local locations are also absent; manual input is required.)
 - [ ] If B8 hard-disabled, classify late B7 `S911BXXS7CXL2`; if B8 dynamic, classify late B8 `S911BXXS8EZA1`.
 
 ## F. Device-side plan
