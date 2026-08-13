@@ -20,6 +20,8 @@ No B6/B7/B8 input exists locally. A public firmware index lists the BL child as 
 
 Remote command `2026-08-13-cyb4-probe-006` then searched only the designated local locations (`firmware_inputs/`, `CYB4/`, Downloads, and Desktop). No CYB4 archive, `abl.elf`, or LinuxLoader input was present; only already-analyzed CXDF/EZB6/FZDP artifacts were found.
 
+Remote command `2026-08-13-cyb4-probe-007` checked the centralized authoritative `BL_FILES/` directory exactly as directed. Its only shallow file entry is `.DS_Store`; the exact CYB4 BL archive and any CYB4 extracted ABL/LinuxLoader input are absent.
+
 ## Next decision
 
 Supply the exact unmodified CYB4 BL child archive above (or extracted `abl.elf` / LinuxLoader PE plus archive identity). It is the single highest-information first probe:
