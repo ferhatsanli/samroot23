@@ -1,32 +1,33 @@
 # CODEX_INBOX.md
 
-COMMAND_ID: 2026-08-13-cyb4-probe-006
+COMMAND_ID: 2026-08-13-cyb4-probe-007
 STATUS: READY
 
 ## Objective
-Continue the existing offline historical firmware comparison from `UNLOCK_ENTRY_BOUNDARY.md` using the next B8 sample if it is available locally.
+Continue the offline historical unlock-entry boundary comparison with CYB4 B8, using the user's centralized local BL input directory.
 
-Preferred local input:
-`BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`
+Authoritative local firmware-input directory:
+`/Users/ferhatsanli/Desktop/samroot/bl_packs/BL_FILES/`
 
-First search only these locations for that archive or an already-extracted CYB4 ABL/LinuxLoader input:
-- `/Users/ferhatsanli/Desktop/samroot/bl_packs/firmware_inputs/`
-- `/Users/ferhatsanli/Desktop/samroot/bl_packs/CYB4/`
-- `/Users/ferhatsanli/Downloads/`
-- `/Users/ferhatsanli/Desktop/`
+The user reports that CYB4 and all other BL files they currently possess have been moved into this directory. Do not search `Downloads`, `Desktop`, `FZDP/`, `CYB4/`, or `firmware_inputs/` first.
 
-If absent, set `RESULT: NEEDS_INPUT`, report the exact filename above, and stop without repeating broad download searches.
+Expected CYB4 input:
+`/Users/ferhatsanli/Desktop/samroot/bl_packs/BL_FILES/BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`
 
-If present:
-- record filename, size, and SHA-256;
-- keep binary inputs local-only and Git-ignored;
-- reuse the existing extraction workflow;
+Start with an exact existence check for that path. If the exact name differs, perform only one shallow filename listing of `BL_FILES/` to locate the CYB4 archive; do not perform broad filesystem searches.
+
+If CYB4 is present:
+- record its exact filename, size, and SHA-256;
+- keep all firmware binaries and extraction outputs local-only and Git-ignored;
+- reuse the existing extraction workflow and existing analysis scripts/reports;
 - map the CYB4 counterpart of the previously compared entry-policy helper and its matching event-loop call sites;
-- classify the CYB4 behavior relative to CXDF B5, FZDP B9, and EZB6 B9;
-- update `UNLOCK_ENTRY_BOUNDARY.md`, `PROJECT_STATE.md`, `CHECKPOINT.md`, `NEXT_TASK.md`, `ROADMAP.md`, `EVIDENCE_LEDGER.csv`, `REPORT_INDEX.md`, and `CODEX_STATUS.md` with concise VERIFIED / INFERENCE / UNKNOWN findings.
+- classify CYB4 as dynamic/reachable, hard-disabled, or materially rewired relative to CXDF B5, FZDP B9, and EZB6 B9;
+- update `UNLOCK_ENTRY_BOUNDARY.md`, `PROJECT_STATE.md`, `CHECKPOINT.md`, `NEXT_TASK.md`, `ROADMAP.md`, `EVIDENCE_LEDGER.csv`, `REPORT_INDEX.md`, and `CODEX_STATUS.md` concisely.
 
 Adaptive next sample:
-- if CYB4 matches the later B9 behavior, next target `S911BXXS7CXL2` B7;
-- if CYB4 matches the earlier B5 behavior, next target `S911BXXS8EZA1` B8.
+- if CYB4 matches the later B9 behavior, choose the next useful earlier sample from the BL files already present in `BL_FILES/` before requesting or searching for anything externally;
+- if CYB4 matches the earlier B5 behavior, choose the next useful later sample from `BL_FILES/` first.
 
-Use only the minimum historical BL samples needed. Offline static analysis only; do not flash or modify the physical device. Preserve unrelated local changes and never commit firmware binaries.
+Also remove/replace stale state text claiming that no B6/B7/B8 input is local, once local presence is verified.
+
+Offline static analysis only. Do not flash or modify the physical device. Preserve unrelated local changes and never commit firmware binaries.
