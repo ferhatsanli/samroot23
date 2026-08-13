@@ -1,115 +1,88 @@
 # CODEX_INBOX.md
 
-COMMAND_ID: 2026-08-13-fzdp-b9-004
+COMMAND_ID: 2026-08-13-boundary-search-005
 STATUS: READY
 
-## Coordination-sync fix — do this first
-The previous loop rule was too conservative: a dirty worktree could prevent Codex from seeing a newer GitHub inbox. Fix this permanently.
-
-At the start of this command:
-1. Run `git fetch origin main` from anywhere inside this repository.
-2. Treat the newest remote inbox as authoritative even if the worktree is dirty. Read it directly with `git show origin/main:bl_packs/CODEX_INBOX.md` when necessary; do not require a clean worktree merely to discover a new command.
-3. Add a compact permanent rule to `AGENTS.md` under `GitHub coordination loop`:
-   - on every `continue`/`devam`/`updated`, first `git fetch origin main`;
-   - inspect the remote inbox with `git show origin/main:bl_packs/CODEX_INBOX.md` and compare its `COMMAND_ID` with `CODEX_STATUS.md`;
-   - a dirty worktree must NOT prevent reading/executing a newer remote command;
-   - never discard local changes just to sync;
-   - before final commit/push, integrate remote history safely, preserving unrelated local changes and stopping on real conflicts instead of guessing.
-4. The local uncommitted `.gitignore` and `.DS_Store` changes are expected and must not block command discovery.
-
 ## Starting point
-The GitHub coordination loop bootstrap completed successfully under `2026-08-13-bootstrap-002`.
+The previous command `2026-08-13-fzdp-b9-004` completed successfully.
 
-Preserve these established facts:
-- Device/build: SM-S911B/DS on `S911BXXS9EZB6`, binary B9.
-- EZB6 Download-Mode interactive unlock entry is hard-disabled by `0xCA790` returning false unconditionally.
-- EZB6 retained interactive confirmation/transition code exists but is skipped by the normal event loop.
-- EZB6 LinuxLoader has only two recovered direct/tail callers of `0x26020`: blocked interactive `0xD4BAC` and boot-time EM reconciliation `0x9324`.
-- EZB6 Odin has a privileged Samsung EM-token install/verification mechanism, but no consumer-unlock token mode or permitted end-user workflow is established.
-- Physical Android-policy evidence is already incorporated into project state.
+Preserve these VERIFIED facts:
+- CXDF B5 has a dynamically satisfiable Download-Mode entry-policy helper (`0xC6ED0`) and a reachable long-press/confirmation route.
+- FZDP B9 has helper `0xCABE0`, 100%-normalized to EZB6 `0xCA790`, and returns false unconditionally.
+- EZB6 B9 likewise hard-disables the normal Download-Mode long-press route.
+- FZDP and EZB6 retain the same persistent transition architecture and privileged EM-token processing, but no authorized consumer-unlock EM-token mode/workflow is established.
+- Therefore the hard-disable boundary is earlier than FZDP B9 and later than the known CXDF B5 baseline.
 
-## New local input available
-A same-binary B9 FZDP BL archive is present locally at:
+Read only the compact current state plus `codex_context/reports/FZDP_B9_ENTRY_COMPARISON.md` as needed. Do not redo the completed FZDP analysis.
 
-`/Users/ferhatsanli/Desktop/samroot/bl_packs/FZDP/BL_S911BXXU9FZDP_S911BXXU9FZDP_MQB109002558_REV00_user_low_ship_MULTI_CERT.tar.md5`
+## Primary objective — locate the first hard-disable boundary efficiently
+Use a revision-aware historical search, not a broad firmware crawl.
 
-Repository root:
-`/Users/ferhatsanli/Desktop/samroot`
+Public SM-S911B/EUX history identifies useful intermediate revisions between CXDF B5 and FZDP B9. Verify build identities independently before using them.
 
-Important Git rules:
-- `bl_packs/FZDP/` is intentionally local-only and should be ignored by Git.
-- Never add/commit/push the FZDP BL archive, extracted firmware binaries, UEFI bodies, or large generated binary artifacts.
-- The local `.gitignore` addition `/bl_packs/FZDP/` is intended and may be committed.
-- Existing `.DS_Store` changes are unrelated and may remain unstaged.
+### First probe: earliest public B8
+Prioritize:
+- `S911BXXU8CYB4` — binary B8, Android 14-era EUX build.
+- Expected BL child filename pattern: `BL_S911BXXU8CYB4_S911BXXU8CYB4_*_user_low_ship_MULTI_CERT.tar.md5.zip` or equivalent unmodified BL archive.
 
-## Primary objective — FZDP B9 entry-policy comparison
-Use the unmodified local FZDP BL archive for offline static analysis only.
+1. First inspect the local workspace for this exact build or any already-present B6/B7/B8 SM-S911B BL/ABL input. Do not repeat broad scans if a targeted `find`/`rg` is sufficient.
+2. If absent, external retrieval is now justified because missing historical firmware is the explicit blocker. Search reputable/public firmware sources for the exact SM-S911B EUX build and obtain only the BL child archive if a normal direct/public download is available.
+3. Do not download the multi-gigabyte AP/full firmware when a ~BL-only package is available.
+4. Do not bypass authentication, paywalls, anti-bot controls, access restrictions, or fabricate download URLs. If a normal CLI-accessible BL download is unavailable, stop acquisition cleanly and report the exact build + BL filename the user must supply manually.
+5. Before placing any downloaded firmware input, create/use a clearly local-only ignored directory such as `bl_packs/firmware_inputs/` and ensure Git ignores it. Never stage or push firmware binaries, archives, extracted ABLs, PE bodies, or large generated binary artifacts.
 
-1. Record the exact archive identity and SHA-256 in the textual report.
-2. Extract only what is needed. Recover `abl.elf` from `abl.elf.lz4`, then extract the UEFI LinuxLoader PE body. Recover the Odin PE body too if practical with the existing extraction workflow.
-3. Reuse existing scripts, UEFI extraction knowledge, reports, and CXDF/EZB6 mappings; do not rebuild the workflow unnecessarily.
-4. Locate the FZDP function equivalent to:
-   - CXDF LinuxLoader `0xC6ED0` — dynamic Download-Mode entry-policy helper.
-   - EZB6 LinuxLoader `0xCA790` — unconditional-false replacement.
-5. Recover both FZDP event-loop call sites corresponding to the known CXDF/EZB6 long-press gates and determine whether FZDP:
-   - can return true dynamically,
-   - is hard-disabled like EZB6,
-   - uses a different predicate/authorization mechanism,
-   - or removes/rewires the route.
-6. Trace FZDP through `LongPressVolUpkeyCheck(~4000 ms)` and its confirmation handler far enough to establish whether the native locked→unlocked transition is legitimately reachable in normal FZDP Download Mode.
-7. Map the FZDP counterpart of the persistent transition (`CXDF 0x25EE0`, `EZB6 0x26020`) and compare normalized structure and caller topology. Do not redo VaultKeeper/tz_kg unless FZDP introduces a material contradiction.
-8. Produce a concise three-way CXDF B5 vs FZDP B9 vs EZB6 B9 comparison covering:
-   - entry-policy helper behavior,
-   - event-loop reachability,
-   - long-press confirmation reachability,
-   - transition caller topology,
-   - materially relevant OEM/FRP/OEM-LOCK diagnostics.
+## Analysis for each acquired candidate
+Reuse the existing CXDF/FZDP/EZB6 extraction and comparison workflow.
 
-## Secondary objective — FZDP Odin / EM channel
-If the FZDP Odin PE is available without broad extra work:
-1. Compare its EM-token install/verification path with EZB6 Odin.
-2. Determine whether FZDP exposes any token mode, command, or authorization path that materially clarifies consumer bootloader unlock.
-3. Static analysis only: do not install, generate, request, replay, or fabricate tokens.
-4. Keep VERIFIED / INFERENCE / UNKNOWN strictly separated.
+For the candidate LinuxLoader:
+1. Locate the counterpart of CXDF `0xC6ED0` / FZDP `0xCABE0` / EZB6 `0xCA790`.
+2. Recover the two normal Download-Mode event-loop call sites.
+3. Determine whether the helper is dynamically satisfiable or unconditional-false.
+4. Trace the ~4000 ms Volume-Up path and confirmation handler far enough to classify normal locked→unlocked reachability.
+5. Map the persistent transition counterpart and direct/tail caller topology only as far as needed to confirm architectural equivalence.
+6. Record OEM/FRP/OEM-LOCK diagnostics only when they materially help date the policy transition.
+7. Keep VERIFIED / INFERENCE / UNKNOWN separated.
+
+## Adaptive boundary search
+Do not stop after merely classifying the first B8 candidate if another small BL-only probe can materially narrow the boundary.
+
+Use this strategy:
+- If earliest B8 (`S911BXXU8CYB4`) is HARD-DISABLED, next test the latest B7 build available near the B7→B8 boundary (prefer `S911BXXS7CXL2` if verified).
+- If earliest B8 is DYNAMIC/REACHABLE, the boundary is later; test a late B8 build near B8→B9 (prefer `S911BXXS8EZA1` if verified), then bisect within B8 only if necessary.
+- If latest B7 is HARD-DISABLED, step backward to the latest/earliest useful B6 boundary candidate (for example verified B6 builds around `S911BXXS6CXI4` / `S911BXXU6CXH7`) and continue revision-aware narrowing.
+- If latest B7 is DYNAMIC, the boundary is localized to B7→B8 and no B6 probe is needed.
+
+Prefer the minimum number of ~BL-only downloads needed to localize the first firmware boundary. Do not collect every historical firmware build.
 
 ## Decision goal
-Resolve this question:
+Produce the narrowest evidence-supported interval/build where Samsung changed the normal Download-Mode consumer unlock entry from dynamic/reachable to hard-disabled.
 
-**Did FZDP, despite also being binary B9, still retain a legitimately reachable native Download-Mode unlock-entry path that EZB6 later hard-disabled?**
+The key question is not whether old firmware can be flashed to the current device. This is historical offline analysis only. Never treat an older binary as flash authorization.
 
-If YES:
-- identify the first meaningful FZDP→EZB6 divergence that disables it;
-- determine whether it is a code-policy change rather than a KG/FRP runtime prerequisite;
-- do not infer flashing safety merely from shared B9 revision.
-
-If NO:
-- establish how early the hard-disable already exists in FZDP and update the historical boundary.
-
-If parsing/extraction fails:
-- document the exact blocker and cheapest next step rather than broadening analysis.
+## Secondary check
+For any candidate already extracted for LinuxLoader, inspect Odin only if it is cheap and only for a material divergence in EM-token mode/command semantics. Do not spend broad effort re-proving the already-known privileged EM-token mechanism unless a candidate reveals a consumer-relevant difference.
 
 ## Required outputs
-Create/update concise textual evidence only, including at minimum:
-- `codex_context/reports/FZDP_B9_ENTRY_COMPARISON.md`
+Create/update concise textual evidence, including:
+- `codex_context/reports/UNLOCK_ENTRY_BOUNDARY.md` — cumulative compact boundary table and evidence.
 - `codex_context/DEVICE_UNLOCK_PLAN.md`
 - `PROJECT_STATE.md`
 - `CHECKPOINT.md`
 - `NEXT_TASK.md`
 - `ROADMAP.md`
 - `EVIDENCE_LEDGER.csv`
+- `REPORT_INDEX.md`
 - `CODEX_STATUS.md`
-- `AGENTS.md` for the permanent remote-inbox sync fix.
 
-`CODEX_STATUS.md` must use the established fixed handoff format and list all meaningful changed files.
+If acquisition is blocked before any new binary can be analyzed, `CODEX_STATUS.md` should use `RESULT: NEEDS_INPUT` and provide the single highest-value exact BL archive/build for the user to supply next. Do not generate a fake analysis result.
 
-## Git / completion protocol
-- Preserve unrelated local modifications.
-- Never stage anything under `bl_packs/FZDP/`.
-- Stage only meaningful textual project changes plus the intended `.gitignore` and AGENTS sync-rule update.
-- Use a short 3-5 word English commit message.
-- Push automatically when complete.
-- If remote history advanced during the run, integrate safely without discarding local changes.
-- Do not stop at an intermediate function/address; continue until FZDP entry-policy/reachability is resolved or reduced to a precise blocker.
+## Git / coordination
+- Follow the established remote-inbox rule in `AGENTS.md`: fetch `origin/main` and treat the remote inbox as authoritative.
+- Preserve unrelated local changes.
+- Never commit firmware inputs or extracted binaries.
+- Stage only meaningful textual reports/state/checkpoint files and any deliberate `.gitignore` rule needed for the local input directory.
+- Commit with a short 3–5-word English message and push automatically.
+- Continue autonomously through the adaptive probes while normal BL-only acquisition is available and high-information; stop only at a precise external-input blocker or a well-localized policy boundary.
 
 ## Safety
-Offline static analysis only. Do not flash FZDP, downgrade firmware, patch ABL, modify trusted state, install EM tokens, or treat same binary revision as proof of flash compatibility.
+Offline static analysis only. Do not flash, downgrade, patch ABL, modify trusted state, install/generate/replay EM tokens, or perform destructive device operations.
