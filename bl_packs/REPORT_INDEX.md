@@ -27,6 +27,9 @@ Local B9 inventory, exact missing FZDP component requirement, and the constraine
 ### `codex_context/reports/token_channel_report.txt`
 Targeted Odin/LinuxLoader EM-token string/xref contexts and complete direct/tail caller inventory for LinuxLoader transition `0x26020`.
 
+### `codex_context/reports/FZDP_B9_ENTRY_COMPARISON.md`
+Archive-identified FZDP B9 extraction and three-way CXDF/FZDP/EZB6 conclusion: FZDP already uses the same unconditional-false Download-Mode entry policy as EZB6.
+
 ## Earlier unlock-path work
 ### `unlock_path_analysis/unlock_string_diff.txt`
 Old/new OEM/FRP string presence and removal.

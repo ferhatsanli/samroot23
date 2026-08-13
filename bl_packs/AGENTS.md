@@ -54,9 +54,9 @@ Before every atomic objective, keep `CHECKPOINT.md` current. Save it before any 
 Never depend on a graceful final response at quota exhaustion. A new session must be able to resume from `AGENTS.md`, `CHECKPOINT.md`, and `NEXT_TASK.md` without reading the long archive.
 
 ## GitHub coordination loop
-- When the user sends only `continue`, `devam`, `updated`, or equivalent continuation wording, execute the newest unprocessed command in `CODEX_INBOX.md`.
-- At the start, if the worktree is clean, run `git pull --ff-only`; if it is unexpectedly dirty, preserve and inspect changes and never discard or overwrite them blindly.
-- Compare the inbox `COMMAND_ID` with `CODEX_STATUS.md`; never execute the same command twice.
+- When the user sends only `continue`, `conti`, `devam`, `updated`, or equivalent continuation wording, first run `git fetch origin main`, then inspect `git show origin/main:bl_packs/CODEX_INBOX.md` and compare its `COMMAND_ID` with `CODEX_STATUS.md`.
+- Treat the remote inbox as authoritative even when the worktree is dirty; unrelated `.DS_Store` or `.gitignore` changes must not prevent discovery or execution of a newer command. Never discard local changes merely to sync.
+- Never execute the same remote inbox `COMMAND_ID` twice. Before final commit/push, integrate remote history safely while preserving unrelated local changes; stop on real conflicts rather than guessing.
 - Follow the persistent checkpoint/state/evidence protocol and existing token-efficiency rules.
 - At the end of each processed command, replace `CODEX_STATUS.md` with a concise 10–30-line handoff containing exactly `COMMAND_ID`, `RESULT`, `VERIFIED`, `INFERENCE`, `UNKNOWN`, `FILES_CHANGED`, and `NEXT_RECOMMENDED_ACTION`.
 - Before committing, inspect `git status --short` and `git diff`; stage only meaningful project changes. Exclude caches, venvs, temporary/build files, `.pyc`, `__pycache__`, and unrelated user files; improve `.gitignore` when appropriate.

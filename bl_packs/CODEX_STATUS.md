@@ -1,17 +1,16 @@
-COMMAND_ID: 2026-08-13-bootstrap-002
+COMMAND_ID: 2026-08-13-fzdp-b9-004
 RESULT: COMPLETE
 VERIFIED:
-- Coordination-loop rules are installed in AGENTS.md.
-- EZB6 long-press entry remains hard-disabled by unconditional-false 0xCA790.
-- Android policy baseline: OEM support unset/OEM setting null; FRP enforced but inactive with no credential; no targeted enterprise restriction.
-- Only CXDF B5 and EZB6 B9 ABL inputs are local; no FZDP/alternate B9 component exists.
-- EZB6 Odin has a privileged EM-token protocol, but no user unlock mode/workflow is established.
+- FZDP B9 archive SHA-256 is recorded in FZDP_B9_ENTRY_COMPARISON.md; its extracted binaries remain ignored/local-only.
+- FZDP entry helper 0xCABE0 is 100%-normalized to EZB6 0xCA790 and returns false unconditionally.
+- FZDP gates 0x707A8/0x707F0 skip long press 0x710D0 and confirmation 0xD74E0; dormant confirmation calls 0x26020 at 0xD75AC.
+- FZDP and EZB6 transitions and two-caller topology match; both retain privileged EM-token processing.
 INFERENCE:
-- The Android observations remove inspected FRP/enterprise indicators as an obvious explanation for missing OEM UI, but do not explain or alter the ABL gate.
+- The Download-Mode hard-disable predates EZB6 within B9 and is code policy, not a KG/FRP runtime prerequisite.
 UNKNOWN:
-- EM token mode-to-consumer-unlock meaning and permitted issuer workflow.
-- Whether a verified alternate B9 image retains a dynamic native entry path.
+- The pre-FZDP firmware boundary introducing the hard-disable.
+- A consumer-unlock EM-token mode or a permitted end-user issuer/workflow.
 FILES_CHANGED:
-- AGENTS.md, PROJECT_STATE.md, CHECKPOINT.md, EVIDENCE_LEDGER.csv, codex_context/DEVICE_UNLOCK_PLAN.md, CODEX_STATUS.md.
+- AGENTS.md, .gitignore, FZDP_B9_ENTRY_COMPARISON.md, fzdp_entry_probe.txt, DEVICE_UNLOCK_PLAN.md, PROJECT_STATE.md, ROADMAP.md, CHECKPOINT.md, NEXT_TASK.md, EVIDENCE_LEDGER.csv, REPORT_INDEX.md, CODEX_STATUS.md.
 NEXT_RECOMMENDED_ACTION:
-- Supply an unmodified SM-S911BXXU9FZDP or other verified B9 abl.elf/LinuxLoader PE (Odin PE preferred) for offline comparison; do not flash or install tokens.
+- Obtain a verified SM-S911B image between CXDF B5 and FZDP B9, or evidence of an authorized consumer EM-token mode; do not flash or install tokens.

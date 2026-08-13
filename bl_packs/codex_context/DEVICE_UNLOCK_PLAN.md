@@ -31,6 +31,8 @@ EZB6 Odin and LinuxLoader contain a privileged EM-token installation/verificatio
 
 This is **VERIFIED as a Samsung service-token mechanism**, but **UNKNOWN as a consumer unlock channel**: no local evidence identifies an unlock token mode, a permitted end-user issuer, or a safe user procedure. Do not install, request, reuse, or fabricate tokens. A future local B9 image can be compared statically; it must not be flashed merely because it shares B9.
 
+Same-binary FZDP B9 has now been compared offline and does not change this conclusion: it carries the same unconditional-false Download-Mode entry-policy behavior as EZB6. Therefore no known local B9 build has a legitimately reachable native consumer entry route, and FZDP must not be flashed merely because it shares bootloader revision B9.
+
 ## DEVICE PRECONDITIONS
 
 The phone is genuinely locked: `flash.locked=1`, vbmeta locked, verified boot green, `KG CHECKING (00)`, secure boot enabled, RPMB provisioned, binary B9. CXDF/B5 cannot be flashed because of anti-rollback.

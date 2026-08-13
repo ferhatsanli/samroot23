@@ -74,10 +74,10 @@ Status legend:
 
 ## E2. Same-binary comparison and alternate authorization routes
 - [x] Inventory local SM-S911B binary-B9 inputs. (Only EZB6 B9 exists; no FZDP/other B9 ABL component is local.)
-- [!] Compare CXDF/EZB6 entry-policy replacement with FZDP or another B9 build. (Blocked pending unmodified `S911BXXU9FZDP` or other verified B9 `abl.elf` / LinuxLoader PE; Odin PE preferred.)
+- [x] Compare CXDF/EZB6 entry-policy replacement with FZDP B9. (FZDP `0xCABE0` is 100%-normalized to EZB6 unconditional-false `0xCA790`; both FZDP gates skip long press/confirmation.)
 - [x] Enumerate EZB6 direct/tail LinuxLoader transition callers. (Only `0x9324` EM boot reconciliation and blocked interactive `0xD4BAC`.)
 - [x] Search EZB6 for a separate legitimate authorization protocol. (Odin EM-token install/verification exists.)
-- [~] Determine whether an EM token mode legitimately authorizes consumer bootloader unlock. (Token mode-to-bit-3 meaning and authorized issuer workflow unavailable locally; do not install tokens.)
+- [~] Determine whether an EM token mode legitimately authorizes consumer bootloader unlock. (FZDP and EZB6 retain the same privileged protocol; no consumer mode/authorized issuer workflow identified; do not install tokens.)
 
 ## F. Device-side plan
 - [x] Determine whether a complete offline-derived unlock procedure is possible. (No: the normal EZB6 Download-Mode entry route is hard-disabled.)
