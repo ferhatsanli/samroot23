@@ -1,0 +1,37 @@
+UNLOCK ENTRY TRACE SUMMARY
+==========================================================================================
+
+Unlock setter old/new similarity: 100.00%
+CXDF setter direct callers: 0
+EZB6 setter direct callers: 1
+
+D5D90 @ 0xD5D90
+  resolved start : 0xD5D90
+  instructions   : 0
+  callers        : 3
+  security strings: 0
+  best CXDF matches:
+
+C7CF0 @ 0xC7CF0
+  resolved start : 0xC7CF0
+  instructions   : 0
+  callers        : 4
+  security strings: 0
+  best CXDF matches:
+
+C5A10 @ 0xC5A10
+  resolved start : 0xC5A10
+  instructions   : 0
+  callers        : 1
+  security strings: 0
+  best CXDF matches:
+
+6EE10 @ 0x6EE10
+  resolved start : 0x6EE10
+  instructions   : 15
+  callers        : 1
+  security strings: 0
+  best CXDF matches:
+     100.00% 0x6EBA0 len=15
+     100.00% 0x814C0 len=15
+      89.66% 0x71600 len=14

@@ -1,0 +1,82 @@
+Use $s23-firmware-analysis.
+
+PRIMARY GOAL
+Prepare a technically justified, executable bootloader-unlock procedure for this exact Samsung Galaxy S23 SM-S911B/DS on S911BXXS9EZB6, to be used later when the phone is physically connected. The phone is not connected now, so continue offline analysis.
+
+PERSISTENT CHECKPOINT SYSTEM — MANDATORY
+Before doing further analysis, read:
+1. CHECKPOINT_PROTOCOL.md
+2. CHECKPOINT.md
+3. NEXT_TASK.md
+4. only the relevant unchecked/partial portion of ROADMAP.md
+
+Treat these files as persistent state, not optional documentation.
+
+Do NOT rely on receiving a final turn before quota exhaustion.
+
+At the start of each atomic objective:
+- ensure CHECKPOINT.md states the current objective;
+- checkpoint BEFORE any long-running or high-output command.
+
+After every meaningful result:
+- save detailed evidence under codex_context/reports/;
+- update EVIDENCE_LEDGER.csv with a concise evidence-linked claim;
+- mark ROADMAP.md items [x], [~], or [!] based on actual evidence;
+- compactly update PROJECT_STATE.md for durable VERIFIED facts only;
+- REPLACE CHECKPOINT.md with the current resume state;
+- REPLACE NEXT_TASK.md with the next bounded objective;
+- continue automatically.
+
+Do not append transcript history to checkpoint/state files.
+
+AUTONOMOUS CONTINUATION
+Do not stop after intermediate milestones. When one unknown is resolved, immediately continue to the next highest-information unresolved item on ROADMAP.md.
+
+Current highest-priority unresolved path begins with:
+- producer/meaning of bitmap bit 3 feeding the retained unlock transition;
+- producer/meaning of global 0x18DB94;
+- 0x5C4B0(0x18DB80);
+- relevant 0x61 readers.
+
+Trace upstream until the authoritative locked/unlocked decision or user request source is identified. Then continue upward toward the missing OEM/FRP user-triggered path.
+
+Already established and normally not worth re-proving:
+- EZB6 0x26020 unlock transition matches CXDF 0x25EE0 at 100%;
+- generic unlock-state machinery remains;
+- VaultKeeper OEM-related paths remain;
+- tz_kg KG_unlock remains and matches old behavior;
+- D5D90 is an indexed bitmap bit-test and bit 3 supplies the transition input;
+- C5A10 = bldp_init;
+- C7CF0 = bldp_set_data; BLDP is bookkeeping, not the direct request source.
+
+Do not mistake a mirrored/bookkeeping state for the authoritative producer. Trace every controlling value upstream to whoever legitimately creates or changes it.
+
+TOKEN EFFICIENCY
+- single agent by default;
+- local files only unless an external fact is truly required;
+- use targeted rg/grep/sed/address extraction rather than dumping reports;
+- keep verbose disassembly in files;
+- reuse existing scripts/results;
+- do not reread the long historical handoff unless compact state is insufficient;
+- prefer one hypothesis-discriminating experiment over broad exploration;
+- stay on Terra unless a genuinely difficult reasoning bottleneck warrants Sol.
+
+FINAL DELIVERABLE
+Maintain/create codex_context/DEVICE_UNLOCK_PLAN.md with:
+- FINAL STATUS
+- VERIFIED CHAIN
+- ROOT CAUSE
+- DEVICE PRECONDITIONS
+- DEVICE-SIDE PROCEDURE
+- EXPECTED OBSERVATIONS
+- FAILURE BRANCHES
+- RISK / IRREVERSIBILITY
+- VERIFIED / INFERENCE / UNKNOWN
+- MINIMUM REQUIRED DEVICE EXPERIMENTS if offline analysis cannot finish the path
+
+STOP CONDITIONS
+Stop normally only when:
+A) a sufficiently supported device-side unlock procedure exists; or
+B) local evidence has been exhausted and the remaining problem is reduced to the smallest concrete physical-device experiment set.
+
+If quota interrupts work, the persistent files must already make a fresh session resumable without transcript/history.

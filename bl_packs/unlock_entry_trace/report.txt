@@ -1,0 +1,1266 @@
+S23 LOCKED -> UNLOCKED REQUEST PATH TRACE
+==============================================================================================================
+
+CXDF: /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/CXDF_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin
+  size=1,794,048 sha256=5e58ad88c1318ea5bc38295c0dc3d254ff37dcaaf17ec212d5b36265a951de0f
+EZB6: /Users/ferhatsanli/Desktop/samroot/bl_packs/uefi_abl_compare/EZB6_abl_fv.bin.dump/0 8C8CE578-8A3D-4F1C-9935-896185C32DD3/0 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792/0 EE4E5898-3914-4259-9D6E-DC7BD79403CF/1 Volume image section/0 046FAE99-CF2E-49ED-A6A8-A1488B7E80D3/1 LinuxLoader/1 PE32 image section/body.bin
+  size=1,753,088 sha256=edce402b5f515a3c1ca21b8f6b34a41b989626baeaef6b2c59c25c51a1c492bd
+
+==============================================================================================================
+LOCK / UNLOCK STATE SETTER COMPARISON
+==============================================================================================================
+CXDF 0x25EE0: 136 instructions
+EZB6 0x26020: 136 instructions
+Normalized similarity: 100.00%
+
+CXDF DIRECT CALLERS
+--------------------------------------------------------------------------------------------------------------
+(no direct BL caller detected)
+
+EZB6 DIRECT CALLERS
+--------------------------------------------------------------------------------------------------------------
+0x9324
+   0x000092E4: b         #0x92a4
+   0x000092E8: bl        #0x70230
+   0x000092EC: mov       x20, x0
+   0x000092F0: mov       w0, w20
+   0x000092F4: bl        #0x780e0
+   0x000092F8: cmp       w0, #1
+   0x000092FC: b.ne      #0x9308
+   0x00009300: mov       w22, w21
+   0x00009304: b         #0x8c6c
+   0x00009308: bl        #0x77b50
+   0x0000930C: bl        #0xd60f0
+   0x00009310: mov       w0, #3
+   0x00009314: bl        #0xd5d90
+   0x00009318: tst       w0, #0xff
+   0x0000931C: mov       w1, wzr
+   0x00009320: cset      w0, ne
+>> 0x00009324: bl        #0x26020
+   0x00009328: bl        #0x6ee10
+   0x0000932C: str       w0, [sp, #0xc]
+   0x00009330: add       x1, sp, #0xc
+   0x00009334: mov       w0, #1
+   0x00009338: bl        #0xc7cf0
+   0x0000933C: bl        #0x1c20
+   0x00009340: cmp       w20, #2
+   0x00009344: b.ne      #0x9380
+   0x00009348: tst       w0, #0xff
+   0x0000934C: b.eq      #0x936c
+   0x00009350: bl        #0x9680
+   0x00009354: tst       w0, #0xff
+
+==============================================================================================================
+EZB6 BOOT-TIME UNLOCK STATE INSERTION
+==============================================================================================================
+
+CONTEXT @ 0x9310
+   0x000092E8: bl        #0x70230
+   0x000092EC: mov       x20, x0
+   0x000092F0: mov       w0, w20
+   0x000092F4: bl        #0x780e0
+   0x000092F8: cmp       w0, #1
+   0x000092FC: b.ne      #0x9308
+   0x00009300: mov       w22, w21
+   0x00009304: b         #0x8c6c
+   0x00009308: bl        #0x77b50
+   0x0000930C: bl        #0xd60f0
+>> 0x00009310: mov       w0, #3
+   0x00009314: bl        #0xd5d90
+   0x00009318: tst       w0, #0xff
+   0x0000931C: mov       w1, wzr
+   0x00009320: cset      w0, ne
+   0x00009324: bl        #0x26020
+   0x00009328: bl        #0x6ee10
+   0x0000932C: str       w0, [sp, #0xc]
+   0x00009330: add       x1, sp, #0xc
+   0x00009334: mov       w0, #1
+   0x00009338: bl        #0xc7cf0
+   0x0000933C: bl        #0x1c20
+   0x00009340: cmp       w20, #2
+
+CONTEXT @ 0x9314
+   0x000092EC: mov       x20, x0
+   0x000092F0: mov       w0, w20
+   0x000092F4: bl        #0x780e0
+   0x000092F8: cmp       w0, #1
+   0x000092FC: b.ne      #0x9308
+   0x00009300: mov       w22, w21
+   0x00009304: b         #0x8c6c
+   0x00009308: bl        #0x77b50
+   0x0000930C: bl        #0xd60f0
+   0x00009310: mov       w0, #3
+>> 0x00009314: bl        #0xd5d90
+   0x00009318: tst       w0, #0xff
+   0x0000931C: mov       w1, wzr
+   0x00009320: cset      w0, ne
+   0x00009324: bl        #0x26020
+   0x00009328: bl        #0x6ee10
+   0x0000932C: str       w0, [sp, #0xc]
+   0x00009330: add       x1, sp, #0xc
+   0x00009334: mov       w0, #1
+   0x00009338: bl        #0xc7cf0
+   0x0000933C: bl        #0x1c20
+   0x00009340: cmp       w20, #2
+   0x00009344: b.ne      #0x9380
+
+CONTEXT @ 0x9324
+   0x000092FC: b.ne      #0x9308
+   0x00009300: mov       w22, w21
+   0x00009304: b         #0x8c6c
+   0x00009308: bl        #0x77b50
+   0x0000930C: bl        #0xd60f0
+   0x00009310: mov       w0, #3
+   0x00009314: bl        #0xd5d90
+   0x00009318: tst       w0, #0xff
+   0x0000931C: mov       w1, wzr
+   0x00009320: cset      w0, ne
+>> 0x00009324: bl        #0x26020
+   0x00009328: bl        #0x6ee10
+   0x0000932C: str       w0, [sp, #0xc]
+   0x00009330: add       x1, sp, #0xc
+   0x00009334: mov       w0, #1
+   0x00009338: bl        #0xc7cf0
+   0x0000933C: bl        #0x1c20
+   0x00009340: cmp       w20, #2
+   0x00009344: b.ne      #0x9380
+   0x00009348: tst       w0, #0xff
+   0x0000934C: b.eq      #0x936c
+   0x00009350: bl        #0x9680
+   0x00009354: tst       w0, #0xff
+
+CONTEXT @ 0x9328
+   0x00009300: mov       w22, w21
+   0x00009304: b         #0x8c6c
+   0x00009308: bl        #0x77b50
+   0x0000930C: bl        #0xd60f0
+   0x00009310: mov       w0, #3
+   0x00009314: bl        #0xd5d90
+   0x00009318: tst       w0, #0xff
+   0x0000931C: mov       w1, wzr
+   0x00009320: cset      w0, ne
+   0x00009324: bl        #0x26020
+>> 0x00009328: bl        #0x6ee10
+   0x0000932C: str       w0, [sp, #0xc]
+   0x00009330: add       x1, sp, #0xc
+   0x00009334: mov       w0, #1
+   0x00009338: bl        #0xc7cf0
+   0x0000933C: bl        #0x1c20
+   0x00009340: cmp       w20, #2
+   0x00009344: b.ne      #0x9380
+   0x00009348: tst       w0, #0xff
+   0x0000934C: b.eq      #0x936c
+   0x00009350: bl        #0x9680
+   0x00009354: tst       w0, #0xff
+   0x00009358: b.eq      #0x936c
+
+CONTEXT @ 0x9338
+   0x00009310: mov       w0, #3
+   0x00009314: bl        #0xd5d90
+   0x00009318: tst       w0, #0xff
+   0x0000931C: mov       w1, wzr
+   0x00009320: cset      w0, ne
+   0x00009324: bl        #0x26020
+   0x00009328: bl        #0x6ee10
+   0x0000932C: str       w0, [sp, #0xc]
+   0x00009330: add       x1, sp, #0xc
+   0x00009334: mov       w0, #1
+>> 0x00009338: bl        #0xc7cf0
+   0x0000933C: bl        #0x1c20
+   0x00009340: cmp       w20, #2
+   0x00009344: b.ne      #0x9380
+   0x00009348: tst       w0, #0xff
+   0x0000934C: b.eq      #0x936c
+   0x00009350: bl        #0x9680
+   0x00009354: tst       w0, #0xff
+   0x00009358: b.eq      #0x936c
+   0x0000935C: adrp      x1, #0xf5000
+   0x00009360: mov       w0, #0x40
+   0x00009364: add       x1, x1, #0x926
+   0x00009368: bl        #0x162c
+
+CONTEXT @ 0x9370
+   0x00009348: tst       w0, #0xff
+   0x0000934C: b.eq      #0x936c
+   0x00009350: bl        #0x9680
+   0x00009354: tst       w0, #0xff
+   0x00009358: b.eq      #0x936c
+   0x0000935C: adrp      x1, #0xf5000
+   0x00009360: mov       w0, #0x40
+   0x00009364: add       x1, x1, #0x926
+   0x00009368: bl        #0x162c
+   0x0000936C: mov       w8, #2
+>> 0x00009370: bl        #0x9688
+   0x00009374: mov       w8, #1
+   0x00009378: strb      w8, [sp, #0x10]
+   0x0000937C: b         #0x93cc
+   0x00009380: tst       w0, #0xff
+   0x00009384: b.eq      #0x93a4
+   0x00009388: bl        #0x9680
+   0x0000938C: tst       w0, #0xff
+   0x00009390: b.eq      #0x93a4
+   0x00009394: adrp      x1, #0x119000
+   0x00009398: mov       w0, #0x40
+   0x0000939C: add       x1, x1, #0xdfc
+   0x000093A0: bl        #0x162c
+
+CONTEXT @ 0x93C0
+   0x00009398: mov       w0, #0x40
+   0x0000939C: add       x1, x1, #0xdfc
+   0x000093A0: bl        #0x162c
+   0x000093A4: cmp       w20, #1
+   0x000093A8: strb      wzr, [sp, #0x10]
+   0x000093AC: b.eq      #0x9598
+   0x000093B0: bl        #0x726b0
+   0x000093B4: tst       w0, #0xff
+   0x000093B8: b.ne      #0x93cc
+   0x000093BC: mov       w8, #3
+>> 0x000093C0: bl        #0x9688
+   0x000093C4: mov       w0, #0x61
+   0x000093C8: bl        #0x27ee0
+   0x000093CC: bl        #0xc4130
+   0x000093D0: mov       w21, w0
+   0x000093D4: add       x0, sp, #0x14
+   0x000093D8: bl        #0x56510
+   0x000093DC: cmp       w21, #1
+   0x000093E0: b.ne      #0x9450
+   0x000093E4: ldr       w8, [sp, #0x14]
+   0x000093E8: cmp       w8, #0xddf
+   0x000093EC: b.lo      #0x9450
+   0x000093F0: bl        #0x1c20
+
+CONTEXT @ 0x9594
+   0x0000956C: mov       w2, #1
+   0x00009570: bl        #0x55b00
+   0x00009574: mov       w0, w20
+   0x00009578: bl        #0x719c0
+   0x0000957C: cbz       w21, #0x95e0
+   0x00009580: add       x0, sp, #0x28
+   0x00009584: bl        #0x56310
+   0x00009588: ldr       w0, [sp, #0x28]
+   0x0000958C: bl        #0x71930
+   0x00009590: mov       w8, #4
+>> 0x00009594: bl        #0x9688
+   0x00009598: mov       x21, xzr
+   0x0000959C: add       x0, sp, #0x10
+   0x000095A0: bl        #0x13f80
+   0x000095A4: cbz       x0, #0x95d4
+   0x000095A8: bl        #0x9698
+   0x000095AC: tst       w0, #0xff
+   0x000095B0: b.eq      #0x95d4
+   0x000095B4: mov       w0, #0x400000
+   0x000095B8: bl        #0x1c48
+   0x000095BC: tst       w0, #0xff
+   0x000095C0: b.eq      #0x95d4
+   0x000095C4: adrp      x1, #0x119000
+
+==============================================================================================================
+EZB6: UnlockStateSetter_new @ 0x26020
+==============================================================================================================
+Thunk chain : 0x26020
+Resolved start: 0x26020
+Instructions : 136
+End          : 0x2623C (ret)
+Direct callers: 1
+  0x9324
+Referenced strings: 9
+  ADRP+ADD   code=0x2609C str=0xF8127 Lock  <<< SECURITY
+  ADRP+ADD   code=0x260A4 str=0xF93F0 Unlock  <<< SECURITY
+  ADRP+ADD   code=0x260B8 str=0x10DB70 Device already %a keep booting step(%d)  <<< SECURITY
+  ADRP+ADD   code=0x26148 str=0xF8127 Lock  <<< SECURITY
+  ADRP+ADD   code=0x26150 str=0xF93F0 Unlock  <<< SECURITY
+  ADRP+ADD   code=0x26164 str=0xFE3E7 ERROR!!! Flash Value %a Failed..!!(%d)
+  ADRP+ADD   code=0x261C0 str=0x116626 LOCK  <<< SECURITY
+  ADRP+ADD   code=0x261C8 str=0x10FFEE UNLOCK  <<< SECURITY
+  ADRP+ADD   code=0x261E0 str=0x10FFB3 Device reboot to recovery due to change from %a to %a(%d)  <<< SECURITY
+Direct BL calls: 15
+  0x2604C -> 0x25EC0
+  0x2606C -> 0x1C20
+  0x26088 -> 0x1C48
+  0x260C8 -> 0x162C
+  0x260EC -> 0x27EE0
+  0x26100 -> 0x26240
+  0x26118 -> 0x1C20
+  0x26134 -> 0x1C48
+  0x26174 -> 0x162C
+  0x26190 -> 0x1C20
+  0x261AC -> 0x1C48
+  0x261F0 -> 0x162C
+  0x26208 -> 0x73B70
+  0x26210 -> 0x27EE0
+  0x26230 -> 0x1488
+
+BEST CXDF MATCHES
+--------------------------------------------------------------------------------------------------------------
+ 100.00% 0x25EE0 len=136
+  60.07% 0x13330 len=137
+  59.62% 0xB1D0 len=129
+  58.72% 0xFF50 len=82
+  57.51% 0x158C0 len=97
+  55.26% 0x4D690 len=92
+  54.89% 0xA6E0 len=181
+  54.78% 0x15EA0 len=94
+  54.71% 0x3BDE0 len=87
+  54.47% 0x18D30 len=99
+  54.17% 0x19C10 len=104
+  53.85% 0xAE60 len=98
+
+FUNCTION / TARGET DISASSEMBLY
+--------------------------------------------------------------------------------------------------------------
+   0x00026020: sub       sp, sp, #0x30
+   0x00026024: str       x30, [sp, #0x20]
+   0x00026028: adrp      x8, #0x13e000
+   0x0002602C: ldr       x8, [x8, #8]
+   0x00026030: str       x8, [sp, #0x18]
+   0x00026034: str       w0, [sp, #0x14]
+   0x00026038: str       w1, [sp, #0x10]
+   0x0002603C: mov       w8, wzr
+   0x00026040: strb      w8, [sp, #0xc]
+   0x00026044: mov       x8, #-0x7ffffffffffffffd
+   0x00026048: str       x8, [sp]
+   0x0002604C: bl        #0x25ec0
+   0x00026050: strb      w0, [sp, #0xc]
+   0x00026054: ldrb      w8, [sp, #0xc]
+   0x00026058: ldr       w9, [sp, #0x14]
+   0x0002605C: subs      w8, w8, w9
+   0x00026060: b.ne      #0x260f8
+   0x00026064: b         #0x26068
+   0x00026068: b         #0x2606c
+   0x0002606C: bl        #0x1c20
+   0x00026070: and       w8, w0, #0xff
+   0x00026074: cbz       w8, #0x260d8
+   0x00026078: b         #0x2607c
+   0x0002607C: b         #0x26080
+   0x00026080: mov       w8, #0x40
+   0x00026084: mov       w0, w8
+   0x00026088: bl        #0x1c48
+   0x0002608C: and       w8, w0, #0xff
+   0x00026090: cbz       w8, #0x260d0
+   0x00026094: b         #0x26098
+   0x00026098: ldr       w10, [sp, #0x14]
+   0x0002609C: adrp      x9, #0xf8000
+   0x000260A0: add       x9, x9, #0x127
+   0x000260A4: adrp      x8, #0xf9000
+   0x000260A8: add       x8, x8, #0x3f0
+   0x000260AC: subs      w10, w10, #0
+   0x000260B0: csel      x2, x8, x9, ne
+   0x000260B4: ldr       w3, [sp, #0x10]
+   0x000260B8: adrp      x1, #0x10d000
+   0x000260BC: add       x1, x1, #0xb70
+   0x000260C0: mov       w8, #0x40
+   0x000260C4: mov       w0, w8
+   0x000260C8: bl        #0x162c
+   0x000260CC: b         #0x260d0
+   0x000260D0: b         #0x260d4
+   0x000260D4: b         #0x260d8
+   0x000260D8: b         #0x260dc
+   0x000260DC: ldr       w8, [sp, #0x10]
+   0x000260E0: cbz       w8, #0x260f4
+   0x000260E4: b         #0x260e8
+   0x000260E8: mov       w0, wzr
+   0x000260EC: bl        #0x27ee0
+   0x000260F0: b         #0x260f4
+   0x000260F4: b         #0x26218
+   0x000260F8: ldr       w1, [sp, #0x14]
+   0x000260FC: mov       w0, wzr
+   0x00026100: bl        #0x26240
+   0x00026104: str       x0, [sp]
+   0x00026108: ldr       x8, [sp]
+   0x0002610C: cbz       x8, #0x2618c
+   0x00026110: b         #0x26114
+   0x00026114: b         #0x26118
+   0x00026118: bl        #0x1c20
+   0x0002611C: and       w8, w0, #0xff
+   0x00026120: cbz       w8, #0x26184
+   0x00026124: b         #0x26128
+   0x00026128: b         #0x2612c
+   0x0002612C: mov       w8, #-0x80000000
+   0x00026130: mov       w0, w8
+   0x00026134: bl        #0x1c48
+   0x00026138: and       w8, w0, #0xff
+   0x0002613C: cbz       w8, #0x2617c
+   0x00026140: b         #0x26144
+   0x00026144: ldr       w10, [sp, #0x14]
+   0x00026148: adrp      x9, #0xf8000
+   0x0002614C: add       x9, x9, #0x127
+   0x00026150: adrp      x8, #0xf9000
+   0x00026154: add       x8, x8, #0x3f0
+   0x00026158: subs      w10, w10, #0
+   0x0002615C: csel      x2, x8, x9, ne
+   0x00026160: ldr       w3, [sp, #0x10]
+   0x00026164: adrp      x1, #0xfe000
+   0x00026168: add       x1, x1, #0x3e7
+   0x0002616C: mov       w8, #-0x80000000
+   0x00026170: mov       w0, w8
+   0x00026174: bl        #0x162c
+   0x00026178: b         #0x2617c
+   0x0002617C: b         #0x26180
+   0x00026180: b         #0x26184
+   0x00026184: b         #0x26188
+   0x00026188: b         #0x26218
+   0x0002618C: b         #0x26190
+   0x00026190: bl        #0x1c20
+   0x00026194: and       w8, w0, #0xff
+   0x00026198: cbz       w8, #0x26200
+   0x0002619C: b         #0x261a0
+   0x000261A0: b         #0x261a4
+   0x000261A4: mov       w8, #-0x80000000
+   0x000261A8: mov       w0, w8
+   0x000261AC: bl        #0x1c48
+   0x000261B0: and       w8, w0, #0xff
+   0x000261B4: cbz       w8, #0x261f8
+   0x000261B8: b         #0x261bc
+   0x000261BC: ldrb      w10, [sp, #0xc]
+   0x000261C0: adrp      x8, #0x116000
+   0x000261C4: add       x8, x8, #0x626
+   0x000261C8: adrp      x9, #0x10f000
+   0x000261CC: add       x9, x9, #0xfee
+   0x000261D0: subs      w10, w10, #0
+   0x000261D4: csel      x2, x9, x8, ne
+   0x000261D8: csel      x3, x8, x9, ne
+   0x000261DC: ldr       w4, [sp, #0x10]
+   0x000261E0: adrp      x1, #0x10f000
+   0x000261E4: add       x1, x1, #0xfb3
+   0x000261E8: mov       w8, #-0x80000000
+   0x000261EC: mov       w0, w8
+   0x000261F0: bl        #0x162c
+   0x000261F4: b         #0x261f8
+   0x000261F8: b         #0x261fc
+   0x000261FC: b         #0x26200
+   0x00026200: b         #0x26204
+   0x00026204: mov       w0, #2
+   0x00026208: bl        #0x73b70
+   0x0002620C: mov       w0, #1
+   0x00026210: bl        #0x27ee0
+   0x00026214: b         #0x26218
+   0x00026218: ldr       x9, [sp, #0x18]
+   0x0002621C: adrp      x8, #0x13e000
+   0x00026220: ldr       x8, [x8, #8]
+   0x00026224: subs      x8, x8, x9
+   0x00026228: b.ne      #0x26230
+   0x0002622C: b         #0x26234
+   0x00026230: bl        #0x1488
+   0x00026234: ldr       x30, [sp, #0x20]
+   0x00026238: add       sp, sp, #0x30
+   0x0002623C: ret       
+
+CALLER CONTEXTS
+--------------------------------------------------------------------------------------------------------------
+
+CALL @ 0x9324
+   0x000092E4: b         #0x92a4
+   0x000092E8: bl        #0x70230
+   0x000092EC: mov       x20, x0
+   0x000092F0: mov       w0, w20
+   0x000092F4: bl        #0x780e0
+   0x000092F8: cmp       w0, #1
+   0x000092FC: b.ne      #0x9308
+   0x00009300: mov       w22, w21
+   0x00009304: b         #0x8c6c
+   0x00009308: bl        #0x77b50
+   0x0000930C: bl        #0xd60f0
+   0x00009310: mov       w0, #3
+   0x00009314: bl        #0xd5d90
+   0x00009318: tst       w0, #0xff
+   0x0000931C: mov       w1, wzr
+   0x00009320: cset      w0, ne
+>> 0x00009324: bl        #0x26020
+   0x00009328: bl        #0x6ee10
+   0x0000932C: str       w0, [sp, #0xc]
+   0x00009330: add       x1, sp, #0xc
+   0x00009334: mov       w0, #1
+   0x00009338: bl        #0xc7cf0
+   0x0000933C: bl        #0x1c20
+   0x00009340: cmp       w20, #2
+   0x00009344: b.ne      #0x9380
+   0x00009348: tst       w0, #0xff
+   0x0000934C: b.eq      #0x936c
+   0x00009350: bl        #0x9680
+   0x00009354: tst       w0, #0xff
+
+==============================================================================================================
+EZB6: NewStateSource_D5D90 @ 0xD5D90
+==============================================================================================================
+Address executable .text icinde bulunamadi.
+
+==============================================================================================================
+EZB6: NewStateSink_C7CF0 @ 0xC7CF0
+==============================================================================================================
+Address executable .text icinde bulunamadi.
+
+==============================================================================================================
+EZB6: NewCall_C5A10 @ 0xC5A10
+==============================================================================================================
+Address executable .text icinde bulunamadi.
+
+==============================================================================================================
+EZB6: NewGlobalRead_6EE10 @ 0x6EE10
+==============================================================================================================
+Thunk chain : 0x6EE10
+Resolved start: 0x6EE10
+Instructions : 15
+End          : 0x6EE48 (ret)
+Direct callers: 1
+  0x9328
+Referenced strings: 0
+Direct BL calls: 0
+
+BEST CXDF MATCHES
+--------------------------------------------------------------------------------------------------------------
+ 100.00% 0x6EBA0 len=15
+ 100.00% 0x814C0 len=15
+  89.66% 0x71600 len=14
+  89.66% 0x7FE00 len=14
+  86.67% 0x62720 len=15
+  85.71% 0x62670 len=13
+  85.71% 0x62760 len=13
+  85.71% 0x7FA50 len=13
+  83.87% 0x7324 len=16
+  82.76% 0x8908 len=14
+  82.76% 0x29D00 len=14
+  82.76% 0x6ED20 len=14
+
+FUNCTION / TARGET DISASSEMBLY
+--------------------------------------------------------------------------------------------------------------
+   0x0006EE10: sub       sp, sp, #0x20
+   0x0006EE14: str       x30, [sp, #0x10]
+   0x0006EE18: adrp      x8, #0x13e000
+   0x0006EE1C: adrp      x9, #0x18d000
+   0x0006EE20: ldr       x8, [x8, #8]
+   0x0006EE24: str       x8, [sp, #8]
+   0x0006EE28: ldr       w0, [x9, #0xb94]
+   0x0006EE2C: adrp      x9, #0x13e000
+   0x0006EE30: ldr       x8, [sp, #8]
+   0x0006EE34: ldr       x9, [x9, #8]
+   0x0006EE38: cmp       x9, x8
+   0x0006EE3C: b.ne      #0x6ee4c
+   0x0006EE40: ldr       x30, [sp, #0x10]
+   0x0006EE44: add       sp, sp, #0x20
+   0x0006EE48: ret       
+
+CALLER CONTEXTS
+--------------------------------------------------------------------------------------------------------------
+
+CALL @ 0x9328
+   0x000092E8: bl        #0x70230
+   0x000092EC: mov       x20, x0
+   0x000092F0: mov       w0, w20
+   0x000092F4: bl        #0x780e0
+   0x000092F8: cmp       w0, #1
+   0x000092FC: b.ne      #0x9308
+   0x00009300: mov       w22, w21
+   0x00009304: b         #0x8c6c
+   0x00009308: bl        #0x77b50
+   0x0000930C: bl        #0xd60f0
+   0x00009310: mov       w0, #3
+   0x00009314: bl        #0xd5d90
+   0x00009318: tst       w0, #0xff
+   0x0000931C: mov       w1, wzr
+   0x00009320: cset      w0, ne
+   0x00009324: bl        #0x26020
+>> 0x00009328: bl        #0x6ee10
+   0x0000932C: str       w0, [sp, #0xc]
+   0x00009330: add       x1, sp, #0xc
+   0x00009334: mov       w0, #1
+   0x00009338: bl        #0xc7cf0
+   0x0000933C: bl        #0x1c20
+   0x00009340: cmp       w20, #2
+   0x00009344: b.ne      #0x9380
+   0x00009348: tst       w0, #0xff
+   0x0000934C: b.eq      #0x936c
+   0x00009350: bl        #0x9680
+   0x00009354: tst       w0, #0xff
+   0x00009358: b.eq      #0x936c
+
+==============================================================================================================
+EZB6: StateWrapper_9688 @ 0x9688
+==============================================================================================================
+Thunk chain : 0x9688
+Resolved start: 0x9688
+Instructions : 91
+End          : 0x97F0 (ret)
+Direct callers: 3
+  0x9370
+  0x93C0
+  0x9594
+Referenced strings: 1
+  ADRP+ADD   code=0x9760 str=0x11780A Failed to get Shared IMEM base, %r
+Direct BL calls: 5
+  0x9730 -> 0x1C20
+  0x974C -> 0x1C48
+  0x9770 -> 0x162C
+  0x97C4 -> 0x7370
+  0x97E4 -> 0x1488
+
+BEST CXDF MATCHES
+--------------------------------------------------------------------------------------------------------------
+  95.56% 0x9620 len=89
+  95.51% 0x9628 len=87
+  94.51% 0x9618 len=91
+  94.32% 0x9630 len=85
+  94.19% 0x9640 len=81
+  93.10% 0x9638 len=83
+  91.67% 0x9650 len=77
+  65.75% 0x46420 len=55
+  65.75% 0x46500 len=55
+  63.09% 0x465E0 len=58
+  58.60% 0x26960 len=66
+  56.58% 0xA5E0 len=61
+
+FUNCTION / TARGET DISASSEMBLY
+--------------------------------------------------------------------------------------------------------------
+   0x00009688: add       x1, sp, #0x30
+   0x0000968C: mov       w0, wzr
+   0x00009690: strb      w8, [sp, #0x30]
+   0x00009694: b         #0xc7cf0
+   0x00009698: mov       x22, x0
+   0x0000969C: b         #0x1c20
+   0x000096A0: mov       x2, x19
+   0x000096A4: b         #0x162c
+   0x000096A8: mov       x2, x22
+   0x000096AC: b         #0x162c
+   0x000096B0: ldr       x8, [x8, #0x140]
+   0x000096B4: br        x8
+   0x000096B8: udf       #0
+   0x000096BC: udf       #0
+   0x000096C0: sub       sp, sp, #0x40
+   0x000096C4: str       x30, [sp, #0x30]
+   0x000096C8: adrp      x8, #0x13e000
+   0x000096CC: ldr       x8, [x8, #8]
+   0x000096D0: str       x8, [sp, #0x28]
+   0x000096D4: mov       w8, #8
+   0x000096D8: str       x8, [sp, #0x20]
+   0x000096DC: adrp      x8, #0x176000
+   0x000096E0: ldr       x8, [x8, #0xe28]
+   0x000096E4: cbnz      x8, #0x978c
+   0x000096E8: b         #0x96ec
+   0x000096EC: adrp      x8, #0x176000
+   0x000096F0: ldr       x8, [x8, #0x130]
+   0x000096F4: ldr       x8, [x8, #0x48]
+   0x000096F8: adrp      x0, #0x11b000
+   0x000096FC: add       x0, x0, #0x23a
+   0x00009700: adrp      x1, #0x13c000
+   0x00009704: add       x1, x1, #0xeb0
+   0x00009708: adrp      x4, #0x176000
+   0x0000970C: add       x4, x4, #0xe28
+   0x00009710: mov       x2, xzr
+   0x00009714: add       x3, sp, #0x20
+   0x00009718: blr       x8
+   0x0000971C: str       x0, [sp]
+   0x00009720: ldr       x8, [sp]
+   0x00009724: cbz       x8, #0x9788
+   0x00009728: b         #0x972c
+   0x0000972C: b         #0x9730
+   0x00009730: bl        #0x1c20
+   0x00009734: and       w8, w0, #0xff
+   0x00009738: cbz       w8, #0x9780
+   0x0000973C: b         #0x9740
+   0x00009740: b         #0x9744
+   0x00009744: mov       w8, #-0x80000000
+   0x00009748: mov       w0, w8
+   0x0000974C: bl        #0x1c48
+   0x00009750: and       w8, w0, #0xff
+   0x00009754: cbz       w8, #0x9778
+   0x00009758: b         #0x975c
+   0x0000975C: ldr       x2, [sp]
+   0x00009760: adrp      x1, #0x117000
+   0x00009764: add       x1, x1, #0x80a
+   0x00009768: mov       w8, #-0x80000000
+   0x0000976C: mov       w0, w8
+   0x00009770: bl        #0x162c
+   0x00009774: b         #0x9778
+   0x00009778: b         #0x977c
+   0x0000977C: b         #0x9780
+   0x00009780: b         #0x9784
+   0x00009784: b         #0x97cc
+   0x00009788: b         #0x978c
+   0x0000978C: adrp      x8, #0x176000
+   0x00009790: ldr       x8, [x8, #0xe28]
+   0x00009794: add       x9, x8, #0x6b0
+   0x00009798: adrp      x8, #0x176000
+   0x0000979C: str       x9, [x8, #0xe30]
+   0x000097A0: ldr       x8, [x8, #0xe30]
+   0x000097A4: str       x8, [sp, #0x18]
+   0x000097A8: mov       w8, wzr
+   0x000097AC: str       w8, [sp, #0x14]
+   0x000097B0: mov       w8, #0x20
+   0x000097B4: str       x8, [sp, #8]
+   0x000097B8: ldr       x0, [sp, #0x18]
+   0x000097BC: ldr       x1, [sp, #8]
+   0x000097C0: ldr       w2, [sp, #0x14]
+   0x000097C4: bl        #0x7370
+   0x000097C8: b         #0x97cc
+   0x000097CC: ldr       x9, [sp, #0x28]
+   0x000097D0: adrp      x8, #0x13e000
+   0x000097D4: ldr       x8, [x8, #8]
+   0x000097D8: subs      x8, x8, x9
+   0x000097DC: b.ne      #0x97e4
+   0x000097E0: b         #0x97e8
+   0x000097E4: bl        #0x1488
+   0x000097E8: ldr       x30, [sp, #0x30]
+   0x000097EC: add       sp, sp, #0x40
+   0x000097F0: ret       
+
+CALLER CONTEXTS
+--------------------------------------------------------------------------------------------------------------
+
+CALL @ 0x9370
+   0x00009330: add       x1, sp, #0xc
+   0x00009334: mov       w0, #1
+   0x00009338: bl        #0xc7cf0
+   0x0000933C: bl        #0x1c20
+   0x00009340: cmp       w20, #2
+   0x00009344: b.ne      #0x9380
+   0x00009348: tst       w0, #0xff
+   0x0000934C: b.eq      #0x936c
+   0x00009350: bl        #0x9680
+   0x00009354: tst       w0, #0xff
+   0x00009358: b.eq      #0x936c
+   0x0000935C: adrp      x1, #0xf5000
+   0x00009360: mov       w0, #0x40
+   0x00009364: add       x1, x1, #0x926
+   0x00009368: bl        #0x162c
+   0x0000936C: mov       w8, #2
+>> 0x00009370: bl        #0x9688
+   0x00009374: mov       w8, #1
+   0x00009378: strb      w8, [sp, #0x10]
+   0x0000937C: b         #0x93cc
+   0x00009380: tst       w0, #0xff
+   0x00009384: b.eq      #0x93a4
+   0x00009388: bl        #0x9680
+   0x0000938C: tst       w0, #0xff
+   0x00009390: b.eq      #0x93a4
+   0x00009394: adrp      x1, #0x119000
+   0x00009398: mov       w0, #0x40
+   0x0000939C: add       x1, x1, #0xdfc
+   0x000093A0: bl        #0x162c
+
+CALL @ 0x93C0
+   0x00009380: tst       w0, #0xff
+   0x00009384: b.eq      #0x93a4
+   0x00009388: bl        #0x9680
+   0x0000938C: tst       w0, #0xff
+   0x00009390: b.eq      #0x93a4
+   0x00009394: adrp      x1, #0x119000
+   0x00009398: mov       w0, #0x40
+   0x0000939C: add       x1, x1, #0xdfc
+   0x000093A0: bl        #0x162c
+   0x000093A4: cmp       w20, #1
+   0x000093A8: strb      wzr, [sp, #0x10]
+   0x000093AC: b.eq      #0x9598
+   0x000093B0: bl        #0x726b0
+   0x000093B4: tst       w0, #0xff
+   0x000093B8: b.ne      #0x93cc
+   0x000093BC: mov       w8, #3
+>> 0x000093C0: bl        #0x9688
+   0x000093C4: mov       w0, #0x61
+   0x000093C8: bl        #0x27ee0
+   0x000093CC: bl        #0xc4130
+   0x000093D0: mov       w21, w0
+   0x000093D4: add       x0, sp, #0x14
+   0x000093D8: bl        #0x56510
+   0x000093DC: cmp       w21, #1
+   0x000093E0: b.ne      #0x9450
+   0x000093E4: ldr       w8, [sp, #0x14]
+   0x000093E8: cmp       w8, #0xddf
+   0x000093EC: b.lo      #0x9450
+   0x000093F0: bl        #0x1c20
+
+CALL @ 0x9594
+   0x00009554: mov       w0, #-0x80000000
+   0x00009558: add       x1, x1, #0xe5c
+   0x0000955C: bl        #0x162c
+   0x00009560: b         #0x9238
+   0x00009564: bl        #0x57240
+   0x00009568: mov       w1, #0x1f4
+   0x0000956C: mov       w2, #1
+   0x00009570: bl        #0x55b00
+   0x00009574: mov       w0, w20
+   0x00009578: bl        #0x719c0
+   0x0000957C: cbz       w21, #0x95e0
+   0x00009580: add       x0, sp, #0x28
+   0x00009584: bl        #0x56310
+   0x00009588: ldr       w0, [sp, #0x28]
+   0x0000958C: bl        #0x71930
+   0x00009590: mov       w8, #4
+>> 0x00009594: bl        #0x9688
+   0x00009598: mov       x21, xzr
+   0x0000959C: add       x0, sp, #0x10
+   0x000095A0: bl        #0x13f80
+   0x000095A4: cbz       x0, #0x95d4
+   0x000095A8: bl        #0x9698
+   0x000095AC: tst       w0, #0xff
+   0x000095B0: b.eq      #0x95d4
+   0x000095B4: mov       w0, #0x400000
+   0x000095B8: bl        #0x1c48
+   0x000095BC: tst       w0, #0xff
+   0x000095C0: b.eq      #0x95d4
+   0x000095C4: adrp      x1, #0x119000
+
+==============================================================================================================
+CXDF: UnlockStateSetter_old @ 0x25EE0
+==============================================================================================================
+Thunk chain : 0x25EE0
+Resolved start: 0x25EE0
+Instructions : 136
+End          : 0x260FC (ret)
+Direct callers: 0
+Referenced strings: 9
+  ADRP+ADD   code=0x25F5C str=0xF2F61 Lock  <<< SECURITY
+  ADRP+ADD   code=0x25F64 str=0xF401D Unlock  <<< SECURITY
+  ADRP+ADD   code=0x25F78 str=0x107C5D Device already %a keep booting step(%d)  <<< SECURITY
+  ADRP+ADD   code=0x26008 str=0xF2F61 Lock  <<< SECURITY
+  ADRP+ADD   code=0x26010 str=0xF401D Unlock  <<< SECURITY
+  ADRP+ADD   code=0x26024 str=0xF8A8D ERROR!!! Flash Value %a Failed..!!(%d)
+  ADRP+ADD   code=0x26080 str=0x110135 LOCK  <<< SECURITY
+  ADRP+ADD   code=0x26088 str=0x109EFC UNLOCK  <<< SECURITY
+  ADRP+ADD   code=0x260A0 str=0x109EC1 Device reboot to recovery due to change from %a to %a(%d)  <<< SECURITY
+Direct BL calls: 15
+  0x25F0C -> 0x25D80
+  0x25F2C -> 0x1C20
+  0x25F48 -> 0x1C48
+  0x25F88 -> 0x162C
+  0x25FAC -> 0x27DA0
+  0x25FC0 -> 0x26100
+  0x25FD8 -> 0x1C20
+  0x25FF4 -> 0x1C48
+  0x26034 -> 0x162C
+  0x26050 -> 0x1C20
+  0x2606C -> 0x1C48
+  0x260B0 -> 0x162C
+  0x260C8 -> 0x73850
+  0x260D0 -> 0x27DA0
+  0x260F0 -> 0x1488
+
+BEST EZB6 MATCHES
+--------------------------------------------------------------------------------------------------------------
+ 100.00% 0x26020 len=136
+  60.07% 0x13470 len=137
+  58.87% 0xB240 len=129
+  58.72% 0x10080 len=82
+  57.51% 0x15A00 len=97
+  55.26% 0x4D7D0 len=92
+  54.89% 0xA750 len=181
+  54.78% 0x15FE0 len=94
+  54.71% 0x3BF20 len=87
+  54.47% 0x18E70 len=99
+  54.17% 0x19D50 len=104
+  53.85% 0xAED0 len=98
+
+FUNCTION / TARGET DISASSEMBLY
+--------------------------------------------------------------------------------------------------------------
+   0x00025EE0: sub       sp, sp, #0x30
+   0x00025EE4: str       x30, [sp, #0x20]
+   0x00025EE8: adrp      x8, #0x137000
+   0x00025EEC: ldr       x8, [x8, #8]
+   0x00025EF0: str       x8, [sp, #0x18]
+   0x00025EF4: str       w0, [sp, #0x14]
+   0x00025EF8: str       w1, [sp, #0x10]
+   0x00025EFC: mov       w8, wzr
+   0x00025F00: strb      w8, [sp, #0xc]
+   0x00025F04: mov       x8, #-0x7ffffffffffffffd
+   0x00025F08: str       x8, [sp]
+   0x00025F0C: bl        #0x25d80
+   0x00025F10: strb      w0, [sp, #0xc]
+   0x00025F14: ldrb      w8, [sp, #0xc]
+   0x00025F18: ldr       w9, [sp, #0x14]
+   0x00025F1C: subs      w8, w8, w9
+   0x00025F20: b.ne      #0x25fb8
+   0x00025F24: b         #0x25f28
+   0x00025F28: b         #0x25f2c
+   0x00025F2C: bl        #0x1c20
+   0x00025F30: and       w8, w0, #0xff
+   0x00025F34: cbz       w8, #0x25f98
+   0x00025F38: b         #0x25f3c
+   0x00025F3C: b         #0x25f40
+   0x00025F40: mov       w8, #0x40
+   0x00025F44: mov       w0, w8
+   0x00025F48: bl        #0x1c48
+   0x00025F4C: and       w8, w0, #0xff
+   0x00025F50: cbz       w8, #0x25f90
+   0x00025F54: b         #0x25f58
+   0x00025F58: ldr       w10, [sp, #0x14]
+   0x00025F5C: adrp      x9, #0xf2000
+   0x00025F60: add       x9, x9, #0xf61
+   0x00025F64: adrp      x8, #0xf4000
+   0x00025F68: add       x8, x8, #0x1d
+   0x00025F6C: subs      w10, w10, #0
+   0x00025F70: csel      x2, x8, x9, ne
+   0x00025F74: ldr       w3, [sp, #0x10]
+   0x00025F78: adrp      x1, #0x107000
+   0x00025F7C: add       x1, x1, #0xc5d
+   0x00025F80: mov       w8, #0x40
+   0x00025F84: mov       w0, w8
+   0x00025F88: bl        #0x162c
+   0x00025F8C: b         #0x25f90
+   0x00025F90: b         #0x25f94
+   0x00025F94: b         #0x25f98
+   0x00025F98: b         #0x25f9c
+   0x00025F9C: ldr       w8, [sp, #0x10]
+   0x00025FA0: cbz       w8, #0x25fb4
+   0x00025FA4: b         #0x25fa8
+   0x00025FA8: mov       w0, wzr
+   0x00025FAC: bl        #0x27da0
+   0x00025FB0: b         #0x25fb4
+   0x00025FB4: b         #0x260d8
+   0x00025FB8: ldr       w1, [sp, #0x14]
+   0x00025FBC: mov       w0, wzr
+   0x00025FC0: bl        #0x26100
+   0x00025FC4: str       x0, [sp]
+   0x00025FC8: ldr       x8, [sp]
+   0x00025FCC: cbz       x8, #0x2604c
+   0x00025FD0: b         #0x25fd4
+   0x00025FD4: b         #0x25fd8
+   0x00025FD8: bl        #0x1c20
+   0x00025FDC: and       w8, w0, #0xff
+   0x00025FE0: cbz       w8, #0x26044
+   0x00025FE4: b         #0x25fe8
+   0x00025FE8: b         #0x25fec
+   0x00025FEC: mov       w8, #-0x80000000
+   0x00025FF0: mov       w0, w8
+   0x00025FF4: bl        #0x1c48
+   0x00025FF8: and       w8, w0, #0xff
+   0x00025FFC: cbz       w8, #0x2603c
+   0x00026000: b         #0x26004
+   0x00026004: ldr       w10, [sp, #0x14]
+   0x00026008: adrp      x9, #0xf2000
+   0x0002600C: add       x9, x9, #0xf61
+   0x00026010: adrp      x8, #0xf4000
+   0x00026014: add       x8, x8, #0x1d
+   0x00026018: subs      w10, w10, #0
+   0x0002601C: csel      x2, x8, x9, ne
+   0x00026020: ldr       w3, [sp, #0x10]
+   0x00026024: adrp      x1, #0xf8000
+   0x00026028: add       x1, x1, #0xa8d
+   0x0002602C: mov       w8, #-0x80000000
+   0x00026030: mov       w0, w8
+   0x00026034: bl        #0x162c
+   0x00026038: b         #0x2603c
+   0x0002603C: b         #0x26040
+   0x00026040: b         #0x26044
+   0x00026044: b         #0x26048
+   0x00026048: b         #0x260d8
+   0x0002604C: b         #0x26050
+   0x00026050: bl        #0x1c20
+   0x00026054: and       w8, w0, #0xff
+   0x00026058: cbz       w8, #0x260c0
+   0x0002605C: b         #0x26060
+   0x00026060: b         #0x26064
+   0x00026064: mov       w8, #-0x80000000
+   0x00026068: mov       w0, w8
+   0x0002606C: bl        #0x1c48
+   0x00026070: and       w8, w0, #0xff
+   0x00026074: cbz       w8, #0x260b8
+   0x00026078: b         #0x2607c
+   0x0002607C: ldrb      w10, [sp, #0xc]
+   0x00026080: adrp      x8, #0x110000
+   0x00026084: add       x8, x8, #0x135
+   0x00026088: adrp      x9, #0x109000
+   0x0002608C: add       x9, x9, #0xefc
+   0x00026090: subs      w10, w10, #0
+   0x00026094: csel      x2, x9, x8, ne
+   0x00026098: csel      x3, x8, x9, ne
+   0x0002609C: ldr       w4, [sp, #0x10]
+   0x000260A0: adrp      x1, #0x109000
+   0x000260A4: add       x1, x1, #0xec1
+   0x000260A8: mov       w8, #-0x80000000
+   0x000260AC: mov       w0, w8
+   0x000260B0: bl        #0x162c
+   0x000260B4: b         #0x260b8
+   0x000260B8: b         #0x260bc
+   0x000260BC: b         #0x260c0
+   0x000260C0: b         #0x260c4
+   0x000260C4: mov       w0, #2
+   0x000260C8: bl        #0x73850
+   0x000260CC: mov       w0, #1
+   0x000260D0: bl        #0x27da0
+   0x000260D4: b         #0x260d8
+   0x000260D8: ldr       x9, [sp, #0x18]
+   0x000260DC: adrp      x8, #0x137000
+   0x000260E0: ldr       x8, [x8, #8]
+   0x000260E4: subs      x8, x8, x9
+   0x000260E8: b.ne      #0x260f0
+   0x000260EC: b         #0x260f4
+   0x000260F0: bl        #0x1488
+   0x000260F4: ldr       x30, [sp, #0x20]
+   0x000260F8: add       sp, sp, #0x30
+   0x000260FC: ret       
+
+CALLER CONTEXTS
+--------------------------------------------------------------------------------------------------------------
+
+==============================================================================================================
+CXDF: IsUnlocked_old @ 0x25D80
+==============================================================================================================
+Thunk chain : 0x25D80
+Resolved start: 0x25D80
+Instructions : 44
+End          : 0x25E2C (ret)
+Direct callers: 5
+  0x1C3E4
+  0x1C8AC
+  0x25F0C
+  0x26830
+  0x2A2B8
+Referenced strings: 2
+  ADRP+ADD   code=0x25DCC str=0x10B3D9 %a : (%d)
+  ADRP+ADD   code=0x25DD4 str=0x1044DE IsUnlocked  <<< SECURITY
+Direct BL calls: 4
+  0x25D98 -> 0x1C20
+  0x25DB4 -> 0x1C48
+  0x25DE4 -> 0x162C
+  0x25E1C -> 0x1488
+
+BEST EZB6 MATCHES
+--------------------------------------------------------------------------------------------------------------
+ 100.00% 0x25EC0 len=44
+ 100.00% 0x25F70 len=44
+  93.02% 0xB190 len=42
+  90.91% 0x25E10 len=44
+  78.05% 0xB450 len=38
+  72.73% 0x46560 len=55
+  72.73% 0x46640 len=55
+  71.23% 0x32380 len=29
+  68.09% 0x4FE50 len=50
+  68.00% 0x50360 len=56
+  64.15% 0xAA30 len=62
+  63.53% 0x280D0 len=41
+
+FUNCTION / TARGET DISASSEMBLY
+--------------------------------------------------------------------------------------------------------------
+   0x00025D80: sub       sp, sp, #0x20
+   0x00025D84: str       x30, [sp, #0x10]
+   0x00025D88: adrp      x8, #0x137000
+   0x00025D8C: ldr       x8, [x8, #8]
+   0x00025D90: str       x8, [sp, #8]
+   0x00025D94: b         #0x25d98
+   0x00025D98: bl        #0x1c20
+   0x00025D9C: and       w8, w0, #0xff
+   0x00025DA0: cbz       w8, #0x25df4
+   0x00025DA4: b         #0x25da8
+   0x00025DA8: b         #0x25dac
+   0x00025DAC: mov       w8, #-0x80000000
+   0x00025DB0: mov       w0, w8
+   0x00025DB4: bl        #0x1c48
+   0x00025DB8: and       w8, w0, #0xff
+   0x00025DBC: cbz       w8, #0x25dec
+   0x00025DC0: b         #0x25dc4
+   0x00025DC4: adrp      x8, #0x199000
+   0x00025DC8: ldrb      w3, [x8, #0xf65]
+   0x00025DCC: adrp      x1, #0x10b000
+   0x00025DD0: add       x1, x1, #0x3d9
+   0x00025DD4: adrp      x2, #0x104000
+   0x00025DD8: add       x2, x2, #0x4de
+   0x00025DDC: mov       w8, #-0x80000000
+   0x00025DE0: mov       w0, w8
+   0x00025DE4: bl        #0x162c
+   0x00025DE8: b         #0x25dec
+   0x00025DEC: b         #0x25df0
+   0x00025DF0: b         #0x25df4
+   0x00025DF4: b         #0x25df8
+   0x00025DF8: adrp      x8, #0x199000
+   0x00025DFC: ldrb      w8, [x8, #0xf65]
+   0x00025E00: str       w8, [sp, #4]
+   0x00025E04: ldr       x9, [sp, #8]
+   0x00025E08: adrp      x8, #0x137000
+   0x00025E0C: ldr       x8, [x8, #8]
+   0x00025E10: subs      x8, x8, x9
+   0x00025E14: b.ne      #0x25e1c
+   0x00025E18: b         #0x25e20
+   0x00025E1C: bl        #0x1488
+   0x00025E20: ldr       w0, [sp, #4]
+   0x00025E24: ldr       x30, [sp, #0x10]
+   0x00025E28: add       sp, sp, #0x20
+   0x00025E2C: ret       
+
+CALLER CONTEXTS
+--------------------------------------------------------------------------------------------------------------
+
+CALL @ 0x1C3E4
+   0x0001C3A4: cbz       x0, #0x1c3b8
+   0x0001C3A8: adrp      x0, #0x185000
+   0x0001C3AC: add       x0, x0, #0x6dc
+   0x0001C3B0: ldr       w1, [x0, #0x400]
+   0x0001C3B4: bl        #0xc66f0
+   0x0001C3B8: bl        #0xcc510
+   0x0001C3BC: tst       w20, #0xff
+   0x0001C3C0: b.ne      #0x1c69c
+   0x0001C3C4: cbz       x22, #0x1c3e4
+   0x0001C3C8: bl        #0x257a0
+   0x0001C3CC: tst       w0, #0xff
+   0x0001C3D0: b.eq      #0x1c3e4
+   0x0001C3D4: ldrh      w8, [sp, #0x24]
+   0x0001C3D8: ldr       w0, [sp, #0x20]
+   0x0001C3DC: bfi       x0, x8, #0x20, #0x10
+   0x0001C3E0: bl        #0x25bb0
+>> 0x0001C3E4: bl        #0x25d80
+   0x0001C3E8: tst       w0, #0xff
+   0x0001C3EC: b.eq      #0x1c484
+   0x0001C3F0: cbz       x22, #0x1c484
+   0x0001C3F4: bl        #0x1c20
+   0x0001C3F8: tst       w0, #0xff
+   0x0001C3FC: b.eq      #0x1c420
+   0x0001C400: bl        #0x1e688
+   0x0001C404: tst       w0, #0xff
+   0x0001C408: b.eq      #0x1c420
+   0x0001C40C: adrp      x1, #0x10c000
+   0x0001C410: mov       w0, #-0x80000000
+   0x0001C414: add       x1, x1, #0x6f2
+
+CALL @ 0x1C8AC
+   0x0001C86C: stp       x22, x21, [sp, #0x40]
+   0x0001C870: stp       x20, x19, [sp, #0x50]
+   0x0001C874: sub       sp, sp, #0x360
+   0x0001C878: adrp      x8, #0x137000
+   0x0001C87C: movi      v0.2d, #0000000000000000
+   0x0001C880: add       x24, sp, #0x1a0
+   0x0001C884: mov       w29, w2
+   0x0001C888: mov       w25, w1
+   0x0001C88C: mov       x19, x0
+   0x0001C890: ldr       x8, [x8, #8]
+   0x0001C894: and       w20, w1, #0xff
+   0x0001C898: str       x8, [sp, #0x358]
+   0x0001C89C: str       xzr, [sp, #0xb0]
+   0x0001C8A0: str       xzr, [sp, #0x280]
+   0x0001C8A4: stp       q0, q0, [x24, #0xc0]
+   0x0001C8A8: stp       q0, q0, [x24, #0xa0]
+>> 0x0001C8AC: bl        #0x25d80
+   0x0001C8B0: movi      v0.2d, #0000000000000000
+   0x0001C8B4: tst       w0, #0xff
+   0x0001C8B8: mov       w22, w0
+   0x0001C8BC: mov       w8, #3
+   0x0001C8C0: cset      w27, ne
+   0x0001C8C4: stp       wzr, wzr, [sp, #0xa8]
+   0x0001C8C8: stp       xzr, xzr, [sp, #0x98]
+   0x0001C8CC: stp       xzr, xzr, [sp, #0x88]
+   0x0001C8D0: stp       xzr, xzr, [sp, #0x78]
+   0x0001C8D4: stp       q0, q0, [x24, #0x80]
+   0x0001C8D8: stp       q0, q0, [x24, #0x60]
+   0x0001C8DC: stp       q0, q0, [sp, #0x50]
+
+CALL @ 0x25F0C
+   0x00025ECC: bl        #0x1488
+   0x00025ED0: ldr       w0, [sp, #4]
+   0x00025ED4: ldr       x30, [sp, #0x10]
+   0x00025ED8: add       sp, sp, #0x20
+   0x00025EDC: ret       
+   0x00025EE0: sub       sp, sp, #0x30
+   0x00025EE4: str       x30, [sp, #0x20]
+   0x00025EE8: adrp      x8, #0x137000
+   0x00025EEC: ldr       x8, [x8, #8]
+   0x00025EF0: str       x8, [sp, #0x18]
+   0x00025EF4: str       w0, [sp, #0x14]
+   0x00025EF8: str       w1, [sp, #0x10]
+   0x00025EFC: mov       w8, wzr
+   0x00025F00: strb      w8, [sp, #0xc]
+   0x00025F04: mov       x8, #-0x7ffffffffffffffd
+   0x00025F08: str       x8, [sp]
+>> 0x00025F0C: bl        #0x25d80
+   0x00025F10: strb      w0, [sp, #0xc]
+   0x00025F14: ldrb      w8, [sp, #0xc]
+   0x00025F18: ldr       w9, [sp, #0x14]
+   0x00025F1C: subs      w8, w8, w9
+   0x00025F20: b.ne      #0x25fb8
+   0x00025F24: b         #0x25f28
+   0x00025F28: b         #0x25f2c
+   0x00025F2C: bl        #0x1c20
+   0x00025F30: and       w8, w0, #0xff
+   0x00025F34: cbz       w8, #0x25f98
+   0x00025F38: b         #0x25f3c
+   0x00025F3C: b         #0x25f40
+
+CALL @ 0x26830
+   0x000267F0: b         #0x267f8
+   0x000267F4: bl        #0x1488
+   0x000267F8: ldr       x0, [sp]
+   0x000267FC: ldr       x30, [sp, #0x30]
+   0x00026800: add       sp, sp, #0x40
+   0x00026804: ret       
+   0x00026808: udf       #0
+   0x0002680C: udf       #0
+   0x00026810: sub       sp, sp, #0x40
+   0x00026814: str       x30, [sp, #0x30]
+   0x00026818: adrp      x8, #0x137000
+   0x0002681C: ldr       x8, [x8, #8]
+   0x00026820: str       x8, [sp, #0x28]
+   0x00026824: strb      w0, [sp, #0x1c]
+   0x00026828: mov       x8, xzr
+   0x0002682C: str       x8, [sp, #0x10]
+>> 0x00026830: bl        #0x25d80
+   0x00026834: ldrb      w8, [sp, #0x1c]
+   0x00026838: subs      w8, w8, w0, uxtb
+   0x0002683C: b.eq      #0x26920
+   0x00026840: b         #0x26844
+   0x00026844: ldrb      w8, [sp, #0x1c]
+   0x00026848: cbz       w8, #0x26864
+   0x0002684C: b         #0x26850
+   0x00026850: adrp      x9, #0x19a000
+   0x00026854: ldr       w8, [x9, #0xbf8]
+   0x00026858: add       w8, w8, #1
+   0x0002685C: str       w8, [x9, #0xbf8]
+   0x00026860: b         #0x26864
+
+CALL @ 0x2A2B8
+   0x0002A278: bl        #0x2aa6c
+   0x0002A27C: mov       w0, #2
+   0x0002A280: b         #0x2a288
+   0x0002A284: mov       w0, wzr
+   0x0002A288: bl        #0x2aa28
+   0x0002A28C: b.ne      #0x2a29c
+   0x0002A290: ldp       x20, x19, [sp, #0x20]
+   0x0002A294: ldp       x30, x21, [sp, #0x10]
+   0x0002A298: b         #0x2aaf0
+   0x0002A29C: bl        #0x1488
+   0x0002A2A0: sub       sp, sp, #0x20
+   0x0002A2A4: stp       x30, x19, [sp, #0x10]
+   0x0002A2A8: adrp      x8, #0x137000
+   0x0002A2AC: bl        #0x2aa60
+   0x0002A2B0: cbz       x1, #0x2a2cc
+   0x0002A2B4: mov       x19, x1
+>> 0x0002A2B8: bl        #0x25d80
+   0x0002A2BC: mov       w8, w0
+   0x0002A2C0: mov       w0, wzr
+   0x0002A2C4: strb      w8, [x19]
+   0x0002A2C8: b         #0x2a2ec
+   0x0002A2CC: bl        #0x1c20
+   0x0002A2D0: tst       w0, #0xff
+   0x0002A2D4: b.eq      #0x2a2e8
+   0x0002A2D8: bl        #0x2aa20
+   0x0002A2DC: tst       w0, #0xff
+   0x0002A2E0: b.eq      #0x2a2e8
+   0x0002A2E4: bl        #0x2aac0
+   0x0002A2E8: mov       w0, #2
+
+==============================================================================================================
+CALL GRAPH EXPANSION
+==============================================================================================================
+
+TWO-HOP CALL GRAPH FOR 0x26020
+--------------------------------------------------------------------------------------------------------------
+CALL 0x9324 -> 0x26020
+  enclosing probable function: 0x8B50
+
+TWO-HOP CALL GRAPH FOR 0xD5D90
+--------------------------------------------------------------------------------------------------------------
+CALL 0x9314 -> 0xD5D90
+  enclosing probable function: 0x8B50
+CALL 0x2C184 -> 0xD5D90
+CALL 0x5B7B8 -> 0xD5D90
+
+TWO-HOP CALL GRAPH FOR 0xC7CF0
+--------------------------------------------------------------------------------------------------------------
+CALL 0x89A8 -> 0xC7CF0
+  enclosing probable function: 0x8944
+    parent call: 0x94E8 -> 0x8944
+CALL 0x9338 -> 0xC7CF0
+  enclosing probable function: 0x8B50
+CALL 0x813C8 -> 0xC7CF0
+  enclosing probable function: 0x80F80
+    parent call: 0x8170C -> 0x80F80
+    parent call: 0x81814 -> 0x80F80
+    parent call: 0x81940 -> 0x80F80
+CALL 0x81410 -> 0xC7CF0
+  enclosing probable function: 0x80F80
+    parent call: 0x8170C -> 0x80F80
+    parent call: 0x81814 -> 0x80F80
+    parent call: 0x81940 -> 0x80F80

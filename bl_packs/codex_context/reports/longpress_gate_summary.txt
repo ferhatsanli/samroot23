@@ -1,0 +1,1 @@
+Targeted contexts and direct callers written to longpress_gate_report.txt. Interpret control-flow manually; do not treat a retained target as unconditional reachability.

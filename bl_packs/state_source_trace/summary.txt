@@ -1,0 +1,59 @@
+STATE SOURCE TRACE SUMMARY
+==========================================================================================
+
+TARGET SECTION MAPPING
+------------------------------------------------------------------------------------------
+D5D90_STATE_SOURCE       0xD5D90  section=.text exec=True code=True decoded=19 refs=13
+    CXDF match   94.74% 0xD0D50 len=19
+    CXDF match   68.57% 0x641F8 len=16
+    CXDF match   64.71% 0x6EBA0 len=15
+C7CF0_STATE_SINK         0xC7CF0  section=.text exec=True code=True decoded=269 refs=7
+    CXDF match   21.73% 0x5FCA0 len=136
+    CXDF match   21.48% 0xC3E80 len=122
+    CXDF match   17.89% 0xC64B0 len=111
+C5A10_NEW_BOOT_CALL      0xC5A10  section=.text exec=True code=True decoded=173 refs=1
+    CXDF match   20.82% 0xCDE10 len=96
+    CXDF match   20.34% 0xC4790 len=122
+    CXDF match   18.12% 0x75C00 len=136
+UNLOCK_SETTER            0x26020  section=.text exec=True code=True decoded=136 refs=2
+    CXDF match   87.50% 0x25EE0 len=136
+    CXDF match   58.50% 0x3C680 len=117
+    CXDF match   49.12% 0x4D690 len=92
+GLOBAL_GETTER            0x6EE10  section=.text exec=True code=True decoded=15 refs=1
+    CXDF match  100.00% 0x6EBA0 len=15
+    CXDF match  100.00% 0x814C0 len=15
+    CXDF match  100.00% 0xC6630 len=15
+STATE_WRAPPER            0x9688  section=.text exec=True code=True decoded=6 refs=3
+
+GLOBAL 0x18DB94
+------------------------------------------------------------------------------------------
+Exact accesses: 3
+  READ  code=0x6EE28
+  READ  code=0x707D4
+  READ  code=0x71290
+
+D5D90 DIRECT REFS
+------------------------------------------------------------------------------------------
+  bl 0x9314
+  bl 0x2C184
+  bl 0x5B7B8
+  bl 0xC38E4
+  bl 0xC39C8
+  bl 0xC3A94
+  bl 0xC3B00
+  bl 0xC3B4C
+  bl 0xC3C6C
+  bl 0xC3DC8
+  bl 0xC3EA0
+  bl 0xD14BC
+  bl 0xD4318
+
+C7CF0 DIRECT / TAIL REFS
+------------------------------------------------------------------------------------------
+  bl 0x89A8
+  bl 0x9338
+  b 0x9694
+  bl 0x813C8
+  bl 0x81410
+  bl 0xC2664
+  bl 0xCA860

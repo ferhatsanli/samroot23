@@ -1,0 +1,9 @@
+Use $s23-firmware-analysis.
+
+Continue this project from `PROJECT_STATE.md` and `NEXT_TASK.md`. Do not read the long archive unless compact context is insufficient. Work single-agent and local-first; inspect only the report sections/files needed for the current objective.
+
+First check whether `state_source_trace/summary.txt` and `state_source_trace/report.txt` already exist. If they do, analyze them. If not, inspect and run/fix `trace_state_sources.sh`.
+
+Focus only on D5D90, global 0x18DB94, C7CF0, and C5A10 until they are resolved. Reuse existing evidence; do not redo already-established unlock-setter/VaultKeeper/tz_kg work.
+
+Return a concise VERIFIED / INFERENCE / UNKNOWN summary, write detailed evidence to a local report, and update `PROJECT_STATE.md` + `NEXT_TASK.md` after a meaningful milestone.
