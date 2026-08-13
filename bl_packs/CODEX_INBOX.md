@@ -1,33 +1,48 @@
 # CODEX_INBOX.md
 
-COMMAND_ID: 2026-08-13-cyb4-probe-007
+COMMAND_ID: 2026-08-13-bl-files-path-008
 STATUS: READY
 
 ## Objective
-Continue the offline historical unlock-entry boundary comparison with CYB4 B8, using the user's centralized local BL input directory.
+Resolve the discrepancy between the user's report that all BL firmware files are under `bl_packs/BL_FILES/` and the previous run seeing only `.DS_Store`, then continue CYB4 analysis immediately if the input is found.
 
-Authoritative local firmware-input directory:
+Expected repository root:
+`/Users/ferhatsanli/Desktop/samroot`
+
+Expected authoritative BL input directory:
 `/Users/ferhatsanli/Desktop/samroot/bl_packs/BL_FILES/`
 
-The user reports that CYB4 and all other BL files they currently possess have been moved into this directory. Do not search `Downloads`, `Desktop`, `FZDP/`, `CYB4/`, or `firmware_inputs/` first.
+Do not perform broad filesystem searches or web searches.
 
-Expected CYB4 input:
-`/Users/ferhatsanli/Desktop/samroot/bl_packs/BL_FILES/BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`
+### Step 1 — cheap path verification
+From anywhere in the repo, record only concise output for:
+- `git rev-parse --show-toplevel`
+- `pwd -P`
+- `ls -la /Users/ferhatsanli/Desktop/samroot/bl_packs/BL_FILES/`
+- `find /Users/ferhatsanli/Desktop/samroot -maxdepth 4 -type d -name BL_FILES -print`
 
-Start with an exact existence check for that path. If the exact name differs, perform only one shallow filename listing of `BL_FILES/` to locate the CYB4 archive; do not perform broad filesystem searches.
+For every `BL_FILES` directory returned, perform only a depth-1 filename listing with file sizes. Do not hash every firmware file.
 
-If CYB4 is present:
-- record its exact filename, size, and SHA-256;
-- keep all firmware binaries and extraction outputs local-only and Git-ignored;
-- reuse the existing extraction workflow and existing analysis scripts/reports;
-- map the CYB4 counterpart of the previously compared entry-policy helper and its matching event-loop call sites;
-- classify CYB4 as dynamic/reachable, hard-disabled, or materially rewired relative to CXDF B5, FZDP B9, and EZB6 B9;
-- update `UNLOCK_ENTRY_BOUNDARY.md`, `PROJECT_STATE.md`, `CHECKPOINT.md`, `NEXT_TASK.md`, `ROADMAP.md`, `EVIDENCE_LEDGER.csv`, `REPORT_INDEX.md`, and `CODEX_STATUS.md` concisely.
+Also check these two likely accidental nesting variants only if needed:
+- `/Users/ferhatsanli/Desktop/samroot/BL_FILES/`
+- `/Users/ferhatsanli/Desktop/samroot/bl_packs/bl_packs/BL_FILES/`
 
-Adaptive next sample:
-- if CYB4 matches the later B9 behavior, choose the next useful earlier sample from the BL files already present in `BL_FILES/` before requesting or searching for anything externally;
-- if CYB4 matches the earlier B5 behavior, choose the next useful later sample from `BL_FILES/` first.
+### Step 2 — CYB4 discovery
+Locate CYB4 only from the shallow BL_FILES listings. Expected identifying substring:
+`S911BXXU8CYB4`
 
-Also remove/replace stale state text claiming that no B6/B7/B8 input is local, once local presence is verified.
+Expected historical filename if unchanged:
+`BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`
 
-Offline static analysis only. Do not flash or modify the physical device. Preserve unrelated local changes and never commit firmware binaries.
+If found anywhere in the verified BL_FILES location:
+- record exact path, filename, size, and SHA-256 for CYB4 only;
+- keep firmware/extracted binaries local-only and Git-ignored;
+- reuse the existing extraction/UEFI/LinuxLoader workflow;
+- map the CYB4 counterpart of the CXDF/FZDP/EZB6 entry-policy helper and its two event-loop gates;
+- classify CYB4 as dynamic/reachable, hard-disabled, or materially rewired;
+- update `codex_context/reports/UNLOCK_ENTRY_BOUNDARY.md`, `PROJECT_STATE.md`, `CHECKPOINT.md`, `NEXT_TASK.md`, `ROADMAP.md`, `EVIDENCE_LEDGER.csv`, `REPORT_INDEX.md`, and `CODEX_STATUS.md` concisely;
+- inspect the other filenames already present in the same BL_FILES directory only to choose the next minimum-information historical sample. Do not analyze additional builds in this same run unless necessary to resolve an ambiguity in CYB4.
+
+If CYB4 is still absent after these bounded checks, set `RESULT: NEEDS_INPUT` and report exactly which BL_FILES directories were found and their shallow filenames. Do not search Downloads/Desktop generally and do not attempt external acquisition.
+
+Offline static analysis only. Do not flash, patch, install tokens, or modify the physical device. Preserve unrelated local changes and never commit firmware binaries.
