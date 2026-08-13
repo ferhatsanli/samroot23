@@ -1,3 +1,3 @@
 # Current bounded objective
 
-No locally supported consumer unlock route remains after FZDP B9 comparison. If new evidence arrives, prioritize a verified pre-FZDP firmware image between CXDF B5 and FZDP B9 to locate the hard-disable introduction, or documentary/firmware evidence identifying an authorized consumer EM-token mode. Do not flash, patch, downgrade, or install tokens.
+Await the unmodified CYB4 B8 BL child `BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip` (or its identified `abl.elf` / LinuxLoader PE). Then extract LinuxLoader and classify the `0xC6ED0`/`0xCABE0`/`0xCA790` counterpart and its two event-loop gates. Do not download full firmware, bypass source restrictions, flash, or install tokens.

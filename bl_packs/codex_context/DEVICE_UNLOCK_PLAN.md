@@ -33,6 +33,8 @@ This is **VERIFIED as a Samsung service-token mechanism**, but **UNKNOWN as a co
 
 Same-binary FZDP B9 has now been compared offline and does not change this conclusion: it carries the same unconditional-false Download-Mode entry-policy behavior as EZB6. Therefore no known local B9 build has a legitimately reachable native consumer entry route, and FZDP must not be flashed merely because it shares bootloader revision B9.
 
+Historical narrowing is now blocked on the exact B8 input `BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`. Its analysis may date the policy change; it does not make B8 flashable on the current B9 device.
+
 ## DEVICE PRECONDITIONS
 
 The phone is genuinely locked: `flash.locked=1`, vbmeta locked, verified boot green, `KG CHECKING (00)`, secure boot enabled, RPMB provisioned, binary B9. CXDF/B5 cannot be flashed because of anti-rollback.

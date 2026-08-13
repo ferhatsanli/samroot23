@@ -30,6 +30,9 @@ Targeted Odin/LinuxLoader EM-token string/xref contexts and complete direct/tail
 ### `codex_context/reports/FZDP_B9_ENTRY_COMPARISON.md`
 Archive-identified FZDP B9 extraction and three-way CXDF/FZDP/EZB6 conclusion: FZDP already uses the same unconditional-false Download-Mode entry policy as EZB6.
 
+### `codex_context/reports/UNLOCK_ENTRY_BOUNDARY.md`
+Cumulative analyzed-build boundary table and the exact highest-value B8 BL child required to continue narrowing.
+
 ## Earlier unlock-path work
 ### `unlock_path_analysis/unlock_string_diff.txt`
 Old/new OEM/FRP string presence and removal.

@@ -79,6 +79,11 @@ Status legend:
 - [x] Search EZB6 for a separate legitimate authorization protocol. (Odin EM-token install/verification exists.)
 - [~] Determine whether an EM token mode legitimately authorizes consumer bootloader unlock. (FZDP and EZB6 retain the same privileged protocol; no consumer mode/authorized issuer workflow identified; do not install tokens.)
 
+## E3. Historical hard-disable boundary
+- [x] Establish initial interval: CXDF B5 dynamic; FZDP B9 and EZB6 B9 hard-disabled.
+- [!] Acquire/classify earliest B8 `S911BXXU8CYB4`. (Exact BL child identified; no unrestricted normal CLI download was exposed, so manual input is required.)
+- [ ] If B8 hard-disabled, classify late B7 `S911BXXS7CXL2`; if B8 dynamic, classify late B8 `S911BXXS8EZA1`.
+
 ## F. Device-side plan
 - [x] Determine whether a complete offline-derived unlock procedure is possible. (No: the normal EZB6 Download-Mode entry route is hard-disabled.)
 - [x] If YES: produce exact ordered device procedure. (Not applicable; prior long-press procedure is superseded.)

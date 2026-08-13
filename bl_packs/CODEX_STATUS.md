@@ -1,16 +1,15 @@
-COMMAND_ID: 2026-08-13-fzdp-b9-004
-RESULT: COMPLETE
+COMMAND_ID: 2026-08-13-boundary-search-005
+RESULT: NEEDS_INPUT
 VERIFIED:
-- FZDP B9 archive SHA-256 is recorded in FZDP_B9_ENTRY_COMPARISON.md; its extracted binaries remain ignored/local-only.
-- FZDP entry helper 0xCABE0 is 100%-normalized to EZB6 0xCA790 and returns false unconditionally.
-- FZDP gates 0x707A8/0x707F0 skip long press 0x710D0 and confirmation 0xD74E0; dormant confirmation calls 0x26020 at 0xD75AC.
-- FZDP and EZB6 transitions and two-caller topology match; both retain privileged EM-token processing.
+- No B6/B7/B8 SM-S911B input is local.
+- CXDF B5 remains dynamic; FZDP B9 and EZB6 B9 are hard-disabled, fixing the current interval after B5 and no later than B9.
+- S911BXXU8CYB4 is verified as an SM-S911B/EUX B8 Android 14 build; its exact BL child archive name is recorded in UNLOCK_ENTRY_BOUNDARY.md.
+- Public indexing lists the ~97 MB BL child, but no unrestricted direct CLI download URL was exposed.
 INFERENCE:
-- The Download-Mode hard-disable predates EZB6 within B9 and is code policy, not a KG/FRP runtime prerequisite.
+- The policy change is a firmware-code boundary, not the observed device KG/FRP state.
 UNKNOWN:
-- The pre-FZDP firmware boundary introducing the hard-disable.
-- A consumer-unlock EM-token mode or a permitted end-user issuer/workflow.
+- Whether CYB4 B8 is dynamic or hard-disabled, and therefore the narrower B5→B9 transition point.
 FILES_CHANGED:
-- AGENTS.md, .gitignore, FZDP_B9_ENTRY_COMPARISON.md, fzdp_entry_probe.txt, DEVICE_UNLOCK_PLAN.md, PROJECT_STATE.md, ROADMAP.md, CHECKPOINT.md, NEXT_TASK.md, EVIDENCE_LEDGER.csv, REPORT_INDEX.md, CODEX_STATUS.md.
+- .gitignore, UNLOCK_ENTRY_BOUNDARY.md, DEVICE_UNLOCK_PLAN.md, PROJECT_STATE.md, ROADMAP.md, REPORT_INDEX.md, EVIDENCE_LEDGER.csv, CHECKPOINT.md, NEXT_TASK.md, CODEX_STATUS.md.
 NEXT_RECOMMENDED_ACTION:
-- Obtain a verified SM-S911B image between CXDF B5 and FZDP B9, or evidence of an authorized consumer EM-token mode; do not flash or install tokens.
+- Supply unmodified BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip (or identified abl.elf/LinuxLoader PE); do not supply/download a full AP firmware or flash it.
