@@ -52,3 +52,13 @@ This project uses `ROADMAP.md`, `CHECKPOINT.md`, `NEXT_TASK.md`, and `EVIDENCE_L
 Before every atomic objective, keep `CHECKPOINT.md` current. Save it before any long/high-output command. After every meaningful result, update evidence/report + roadmap + checkpoint + next task before continuing.
 
 Never depend on a graceful final response at quota exhaustion. A new session must be able to resume from `AGENTS.md`, `CHECKPOINT.md`, and `NEXT_TASK.md` without reading the long archive.
+
+## GitHub coordination loop
+- When the user sends only `continue`, `devam`, `updated`, or equivalent continuation wording, execute the newest unprocessed command in `CODEX_INBOX.md`.
+- At the start, if the worktree is clean, run `git pull --ff-only`; if it is unexpectedly dirty, preserve and inspect changes and never discard or overwrite them blindly.
+- Compare the inbox `COMMAND_ID` with `CODEX_STATUS.md`; never execute the same command twice.
+- Follow the persistent checkpoint/state/evidence protocol and existing token-efficiency rules.
+- At the end of each processed command, replace `CODEX_STATUS.md` with a concise 10–30-line handoff containing exactly `COMMAND_ID`, `RESULT`, `VERIFIED`, `INFERENCE`, `UNKNOWN`, `FILES_CHANGED`, and `NEXT_RECOMMENDED_ACTION`.
+- Before committing, inspect `git status --short` and `git diff`; stage only meaningful project changes. Exclude caches, venvs, temporary/build files, `.pyc`, `__pycache__`, and unrelated user files; improve `.gitignore` when appropriate.
+- Commit intended changes with a short 3–5-word English message and push the current branch. If only remote advancement rejects the push, safely integrate with `git pull --rebase` and retry; never guess through real merge conflicts.
+- A run is complete only when its intended status/checkpoint/reports are committed and pushed. If push/auth/network fails, preserve local state and report the exact blocker.

@@ -35,6 +35,8 @@ This is **VERIFIED as a Samsung service-token mechanism**, but **UNKNOWN as a co
 
 The phone is genuinely locked: `flash.locked=1`, vbmeta locked, verified boot green, `KG CHECKING (00)`, secure boot enabled, RPMB provisioned, binary B9. CXDF/B5 cannot be flashed because of anti-rollback.
 
+Additional read-only Android evidence: `ro.oem_unlock_supported` is unset and `oem_unlock_enabled=null`; FRP storage is `/dev/block/persistent`, persistent-data-block is writable, FRP enforcement is enabled, but FRP state is false with no FRP credential handle. Targeted device-policy output reports no apparent OEM/FRP/enterprise restriction. These observations explain neither a user-set OEM flag nor the ABL hard-disable; they only rule out the inspected FRP/enterprise indicators as an obvious Android-side explanation.
+
 ## DEVICE-SIDE PROCEDURE
 
 There is no authorized device-side unlock action to perform on this build. Do not repeat the long-press test as an unlock method; it is statically gated off. Preserve normal firmware and user data.

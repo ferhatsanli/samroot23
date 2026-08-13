@@ -17,6 +17,12 @@ Observed:
 Therefore the device is genuinely locked; this is not merely Settings hiding a toggle.
 `KG CHECKING` is not proven to be the cause.
 
+Additional read-only Android-policy observations:
+- `ro.oem_unlock_supported` is unset; `settings get global oem_unlock_enabled` is `null`.
+- `ro.frp.pst=/dev/block/persistent`; persistent-data-block is writable; FRP enforcement is enabled, but FRP state is false and no FRP credential handle exists.
+- Targeted `device_policy` output contains no apparent OEM/FRP/enterprise restriction.
+These facts characterize the absent Android OEM-unlock UI. They do not alter the separately verified unconditional-false EZB6 Download-Mode gate.
+
 ## ABL / UEFI structure — VERIFIED
 - `abl.elf` old/new are 4,194,304 bytes.
 - It is an ELF32 ARM outer container holding a UEFI PI Firmware Volume.
