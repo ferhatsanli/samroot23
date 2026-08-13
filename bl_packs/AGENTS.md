@@ -40,6 +40,12 @@ This Codex workspace is macOS and the working directory is expected to be:
 
 Use macOS commands here unless the user explicitly changes environment.
 
+## Local firmware inputs
+- All user-supplied bootloader firmware archives/components are centralized under `/Users/ferhatsanli/Desktop/samroot/bl_packs/BL_FILES/`.
+- Check `BL_FILES/` first and do not scan `Downloads`, `Desktop`, legacy `FZDP/`, `CYB4/`, or `firmware_inputs/` locations unless a task explicitly says the centralized directory is incomplete.
+- Treat `BL_FILES/` as local-only binary input. Do not stage or commit firmware archives, extracted binaries, or temporary extraction outputs from it.
+- Prefer exact filename lookup inside `BL_FILES/` over broad recursive filesystem searches.
+
 ## State maintenance
 After a meaningful milestone:
 - update `PROJECT_STATE.md` with only durable verified facts;
