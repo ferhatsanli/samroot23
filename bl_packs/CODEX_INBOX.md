@@ -1,48 +1,49 @@
 # CODEX_INBOX.md
 
-COMMAND_ID: 2026-08-13-bl-files-path-008
+COMMAND_ID: 2026-08-14-autonomous-boundary-009
 STATUS: READY
 
 ## Objective
-Resolve the discrepancy between the user's report that all BL firmware files are under `bl_packs/BL_FILES/` and the previous run seeing only `.DS_Store`, then continue CYB4 analysis immediately if the input is found.
+Resume from completed CYB4 B8 analysis and continue autonomously toward the overall offline/read-only bootloader-unlock investigation objective. Do not stop after one intermediate firmware comparison when another useful local action is already available.
 
-Expected repository root:
-`/Users/ferhatsanli/Desktop/samroot`
-
-Expected authoritative BL input directory:
+Authoritative local firmware-input directory:
 `/Users/ferhatsanli/Desktop/samroot/bl_packs/BL_FILES/`
 
-Do not perform broad filesystem searches or web searches.
+First, perform one concise shallow inventory of firmware filenames under `BL_FILES/` (including its immediate build subdirectories) so the available historical samples are known. Do not scan Downloads/Desktop or the wider filesystem, and do not hash every file.
 
-### Step 1 — cheap path verification
-From anywhere in the repo, record only concise output for:
-- `git rev-parse --show-toplevel`
-- `pwd -P`
-- `ls -la /Users/ferhatsanli/Desktop/samroot/bl_packs/BL_FILES/`
-- `find /Users/ferhatsanli/Desktop/samroot -maxdepth 4 -type d -name BL_FILES -print`
+Established boundary:
+- CXDF B5: dynamic/reachable native Download-Mode unlock entry.
+- CYB4 B8: dynamic/reachable native Download-Mode unlock entry.
+- FZDP B9: hard-disabled native entry.
+- EZB6 B9: hard-disabled native entry.
 
-For every `BL_FILES` directory returned, perform only a depth-1 filename listing with file sizes. Do not hash every firmware file.
+### Autonomous boundary loop
+1. If late-B8 `S911BXXS8EZA1` is local, analyze it next.
+2. Otherwise choose the locally available sample with the highest information value for narrowing the CYB4-B8 → B9 boundary.
+3. After each sample, immediately choose the next useful local sample if it can narrow the boundary further. Do not wait for another user `continue` between samples.
+4. Reuse existing extraction, UEFI, LinuxLoader, and comparison scripts. Keep raw binaries/extractions ignored and local-only.
+5. For each analyzed build, classify the entry-policy helper as dynamic/reachable, unconditional-false hard-disabled, or materially rewired; map its two normal event-loop gates, long-press/confirmation route, and persistent transition topology.
+6. Maintain concise checkpoint/evidence/state updates between atomic samples so quota exhaustion is recoverable.
 
-Also check these two likely accidental nesting variants only if needed:
-- `/Users/ferhatsanli/Desktop/samroot/BL_FILES/`
-- `/Users/ferhatsanli/Desktop/samroot/bl_packs/bl_packs/BL_FILES/`
+### After the boundary is narrowed as far as local samples permit
+Do not stop merely because the historical classification milestone is complete. Compare the nearest dynamic and hard-disabled builds around the boundary to characterize the policy change itself:
+- normalized helper/function differences;
+- callers and policy-structure field accesses;
+- nearby OEM/FRP/OEM-lock initialization/diagnostic removals or rewiring;
+- whether the hard-disable is an isolated helper replacement or accompanies a broader request-generation/policy-layer change;
+- any evidence-supported relation to the retained transition, VaultKeeper/KG, or EM-token reconciliation path, without asserting unsupported causality.
 
-### Step 2 — CYB4 discovery
-Locate CYB4 only from the shallow BL_FILES listings. Expected identifying substring:
-`S911BXXU8CYB4`
+Then continue to the next evidence-supported local/read-only question that advances the legitimate current-B9 unlock investigation. Do not re-prove settled findings. Stop only under the `Autonomous goal loop` stop conditions in `AGENTS.md` — e.g. genuine missing input, safety/device-operation boundary, user decision, tool/quota failure, or an evidence-sufficient final conclusion.
 
-Expected historical filename if unchanged:
-`BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`
+Update as appropriate:
+- `codex_context/reports/UNLOCK_ENTRY_BOUNDARY.md`
+- a focused boundary-diff report if warranted
+- `PROJECT_STATE.md`
+- `CHECKPOINT.md`
+- `NEXT_TASK.md`
+- `ROADMAP.md`
+- `EVIDENCE_LEDGER.csv`
+- `REPORT_INDEX.md`
+- `CODEX_STATUS.md`
 
-If found anywhere in the verified BL_FILES location:
-- record exact path, filename, size, and SHA-256 for CYB4 only;
-- keep firmware/extracted binaries local-only and Git-ignored;
-- reuse the existing extraction/UEFI/LinuxLoader workflow;
-- map the CYB4 counterpart of the CXDF/FZDP/EZB6 entry-policy helper and its two event-loop gates;
-- classify CYB4 as dynamic/reachable, hard-disabled, or materially rewired;
-- update `codex_context/reports/UNLOCK_ENTRY_BOUNDARY.md`, `PROJECT_STATE.md`, `CHECKPOINT.md`, `NEXT_TASK.md`, `ROADMAP.md`, `EVIDENCE_LEDGER.csv`, `REPORT_INDEX.md`, and `CODEX_STATUS.md` concisely;
-- inspect the other filenames already present in the same BL_FILES directory only to choose the next minimum-information historical sample. Do not analyze additional builds in this same run unless necessary to resolve an ambiguity in CYB4.
-
-If CYB4 is still absent after these bounded checks, set `RESULT: NEEDS_INPUT` and report exactly which BL_FILES directories were found and their shallow filenames. Do not search Downloads/Desktop generally and do not attempt external acquisition.
-
-Offline static analysis only. Do not flash, patch, install tokens, or modify the physical device. Preserve unrelated local changes and never commit firmware binaries.
+Offline static analysis only. Never flash, downgrade, patch firmware, install tokens, forge signatures, write RPMB/trusted state, or modify the physical device. Preserve unrelated local changes and never commit firmware binaries.
