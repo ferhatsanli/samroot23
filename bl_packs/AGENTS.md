@@ -46,6 +46,22 @@ Use macOS commands here unless the user explicitly changes environment.
 - Treat `BL_FILES/` as local-only binary input. Do not stage or commit firmware archives, extracted binaries, or temporary extraction outputs from it.
 - Prefer exact filename lookup inside `BL_FILES/` over broad recursive filesystem searches.
 
+## Autonomous goal loop
+- The project objective is broader than any single `CODEX_INBOX.md` command. An inbox command is a starting objective, not an instruction to stop after one intermediate milestone.
+- After completing an atomic objective, immediately choose and execute the next highest-information local/read-only step toward the project objective when it is supported by existing evidence and available local inputs.
+- Continue chaining bounded objectives in the same run without waiting for another `continue` merely because a report, comparison, firmware sample, or checkpoint milestone completed.
+- Update checkpoint/state/evidence files between atomic objectives so quota exhaustion remains recoverable.
+- Prefer already-available files in `BL_FILES/` and existing reports/scripts before asking for input or doing external research.
+- Stop only when at least one of these is true:
+  1. the actual investigation objective has been reached with evidence sufficient for a defensible conclusion;
+  2. the next useful step genuinely requires missing user/external input that is not already local;
+  3. the next step would cross the safety/device-operation boundary (flash, patch, token installation, destructive write, signature forgery, etc.);
+  4. a real ambiguity requires a user decision rather than an evidence-driven choice;
+  5. tool/auth/network/quota failure prevents further progress.
+- Do not stop merely to report a next recommended local action that can already be performed safely. Perform it instead.
+- When several historical firmware samples are locally available, adaptively analyze the minimum sequence needed to narrow the policy boundary; do not artificially limit a run to one sample.
+- Once an intermediate boundary question is resolved, pivot to the next evidence-supported question that advances the overall legitimate bootloader-unlock investigation, while remaining offline/read-only unless the user separately authorizes device operations.
+
 ## State maintenance
 After a meaningful milestone:
 - update `PROJECT_STATE.md` with only durable verified facts;
@@ -63,8 +79,9 @@ Never depend on a graceful final response at quota exhaustion. A new session mus
 - When the user sends only `continue`, `conti`, `devam`, `updated`, or equivalent continuation wording, first run `git fetch origin main`, then inspect `git show origin/main:bl_packs/CODEX_INBOX.md` and compare its `COMMAND_ID` with `CODEX_STATUS.md`.
 - Treat the remote inbox as authoritative even when the worktree is dirty; unrelated `.DS_Store` or `.gitignore` changes must not prevent discovery or execution of a newer command. Never discard local changes merely to sync.
 - Never execute the same remote inbox `COMMAND_ID` twice. Before final commit/push, integrate remote history safely while preserving unrelated local changes; stop on real conflicts rather than guessing.
-- Follow the persistent checkpoint/state/evidence protocol and existing token-efficiency rules.
-- At the end of each processed command, replace `CODEX_STATUS.md` with a concise 10–30-line handoff containing exactly `COMMAND_ID`, `RESULT`, `VERIFIED`, `INFERENCE`, `UNKNOWN`, `FILES_CHANGED`, and `NEXT_RECOMMENDED_ACTION`.
+- Follow the autonomous goal loop, persistent checkpoint/state/evidence protocol, and existing token-efficiency rules.
+- At the end of each processed command/run, replace `CODEX_STATUS.md` with a concise 10–30-line handoff containing exactly `COMMAND_ID`, `RESULT`, `VERIFIED`, `INFERENCE`, `UNKNOWN`, `FILES_CHANGED`, and `NEXT_RECOMMENDED_ACTION`.
+- `NEXT_RECOMMENDED_ACTION` is for the first action that could not be completed in the current run; never use it as a reason to stop when that action is local, safe, and executable now.
 - Before committing, inspect `git status --short` and `git diff`; stage only meaningful project changes. Exclude caches, venvs, temporary/build files, `.pyc`, `__pycache__`, and unrelated user files; improve `.gitignore` when appropriate.
 - Commit intended changes with a short 3–5-word English message and push the current branch. If only remote advancement rejects the push, safely integrate with `git pull --rebase` and retry; never guess through real merge conflicts.
-- A run is complete only when its intended status/checkpoint/reports are committed and pushed. If push/auth/network fails, preserve local state and report the exact blocker.
+- A run is complete only when the autonomous goal loop reaches a legitimate stop condition and its intended status/checkpoint/reports are committed and pushed. If push/auth/network fails, preserve local state and report the exact blocker.
