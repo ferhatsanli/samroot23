@@ -83,6 +83,7 @@ Status legend:
 - [x] Establish initial interval: CXDF B5 dynamic; FZDP B9 and EZB6 B9 hard-disabled.
 - [x] Acquire/classify earliest B8 `S911BXXU8CYB4`. (Dynamic/reachable `0xC6ED0`; both gates can reach the 4,000 ms long-press and confirmation route.)
 - [!] If B8 hard-disabled, classify late B7 `S911BXXS7CXL2`; if B8 dynamic, classify late B8 `S911BXXS8EZA1`. (CYB4 is dynamic; EZA1 ABL/LinuxLoader is the next exact input and is not local.)
+- [x] Characterize nearest local dynamic→disabled policy change. (FZDP replaces CYB4’s dynamic 71-instruction evaluator with a 28-instruction unconditional-false helper while retaining lower UI/transition code.)
 
 ## F. Device-side plan
 - [x] Determine whether a complete offline-derived unlock procedure is possible. (No: the normal EZB6 Download-Mode entry route is hard-disabled.)

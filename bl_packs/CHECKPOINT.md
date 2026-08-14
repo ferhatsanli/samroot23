@@ -1,13 +1,13 @@
 # CHECKPOINT.md — LIVE RESUME STATE
 
 ## Status
-CYB4 B8 is classified by remote command `2026-08-13-bl-files-path-008`: its Download-Mode entry policy remains dynamic/reachable. The hard-disable was introduced after CYB4 B8 and no later than FZDP B9.
+Remote command `2026-08-14-autonomous-boundary-009` completed all useful local boundary work. Shallow `BL_FILES` inventory has only CXDF B5, CYB4 B8, FZDP B9, and EZB6 B9; no EZA1/intermediate sample exists.
 
-## Verified CYB4 chain
-`0xC6ED0` dynamically evaluates policy/runtime fields and has a reachable true return. Gates `0x701A4` and `0x701EC` can pass to `0x70228 → 0x70A50` (4,000-ms long press), then `0x70238 → 0xCFCC0` (confirmation), which calls `0x25EE0` at `0xCFD8C`. CYB4 policy and transition are each 100.00% normalized to CXDF equivalents.
+## Verified policy mechanism
+CYB4 `0xC6ED0` is a 71-instruction dynamic policy/state evaluator. FZDP `0xCABE0` is a 28-instruction replacement that retains the policy accessor/logging prefix then unconditionally returns false. Its two callers still surround retained long-press/confirmation/transition code, so B9 blocks only the native entry policy layer.
 
-## Current objective
-Await an unmodified late-B8 `S911BXXS8EZA1` BL tar/archive, or archive-identified `abl.elf` / LinuxLoader PE, in `BL_FILES/`. Map the same helper/gates to determine whether removal occurred within B8 or after it. No EZA1 input is currently local.
+## Remaining bounded objective
+Await unmodified late-B8 `S911BXXS8EZA1` BL tar/archive, or archive-identified ABL/LinuxLoader PE, in `BL_FILES/` to date the change more precisely. No other local static input can narrow this boundary or establish a consumer EM-token authorization workflow.
 
 ## Safety
-Firmware/extracted binaries stay local-only; never stage them. Offline static analysis only: no flashing, downgrade, patch, token installation, or device modification.
+Offline static analysis only. Firmware/extractions remain local-only; never flash, downgrade, patch, install tokens, write trusted state, or modify the physical device.

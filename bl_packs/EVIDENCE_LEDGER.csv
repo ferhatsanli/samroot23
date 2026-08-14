@@ -27,3 +27,4 @@ E025,VERIFIED,BL_FILES local input directory,Historical boundary,CYB4 availabili
 E009,UNKNOWN,EZB6,LinuxLoader,bitmap bit 3,Producer and semantic meaning unresolved,codex_context/reports/EZB6_STATE_SOURCE_RESOLUTION.md,,upstream trace
 E026,VERIFIED,CYB4 B8,BL archive,input validation,Expected CYB4 BL tar is present under BL_FILES/CYB4 and ZIP SHA-256 is 7e1231842645dfbf01fe313755bbabbb507c86abae2c458c18b248b877dcc89e,codex_context/reports/CYB4_INPUT_VALIDATION.md,HIGH,
 E027,VERIFIED,CYB4 B8,LinuxLoader,0xC6ED0,CYB4 retains dynamic policy helper and both normal gates can reach 4000-ms long press then confirmation-to-0x25EE0,codex_context/reports/CYB4_B8_ENTRY_COMPARISON.md,HIGH,late B8 EZA1 classification
+E028,VERIFIED,CYB4 B8→FZDP B9,LinuxLoader,0xC6ED0→0xCABE0,FZDP replaces dynamic policy/state evaluator with 28-instruction helper that logs policy plus 0xF0 then returns false,codex_context/reports/CYB4_FZDP_POLICY_BOUNDARY_DIFF.md,HIGH,EZA1 dates exact boundary

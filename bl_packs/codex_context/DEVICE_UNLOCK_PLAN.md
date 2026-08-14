@@ -35,6 +35,8 @@ Same-binary FZDP B9 has now been compared offline and does not change this concl
 
 Historical narrowing has now classified CYB4 B8 as dynamic/reachable; the removal occurred after CYB4 B8 and no later than FZDP B9. The next minimum sample is late B8 `S911BXXS8EZA1` ABL/LinuxLoader. This dates policy only; it does not make any B8 firmware flashable on the current B9 device.
 
+The nearest-build comparison further verifies that B9 actively replaces the dynamic policy decision with an unconditional-false helper while leaving native UI and destructive transition code present below it. Consequently no Android/KG/FRP state inspection can legitimately make the current EZB6 long-press route available.
+
 ## DEVICE PRECONDITIONS
 
 The phone is genuinely locked: `flash.locked=1`, vbmeta locked, verified boot green, `KG CHECKING (00)`, secure boot enabled, RPMB provisioned, binary B9. CXDF/B5 cannot be flashed because of anti-rollback.

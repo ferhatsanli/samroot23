@@ -11,6 +11,8 @@
 
 Current evidence-supported interval: **the consumer Download-Mode entry hard-disable was introduced after CYB4 B8 and no later than FZDP B9.** FZDP/EZB6 prove the effect is code policy, not this handset's KG/FRP runtime state.
 
+Nearest-sample diff now resolves the mechanism: FZDP replaces CYB4’s 71-instruction dynamic evaluator with a 28-instruction helper that keeps policy `+0xF0` logging but omits all decision reads and returns false unconditionally. The normal UI/transition code remains below it. See `CYB4_FZDP_POLICY_BOUNDARY_DIFF.md`.
+
 ## Highest-value unprocessed probe
 
 CYB4 is now classified dynamic/reachable. Its archive SHA-256 is `7e1231842645dfbf01fe313755bbabbb507c86abae2c458c18b248b877dcc89e`; detailed static evidence is in `CYB4_B8_ENTRY_COMPARISON.md`.

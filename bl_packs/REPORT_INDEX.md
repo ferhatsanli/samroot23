@@ -36,6 +36,9 @@ Cumulative analyzed-build boundary table and the exact highest-value B8 BL child
 ### `codex_context/reports/CYB4_B8_ENTRY_COMPARISON.md`
 Archive-identified CYB4 B8 result: dynamic `0xC6ED0`, two live event-loop gates, long-press/confirmation route, and narrowed B8→B9 policy boundary.
 
+### `codex_context/reports/CYB4_FZDP_POLICY_BOUNDARY_DIFF.md`
+Nearest dynamic-to-hard-disabled comparison: B9 replaces CYB4’s policy/state evaluator with a false-return helper while retaining the UI and transition below it.
+
 ## Earlier unlock-path work
 ### `unlock_path_analysis/unlock_string_diff.txt`
 Old/new OEM/FRP string presence and removal.

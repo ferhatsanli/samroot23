@@ -1,15 +1,15 @@
-COMMAND_ID: 2026-08-13-bl-files-path-008
-RESULT: COMPLETE
+COMMAND_ID: 2026-08-14-autonomous-boundary-009
+RESULT: COMPLETE_LOCAL_EVIDENCE
 VERIFIED:
-- CYB4 archive was found in authoritative BL_FILES/CYB4 and validated by SHA-256 7e1231842645dfbf01fe313755bbabbb507c86abae2c458c18b248b877dcc89e.
-- CYB4 B8 retains dynamic helper 0xC6ED0; it can return true and its two normal event-loop gates can reach LongPressVolUpkeyCheck(4000).
-- CYB4 confirmation 0xCFCC0 calls the retained 0x25EE0 transition; CYB4 0xC6ED0 and 0x25EE0 are each 100.00% normalized to CXDF counterparts.
-- FZDP/EZB6 B9 remain unconditional-false; the hard-disable boundary is after CYB4 B8 and no later than B9.
+- Shallow BL_FILES inventory has only CXDF B5, CYB4 B8, FZDP B9, and EZB6 B9; EZA1 is absent.
+- CYB4 0xC6ED0 is a 71-instruction dynamic evaluator; FZDP 0xCABE0 is a 28-instruction replacement that logs policy +0xF0 then returns false unconditionally.
+- Both FZDP gates skip retained long-press/confirmation/transition code solely because of that false result.
+- CYB4 retains three OEM/FRP diagnostics absent in FZDP; this supports broader policy-layer cleanup but not a causal authorization claim.
 INFERENCE:
-- The consumer native unlock-entry removal occurred during late B8 or the B8-to-B9 transition, not before CYB4.
+- B9 deliberately removes native consumer entry at the policy/request layer, independently of observed EZB6 KG/FRP runtime state.
 UNKNOWN:
-- Whether late B8 S911BXXS8EZA1 is dynamic or hard-disabled, and the exact policy-change commit/build.
+- Exact late-B8/B9 change build and any legitimate consumer EM-token authorization workflow.
 FILES_CHANGED:
-- CYB4 input/comparison reports, boundary/state/roadmap/ledger/checkpoint/task/status files, and a reusable CYB4 read-only probe script.
+- Focused CYB4-to-FZDP boundary diff plus durable boundary/state/plan/roadmap/ledger/checkpoint/task/status updates.
 NEXT_RECOMMENDED_ACTION:
-- Supply unmodified S911BXXS8EZA1 BL tar/archive or archive-identified ABL/LinuxLoader PE in BL_FILES for the next static boundary probe; never flash it.
+- Supply unmodified late-B8 S911BXXS8EZA1 BL/ABL/LinuxLoader in BL_FILES; do not flash it.
