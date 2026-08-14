@@ -160,12 +160,12 @@ EZB6 LinuxLoader has exactly two direct/tail callers of `0x26020`: blocked inter
 ## FZDP B9 comparison — VERIFIED
 Unmodified `S911BXXU9FZDP` B9 ABL was extracted locally (archive SHA-256 `9c8508eee373e9ae69a4979aa7f7868bea4a984d1f705dd2707a66137edd505f`). FZDP already hard-disables the normal Download-Mode route: helper `0xCABE0` is a 28-instruction, 100%-normalized equivalent of EZB6 `0xCA790`, logging policy `+0xF0` then returning false unconditionally. Its two gates (`0x707A8`, `0x707F0`) skip retained long press `0x710D0` and confirmation `0xD74E0`; confirmation would otherwise call its unchanged 136-instruction transition `0x26020` at `0xD75AC`. FZDP has the same two transition callers (boot-time `0x9324`, dormant interactive `0xD75AC`) and the same privileged Odin EM-token surface, with no identified consumer-unlock mode. Thus hard-disable predates EZB6 and is code policy, not the observed device's KG/FRP runtime state. No flashing implication follows from same B9.
 
-## Historical boundary probe — BLOCKED ON EXACT INPUT
+## Historical hard-disable boundary — VERIFIED THROUGH EARLY B8
 No B6/B7/B8 component is local. The highest-value first probe is verified B8 `S911BXXU8CYB4` (SM-S911B/EUX, Android 14; exact child `BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`). Normal public indexing exposes the ~97 MB BL child but no unrestricted direct CLI URL; restricted/browser acquisition and full-firmware download were deliberately not used. Current boundary remains after CXDF B5 and no later than FZDP B9.
 
 The four authorized local CYB4 search locations were checked in command `2026-08-13-cyb4-probe-006`; none contains a CYB4 archive or extracted ABL/LinuxLoader input.
 
-The later centralized `BL_FILES/` check likewise found only `.DS_Store`, with no CYB4 archive or extracted input. The historical boundary cannot yet be narrowed.
+CYB4 B8 input was subsequently supplied and analyzed. Its LinuxLoader retains the dynamic CXDF-style helper `0xC6ED0` (71 instructions; 100.00% normalized similarity): two event-loop calls (`0x701A4`, `0x701EC`) can fall through to `LongPressVolUpkeyCheck(4000)` at `0x70228 → 0x70A50`, then confirmation `0x70238 → 0xCFCC0`, which calls transition `0x25EE0` at `0xCFD8C`. Thus the hard-disable was introduced **after CYB4 B8 and no later than FZDP B9**. The next minimum-information input is late B8 `S911BXXS8EZA1` ABL/LinuxLoader; it is not local. This narrows historical timing only and never authorizes a downgrade/flash on the current B9 device.
 
 The interactive `0x26020` path is persistent and destructive by design: it reaches retained `set unlock value` → VB-protocol device-write, resets device state, erases `userdata`, then reboots to recovery.  It is not a cosmetic ABL bitmap change.  Static evidence does not yet expose the VB service’s internal trusted-app linkage, so VaultKeeper/KG connection is not asserted.
 

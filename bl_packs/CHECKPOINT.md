@@ -1,13 +1,13 @@
 # CHECKPOINT.md — LIVE RESUME STATE
 
 ## Status
-NEEDS INPUT — remote command `2026-08-13-cyb4-probe-007` checked centralized `BL_FILES/`; it contains only `.DS_Store`.
+CYB4 B8 is classified by remote command `2026-08-13-bl-files-path-008`: its Download-Mode entry policy remains dynamic/reachable. The hard-disable was introduced after CYB4 B8 and no later than FZDP B9.
 
-## Exact required input
-`BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`, unmodified. An extracted `abl.elf` / LinuxLoader PE with archive identity is acceptable.
+## Verified CYB4 chain
+`0xC6ED0` dynamically evaluates policy/runtime fields and has a reachable true return. Gates `0x701A4` and `0x701EC` can pass to `0x70228 → 0x70A50` (4,000-ms long press), then `0x70238 → 0xCFCC0` (confirmation), which calls `0x25EE0` at `0xCFD8C`. CYB4 policy and transition are each 100.00% normalized to CXDF equivalents.
 
-## Proven boundary
-CXDF B5 dynamic; FZDP B9 and EZB6 B9 hard-disabled. The policy boundary is after B5 and no later than B9. If CYB4 is supplied and hard-disabled, test B7 `S911BXXS7CXL2`; if dynamic, test B8 `S911BXXS8EZA1`.
+## Current objective
+Await an unmodified late-B8 `S911BXXS8EZA1` BL tar/archive, or archive-identified `abl.elf` / LinuxLoader PE, in `BL_FILES/`. Map the same helper/gates to determine whether removal occurred within B8 or after it. No EZA1 input is currently local.
 
 ## Safety
-Place input in ignored `BL_FILES/`; offline analysis only, never flash.
+Firmware/extracted binaries stay local-only; never stage them. Offline static analysis only: no flashing, downgrade, patch, token installation, or device modification.

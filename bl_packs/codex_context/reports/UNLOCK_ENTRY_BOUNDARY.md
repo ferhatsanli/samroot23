@@ -5,14 +5,19 @@
 | Build | Binary | Entry-policy classification | Evidence |
 | --- | ---: | --- | --- |
 | `S911BXXS5CXDF` | B5 | Dynamic/reachable | `0xC6ED0` evaluates policy/state; normal long-press path can be entered. |
+| `S911BXXU8CYB4` | B8 | Dynamic/reachable | `0xC6ED0` has a reachable true return; both event-loop gates can reach `LongPressVolUpkeyCheck(4000)` and confirmation. |
 | `S911BXXU9FZDP` | B9 | Hard-disabled | `0xCABE0` returns false unconditionally; both normal gates skip retained long-press/confirmation. |
 | `S911BXXS9EZB6` | B9 | Hard-disabled | `0xCA790` returns false unconditionally; both normal gates skip retained long-press/confirmation. |
 
-Current evidence-supported interval: **the consumer Download-Mode entry hard-disable was introduced after CXDF B5 and no later than FZDP B9.** FZDP/EZB6 prove the effect is code policy, not this handset's KG/FRP runtime state.
+Current evidence-supported interval: **the consumer Download-Mode entry hard-disable was introduced after CYB4 B8 and no later than FZDP B9.** FZDP/EZB6 prove the effect is code policy, not this handset's KG/FRP runtime state.
 
 ## Highest-value unprocessed probe
 
-`S911BXXU8CYB4` is an independently listed SM-S911B/EUX Android 14 binary-B8 build (build date 2025-02-07; security patch 2025-02-01). The exact BL child archive required is:
+CYB4 is now classified dynamic/reachable. Its archive SHA-256 is `7e1231842645dfbf01fe313755bbabbb507c86abae2c458c18b248b877dcc89e`; detailed static evidence is in `CYB4_B8_ENTRY_COMPARISON.md`.
+
+The next minimum-information sample is late B8 `S911BXXS8EZA1`. Supply its unmodified BL tar/archive, or archive-identified `abl.elf` / LinuxLoader PE. The current local `BL_FILES` directory has only CXDF, CYB4, FZDP, and EZB6 build inputs.
+
+Historical CYB4 acquisition record (now superseded) — `S911BXXU8CYB4` is an independently listed SM-S911B/EUX Android 14 binary-B8 build (build date 2025-02-07; security patch 2025-02-01). The exact BL child archive was:
 
 `BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`
 
@@ -24,9 +29,6 @@ Remote command `2026-08-13-cyb4-probe-007` checked the centralized authoritative
 
 ## Next decision
 
-Supply the exact unmodified CYB4 BL child archive above (or extracted `abl.elf` / LinuxLoader PE plus archive identity). It is the single highest-information first probe:
-
-- If CYB4 is hard-disabled, next compare verified `S911BXXS7CXL2` B7.
-- If CYB4 remains dynamic, next compare late B8 `S911BXXS8EZA1`.
+CYB4 remains dynamic, so compare late B8 `S911BXXS8EZA1` next. Its result determines whether the removal occurred within B8 or after it. No historical firmware is authorized for flashing; this is offline boundary analysis only.
 
 No historical firmware is authorized for flashing; this is offline boundary analysis only.

@@ -1,3 +1,3 @@
 # Current bounded objective
 
-Await unmodified CYB4 B8 input in the centralized `BL_FILES/` directory: `BL_S911BXXU8CYB4_S911BXXU8CYB4_MQB92281678_REV00_user_low_ship_MULTI_CERT.tar.md5.zip`, or identified extracted `abl.elf` / LinuxLoader PE. Then map its entry-policy helper, two gates, long press, confirmation, and transition topology. Do not scan elsewhere, download full firmware, bypass source restrictions, flash, or install tokens.
+Await unmodified late-B8 `S911BXXS8EZA1` BL tar/archive, or archive-identified `abl.elf` / LinuxLoader PE, in `BL_FILES/`. Then classify its equivalent entry-policy helper, two event-loop gates, long-press/confirmation route, and transition topology against CYB4 and FZDP. Do not scan elsewhere, acquire externally, flash, downgrade, patch, or install tokens.

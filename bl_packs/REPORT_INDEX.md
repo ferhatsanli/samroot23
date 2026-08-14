@@ -33,6 +33,9 @@ Archive-identified FZDP B9 extraction and three-way CXDF/FZDP/EZB6 conclusion: F
 ### `codex_context/reports/UNLOCK_ENTRY_BOUNDARY.md`
 Cumulative analyzed-build boundary table and the exact highest-value B8 BL child required to continue narrowing.
 
+### `codex_context/reports/CYB4_B8_ENTRY_COMPARISON.md`
+Archive-identified CYB4 B8 result: dynamic `0xC6ED0`, two live event-loop gates, long-press/confirmation route, and narrowed B8→B9 policy boundary.
+
 ## Earlier unlock-path work
 ### `unlock_path_analysis/unlock_string_diff.txt`
 Old/new OEM/FRP string presence and removal.
